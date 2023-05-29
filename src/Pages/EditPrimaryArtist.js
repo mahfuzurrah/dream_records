@@ -10,15 +10,15 @@ function EditPrimaryArtist() {
     navigate("/primary_artist_manage");
   };
 
-  const [fullName, setFullName] = useState("");
-  const [instagramId, setInstagramId] = useState("");
-  const [spotifyId, setSpotifyId] = useState("");
-  const [appleId, setAppleId] = useState("");
-  const [facebookUrl, setFacebookUrl] = useState("");
-  const [youtubeUrl, setYoutubeUrl] = useState("");
+  const [name, setName] = useState('');
+  const [instagramId, setInstagramId] = useState('');
+  const [spotifyId, setSpotifyId] = useState('');
+  const [appleId, setAppleId] = useState('');
+  const [facebookUrl, setFacebookUrl] = useState('');
+  const [youtubeUrl, setYoutubeUrl] = useState('');
 
   const handleNameChange = (event) => {
-    setFullName(event.target.value);
+    setName(event.target.value);
   };
 
   const handleInstagramIdChange = (event) => {
@@ -67,7 +67,7 @@ function EditPrimaryArtist() {
               <div className="item">
                 <InputField
                   label="Full Name"
-                  value={fullName}
+                  value={name}
                   onChange={handleNameChange}
                 />
                 <InputField
