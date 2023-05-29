@@ -1,5 +1,5 @@
 import React from 'react'
-import Dashboard from '../../../dream_records_dashboard/src/Pages/Dashboard'
+import Dashboard from './Pages/Dashboard'
 
 function App() {
   return (
