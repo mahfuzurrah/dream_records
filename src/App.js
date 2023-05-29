@@ -18,19 +18,19 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<MainLayout />}>
-          <Route index element={<Dashboard />} />
+        <Route path="/" element={<MainLayout />}>
+          <Route path="/" element={<Dashboard />} />
           <Route path="release-audio" element={<ReleaseAudio />} />
           <Route path="catalog" element={<Catalog />} />
           <Route path="analytics" element={<Analytics />} />
           <Route path="primary_artist_manage" element={<PrimaryArtistManage />} />
-          <Route path="edit_primary_artist" element={<EditPrimaryArtist />} />
           <Route path="add_claim_release" element={<AddClaimRelease />} />
           <Route path="content_id_request" element={<ContentIdRequest />} />
           <Route path="artist_channel_request" element={<ArtistChannelRequest />} />
           <Route path="earning" element={<Earning />} />
           <Route path="audio_submission" element={<AudioSubmission />} />
-          </Route>
+          <Route path="edit_primary_artist" element={<EditPrimaryArtist />} />
+        </Route>
         </Routes>
       </Router>
     </div>
