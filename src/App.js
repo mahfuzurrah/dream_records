@@ -19,7 +19,7 @@ function App() {
       <Router>
         <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route path="/" element={<Dashboard />} />
+          <Route index element={<Dashboard />} />
           <Route path="release-audio" element={<ReleaseAudio />} />
           <Route path="catalog" element={<Catalog />} />
           <Route path="analytics" element={<Analytics />} />
