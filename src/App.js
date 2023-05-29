@@ -10,13 +10,14 @@ import Analytics from './Pages/Analytics';
 import Catalog from './Pages/Catalog';
 import Dashboard from './Pages/Dashboard';
 import ReleaseAudio from './Pages/ReleaseAudio';
+import MainLayout from "./Component/Layout/MainLayout";
 
 function App() {
   return (
     <div>
       <Router>
         <Routes>
-          <Route path="/">
+          <Route path="/" element={<MainLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="release-audio" element={<ReleaseAudio />} />
           <Route path="catalog" element={<Catalog />} />

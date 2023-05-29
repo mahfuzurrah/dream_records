@@ -1,17 +1,28 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import { BiArrowToRight, BiArrowToLeft } from "react-icons/bi";
 import { Button, Layout, Menu } from "antd";
 import "./Navbar.css";
-import Logo from "../assets/img/Logo.svg"
-import Bg_logo from "../assets/img/Bg_logo.png"
-// Icons
+import Logo from "../assets/img/Logo.svg";
+import Bg_logo from "../assets/img/Bg_logo.png";
 import {
   UploadOutlined,
   UserOutlined,
   VideoCameraOutlined,
 } from "@ant-design/icons";
-import { FaHome, FaFolderPlus, FaTag, FaChartLine, FaUserPlus, FaYoutube, FaWallet, FaHeadset, FaOrcid, FaPlusSquare, FaRegShareSquare } from "react-icons/fa";
+import {
+  FaHome,
+  FaFolderPlus,
+  FaTag,
+  FaChartLine,
+  FaUserPlus,
+  FaYoutube,
+  FaWallet,
+  FaHeadset,
+  FaOrcid,
+  FaPlusSquare,
+  FaRegShareSquare,
+} from "react-icons/fa";
 
 const { Header, Sider, Content } = Layout;
 
@@ -22,17 +33,21 @@ const MainLayout = () => {
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
-      <div className="logo">
+        <div className="logo">
           <h2 className="text-white fs-5 text-center mb-0">
-            <span className="sm-logo"><img src={Logo} alt="Logo" /></span>
-            <span className="lg-logo"><img src={Bg_logo} alt="Logo" /></span>
+            <span className="sm-logo">
+              <img src={Logo} alt="Logo" />
+            </span>
+            <span className="lg-logo">
+              <img src={Bg_logo} alt="Logo" />
+            </span>
           </h2>
         </div>
         <Menu
           mode="inline"
           defaultSelectedKeys={["/"]}
           onClick={({ key }) => {
-            if (key == "signout") {
+            if (key === "signout") {
             } else {
               navigate(key);
             }
@@ -55,7 +70,7 @@ const MainLayout = () => {
             },
             {
               key: "analytics",
-              icon: <FaChartLine className="icons"/>,
+              icon: <FaChartLine className="icons" />,
               label: "Analytics",
             },
             {
@@ -124,4 +139,5 @@ const MainLayout = () => {
     </Layout>
   );
 };
+
 export default MainLayout;
