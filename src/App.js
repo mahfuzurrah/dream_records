@@ -21,12 +21,11 @@ function App() {
           <Route path="catalog" element={<Catalog />} />
           <Route path="analytics" element={<Analytics />} />
           <Route path="primary_artist_manage" element={<PrimaryArtistManage />} />
-          <Route path="audio_submission" element={<AudioSubmission />} />
-          <Route path="earning" element={<Earning />} />
-          <Route path="artist_channel_request" element={<ArtistChannelRequest />} />
-          <Route path="content_id_request" element={<ContentIdRequest />} />
           <Route path="add_claim_release" element={<AddClaimRelease />} />
-          <Route path="c" element={<AddClaimRelease />} />
+          <Route path="content_id_request" element={<ContentIdRequest />} />
+          <Route path="artist_channel_request" element={<ArtistChannelRequest />} />
+          <Route path="earning" element={<Earning />} />
+          <Route path="audio_submission" element={<AudioSubmission />} />
         </Routes>
       </Router>
     </div>
