@@ -7,7 +7,7 @@ function EditPrimaryArtist() {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
-    navigate("/primary_artist_manage");
+    navigate("primary_artist_manage");
   };
 
     const [name, setName] = useState('');
