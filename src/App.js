@@ -1,15 +1,14 @@
 import React from "react";
-import MainLayout from './Component/Layout/MainLayout';
-import Dashboard from "./Pages/Dashboard";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import EditPrimaryArtist from "./Pages/EditPrimaryArtist";
 
 function App() {
   return (
     <div>
-      <Dashboard />
+      {/* <EditPrimaryArtist /> */}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<MainLayout />} />
+          <Route path="/" element={<EditPrimaryArtist />}/>
         </Routes>
       </BrowserRouter>
     </div>
