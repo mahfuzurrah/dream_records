@@ -5,6 +5,7 @@ import AudioSubmission from "./Pages/AudioSubmission";
 import Earning from "./Pages/Earning";
 import ArtistChannelRequest from "./Pages/ArtistChannelRequest";
 import ContentIdRequest from "./Pages/ContentIdRequest";
+import AddClaimRelease from "./Pages/AddClaimRelease";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="e" element={<Earning />} />
           <Route path="ar" element={<ArtistChannelRequest />} />
           <Route path="c" element={<ContentIdRequest />} />
+          <Route path="c" element={<AddClaimRelease />} />
         </Routes>
       </Router>
     </div>
