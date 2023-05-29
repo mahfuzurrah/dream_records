@@ -20,7 +20,7 @@ function App() {
           <Route path="release-audio" element={<ReleaseAudio />} />
           <Route path="catalog" element={<Catalog />} />
           <Route path="analytics" element={<Analytics />} />
-          <Route path="/" element={<PrimaryArtistManage />} />
+          <Route path="primary_artist_manage" element={<PrimaryArtistManage />} />
           <Route path="audio_submission" element={<AudioSubmission />} />
           <Route path="earning" element={<Earning />} />
           <Route path="artist_channel_request" element={<ArtistChannelRequest />} />
