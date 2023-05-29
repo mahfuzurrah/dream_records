@@ -6,17 +6,26 @@ import Earning from "./Pages/Earning";
 import ArtistChannelRequest from "./Pages/ArtistChannelRequest";
 import ContentIdRequest from "./Pages/ContentIdRequest";
 import AddClaimRelease from "./Pages/AddClaimRelease";
+import Analytics from './Pages/Analytics';
+import Catalog from './Pages/Catalog';
+import Dashboard from './Pages/Dashboard';
+import ReleaseAudio from './Pages/ReleaseAudio';
 
 function App() {
   return (
     <div>
       <Router>
         <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="release-audio" element={<ReleaseAudio />} />
+          <Route path="catalog" element={<Catalog />} />
+          <Route path="analytics" element={<Analytics />} />
           <Route path="/" element={<PrimaryArtistManage />} />
-          <Route path="a" element={<AudioSubmission />} />
-          <Route path="e" element={<Earning />} />
-          <Route path="ar" element={<ArtistChannelRequest />} />
-          <Route path="c" element={<ContentIdRequest />} />
+          <Route path="audio_submission" element={<AudioSubmission />} />
+          <Route path="earning" element={<Earning />} />
+          <Route path="artist_channel_request" element={<ArtistChannelRequest />} />
+          <Route path="content_id_request" element={<ContentIdRequest />} />
+          <Route path="add_claim_release" element={<AddClaimRelease />} />
           <Route path="c" element={<AddClaimRelease />} />
         </Routes>
       </Router>
