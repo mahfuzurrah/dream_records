@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import shortid from 'shortid';
-import UploadIcon from '../assets/icons/Upload.svg'
+import shortid from "shortid";
+import UploadIcon from "../assets/icons/Upload.svg";
 
 const ImageUploadForm = () => {
-  const [selectedfile, SetSelectedFile] = useState([]);
-  const [Files, SetFiles] = useState([]);
+  const [selectedfile, setSelectedFile] = useState([]);
+  const [Files, setFiles] = useState([]);
 
   const filesizes = (bytes, decimals = 2) => {
     if (bytes === 0) return "0 Bytes";
@@ -23,9 +23,9 @@ const ImageUploadForm = () => {
       let reader = new FileReader();
       let file = e.target.files[i];
       reader.onloadend = () => {
-        SetSelectedFile((preValue) => {
+        setSelectedFile((prevValue) => {
           return [
-            ...preValue,
+            ...prevValue,
             {
               id: shortid.generate(),
               filename: e.target.files[i].name,
@@ -47,7 +47,7 @@ const ImageUploadForm = () => {
   const DeleteSelectFile = (id) => {
     if (window.confirm("Are you sure you want to delete this Image?")) {
       const result = selectedfile.filter((data) => data.id !== id);
-      SetSelectedFile(result);
+      setSelectedFile(result);
     } else {
       // alert('No');
     }
@@ -60,24 +60,25 @@ const ImageUploadForm = () => {
     e.target.reset();
     if (selectedfile.length > 0) {
       for (let index = 0; index < selectedfile.length; index++) {
-        SetFiles((preValue) => {
-          return [...preValue, selectedfile[index]];
+        setFiles((prevValue) => {
+          return [...prevValue, selectedfile[index]];
         });
       }
-      SetSelectedFile([]);
+      setSelectedFile([]);
     } else {
-      alert("Please select file");
+      alert("Please select a file");
     }
   };
 
   const DeleteFile = async (id) => {
     if (window.confirm("Are you sure you want to delete this Image?")) {
       const result = Files.filter((data) => data.id !== id);
-      SetFiles(result);
+      setFiles(result);
     } else {
       // alert('No');
     }
   };
+
   return (
     <div>
       <div className="fileupload-view">
@@ -98,16 +99,12 @@ const ImageUploadForm = () => {
                         />
                         <div className="img_Up_info">
                           <img src={UploadIcon} alt="" className="mb-2" />
-                        <span>
-                          Drag and drop or
-                          <span className="file-link">Choose your files</span>
-                        </span>
-                        <span>
-                        - Size: 3000*3000px
-                        </span>
-                        <span>
-                        -Format: .jpeg
-                        </span>
+                          <span>
+                            Drag and drop or
+                            <span className="file-link">Choose your files</span>
+                          </span>
+                          <span>- Size: 3000*3000px</span>
+                          <span>- Format: .jpeg</span>
                         </div>
                       </div>
                     </div>
@@ -134,7 +131,6 @@ const ImageUploadForm = () => {
                             )}
                             <div className="file-detail">
                               <h6>{filename}</h6>
-                              <p></p>
                               <p>
                                 <span>Size : {filesize}</span>
                                 <span className="ml-2">
@@ -156,7 +152,9 @@ const ImageUploadForm = () => {
                       })}
                     </div>
                     <div className="kb-buttons-box">
-                      <button type="submit" className="btn" > Upload </button>
+                      <button type="submit" className="btn">
+                        Upload
+                      </button>
                     </div>
                   </form>
                   {Files.length > 0 ? (
@@ -198,7 +196,11 @@ const ImageUploadForm = () => {
                                 >
                                   Delete
                                 </button>
-                                <a href={fileimage} className="file-action-btn" download={filename} >
+                                <a
+                                  href={fileimage}
+                                  className="file-action-btn"
+                                  download={filename}
+                                >
                                   Download
                                 </a>
                               </div>

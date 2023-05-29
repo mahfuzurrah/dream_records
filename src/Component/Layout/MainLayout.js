@@ -6,11 +6,6 @@ import "./Navbar.css";
 import Logo from "../assets/img/Logo.svg";
 import Bg_logo from "../assets/img/Bg_logo.png";
 import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
-import {
   FaHome,
   FaFolderPlus,
   FaTag,
