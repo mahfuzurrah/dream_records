@@ -1,0 +1,51 @@
+Header {
+    padding: 0 !important;
+    background: var(--white-color) !important;
+}
+
+.trigger {
+    padding: 0 24px;
+    font-size: 18px;
+    line-height: 64px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.trigger:hover {
+    color: #1890ff
+}
+
+.logo {
+    height: 32px;
+    margin: 16px;
+}
+
+.sm-logo {
+    display: none;
+}
+
+.ant-layout-sider-collapsed .sm-logo {
+    display: block;
+}
+
+.ant-layout-sider-collapsed .lg-logo {
+    display: none;
+}
+
+.ant-layout {
+    min-height: 100vh;
+}
+
+.ant-layout-sider-children {
+    background: var(--white-color);
+}
+
+.ant-menu .ant-menu-item,
+.ant-menu-submenu {
+    color: var(--description-color);
+}
+
+.ant-menu .ant-menu-item-selected {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
