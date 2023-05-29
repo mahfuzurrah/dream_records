@@ -5,12 +5,12 @@ import EditPrimaryArtist from "./Pages/EditPrimaryArtist";
 function App() {
   return (
     <div>
-      {/* <EditPrimaryArtist /> */}
-      <BrowserRouter>
+      <EditPrimaryArtist />
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<EditPrimaryArtist />}/>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }
