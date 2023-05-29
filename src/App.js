@@ -9,7 +9,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<PrimaryArtistManage />} />
-          <Route path="/" element={<AudioSubmission />} />
+          <Route path="aa" element={<AudioSubmission />} />
         </Routes>
       </Router>
     </div>
