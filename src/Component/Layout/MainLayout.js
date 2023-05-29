@@ -54,59 +54,59 @@ const MainLayout = () => {
           }}
           items={[
             {
-              key: "/",
+              key: "/", // Unique key
               icon: <FaHome />,
               label: "Dashboard",
             },
             {
-              key: "release-audio",
+              key: "release-audio", // Unique key
               icon: <FaFolderPlus />,
               label: "Release Audio",
             },
             {
-              key: "catalog",
+              key: "catalog", // Unique key
               icon: <FaTag />,
               label: "Catalog",
             },
             {
-              key: "analytics",
+              key: "analytics", // Unique key
               icon: <FaChartLine className="icons" />,
               label: "Analytics",
             },
             {
-              key: "primary_artist_manage",
+              key: "primary_artist_manage", // Unique key
               icon: <FaUserPlus />,
               label: "Primary Artist Manage",
             },
             {
-              key: "",
+              key: "youtube-request", // Unique key
               icon: <FaYoutube />,
               label: "YouTube Request",
               children: [
                 {
-                  key: "add_claim_release",
+                  key: "add_claim_release", // Unique key
                   icon: <FaPlusSquare />,
                   label: "Add Claim Release",
                 },
                 {
-                  key: "content_id_request",
+                  key: "content_id_request", // Unique key
                   icon: <FaOrcid />,
                   label: "Content Id Request",
                 },
                 {
-                  key: "artist_channel_request",
+                  key: "artist_channel_request", // Unique key
                   icon: <FaRegShareSquare />,
                   label: "Artist Channel Request",
                 },
               ],
             },
             {
-              key: "earning",
+              key: "earning", // Unique key
               icon: <FaWallet />,
               label: "Earning",
             },
             {
-              key: "",
+              key: "support_center", // Unique key
               icon: <FaHeadset />,
               label: "Support Center",
             },
