@@ -5,9 +5,7 @@ function App() {
     <>
       <Router>
         <Routes>
-        <Route path="/" element={<MainLayout />}>
-          
-        </Route>
+        <Route path="/" element={<MainLayout />} />
         </Routes>
       </Router>
     </>
