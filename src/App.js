@@ -16,8 +16,8 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/">
+          <Route index element={<Dashboard />} />
           <Route path="release-audio" element={<ReleaseAudio />} />
           <Route path="catalog" element={<Catalog />} />
           <Route path="analytics" element={<Analytics />} />
