@@ -1,12 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { Route, BrowserRouter as Router } from "react-router-dom";
 import PrimaryArtistManage from "./Pages/PrimaryArtistManage";
 
 function App() {
   return (
     <div>
       <Router>
-      <PrimaryArtistManage />
+      <Route path="/" element={<PrimaryArtistManage />} />
     </Router>
     </div>
   );
