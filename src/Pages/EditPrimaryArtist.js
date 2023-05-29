@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import ImageUploadForm from "../Component/ImageUpload/ImageUploadForm";
 import InputField from "../Component/InputField/InputField";
 

@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import EditPrimaryArtist from "./Pages/EditPrimaryArtist";
+import PrimaryArtistManage from "./Pages/PrimaryArtistManage";
 
 function App() {
   return (
     <div>
-      <EditPrimaryArtist />
+      <PrimaryArtistManage />
       {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<EditPrimaryArtist />}/>
