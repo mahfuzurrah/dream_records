@@ -16,6 +16,7 @@ function App() {
     <div>
       <Router>
         <Routes>
+          <Route>
           <Route path="/" element={<Dashboard />} />
           <Route path="release-audio" element={<ReleaseAudio />} />
           <Route path="catalog" element={<Catalog />} />
@@ -26,6 +27,7 @@ function App() {
           <Route path="artist_channel_request" element={<ArtistChannelRequest />} />
           <Route path="earning" element={<Earning />} />
           <Route path="audio_submission" element={<AudioSubmission />} />
+          </Route>
         </Routes>
       </Router>
     </div>
