@@ -29,7 +29,6 @@ const ImageUploadForm = () => {
             {
               id: shortid.generate(),
               filename: e.target.files[i].name,
-              filetype: e.target.files[i].type,
               fileimage: reader.result,
               datetime:
                 e.target.files[i].lastModifiedDate.toLocaleString("en-IN"),
@@ -113,7 +112,6 @@ const ImageUploadForm = () => {
                         const {
                           id,
                           filename,
-                          filetype,
                           fileimage,
                           datetime,
                           filesize,
@@ -164,7 +162,6 @@ const ImageUploadForm = () => {
                         const {
                           id,
                           filename,
-                          filetype,
                           fileimage,
                           datetime,
                           filesize,

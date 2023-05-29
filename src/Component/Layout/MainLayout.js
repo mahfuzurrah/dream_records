@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import { BiArrowToRight, BiArrowToLeft } from "react-icons/bi";
 import { Button, Layout, Menu } from "antd";
-import "./Navbar.css";
+import "../Layout/Navbar.css";
 import Logo from "../assets/img/Logo.svg";
 import Bg_logo from "../assets/img/Bg_logo.png";
 import {
