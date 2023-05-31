@@ -99,6 +99,18 @@ const MainLayout = () => {
               key: "earning", // Unique key
               icon: <FaWallet />,
               label: "Earning",
+              children: [
+                {
+                  key: "overview", // Unique key
+                  icon: <FaPlusSquare />,
+                  label: "Overview",
+                },
+                {
+                  key: "withdraw", // Unique key
+                  icon: <FaOrcid />,
+                  label: "Withdraw",
+                },
+              ],
             },
             {
               key: "support_center", // Unique key

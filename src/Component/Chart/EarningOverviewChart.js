@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 
 function EarningOverviewChart() {
-  const [state, setState] = useState({
+  const [state] = useState({
     series: [
       {
-        name: "series1",
-        data: [31, 40, 28, 51, 42, 109, 100, 80, 95, 70, 85, 75],
+        name: "Total Earning",
+        data: [410, 500, 380, 510, 420, 1090, 1000, 800, 950, 700, 850, 750],
       },
     ],
     options: {
@@ -16,12 +16,36 @@ function EarningOverviewChart() {
         toolbar: {
           show: false,
         },
+        zoom: {
+          enabled: false,
+        },
       },
       dataLabels: {
         enabled: false,
       },
       stroke: {
         curve: "smooth",
+      },
+      fill: {
+        type: "gradient",
+        gradient: {
+          shadeIntensity: 1,
+          opacityFrom: 0.7,
+          opacityTo: 0.9,
+          stops: [50, 100],
+          colorStops: [
+            {
+              offset: 3.77,
+              color: "rgba(120, 62, 253, 0.30)",
+              opacity: 1,
+            },
+            {
+              offset: 100,
+              color: "rgba(255, 255, 255, 0)",
+              opacity: 1,
+            },
+          ],
+        },
       },
       xaxis: {
         type: "category",
