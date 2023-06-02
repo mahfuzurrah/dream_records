@@ -165,8 +165,11 @@ label {
   display: flex;
   align-items: center;
   gap: 20px;
-  width: 100%;
 
+}
+
+.modal-footer .btn_area{
+width: 100%;
 }
 
 .btn_area .btn,
@@ -554,4 +557,13 @@ Withdraw page
 
 .modal-footer {
   justify-content: flex-start;
+}
+
+.dot_toggle .icons{
+cursor: pointer;
+}
+
+.toggle_menu li{
+  color: var(--title-color) !important;
+  cursor: pointer;
 }

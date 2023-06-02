@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Card from "../Component/BankCard/Card";
 import CardList from "../Component/BankCard/CardList";
 import AddBankPopup from "../Component/Modal/AddBankPopup";
 import WithdrawalTransactionTable from "../Component/Table/WithdrawalTransaction Table";
@@ -26,7 +25,7 @@ function WithdrawA() {
           <p>Cashing out your balance</p>
         </div>
       </div>
-      <div className="row">
+      <div className="row mt-5">
         <div className="col-lg-4">
           <div className="card withdraw_card">
             <h2>Available Amount</h2>

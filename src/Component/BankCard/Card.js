@@ -1,4 +1,3 @@
-// Card.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { BsBank2 } from "react-icons/bs";
 import { BiDotsVerticalRounded } from "react-icons/bi";
@@ -9,6 +8,7 @@ function Card({ bankName, accountNumber, companyName, activateCard, isActive }) 
 
   const handlePrimaryClick = () => {
     activateCard();
+    setIsMenuOpen(false); // Close the menu when primary is clicked
   };
 
   const handleMenuClick = () => {
@@ -28,6 +28,8 @@ function Card({ bankName, accountNumber, companyName, activateCard, isActive }) 
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
+
+
 
   return (
     <div className={`bank_card card ${isActive ? "active" : "inactive"}`}>
@@ -52,7 +54,7 @@ function Card({ bankName, accountNumber, companyName, activateCard, isActive }) 
               <li className="primary" onClick={handlePrimaryClick}>
                 Primary
               </li>
-              <li>Edit</li>
+              <li className="mt-2" onClick={() => setIsMenuOpen(false)}>Edit</li>
             </ul>
           </div>
         )}
