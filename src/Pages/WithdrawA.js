@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import Card from "../Component/BankCard/Card";
+import CardList from "../Component/BankCard/CardList";
+import AddBankPopup from "../Component/Modal/AddBankPopup";
+import WithdrawalTransactionTable from "../Component/Table/WithdrawalTransaction Table";
 
 function WithdrawA() {
   const [balance, setBalance] = useState(0);
@@ -24,7 +28,7 @@ function WithdrawA() {
       </div>
       <div className="row">
         <div className="col-lg-4">
-          <div className="card">
+          <div className="card withdraw_card">
             <h2>Available Amount</h2>
             <h1>₹{balance.toFixed(2)}</h1>
             <div className="btn_area">
@@ -39,6 +43,17 @@ function WithdrawA() {
             </div>
           </div>
         </div>
+        <div className="col-lg-4">
+          <div className="card bank_add_card">
+            <h2>How you get paid</h2>
+            <CardList />
+            <AddBankPopup/>
+          </div>
+        </div>
+      </div>
+      <div className="table_content">
+        <h1 className="mb-4">Recent Transactions</h1>
+        <WithdrawalTransactionTable/>
       </div>
     </div>
   );

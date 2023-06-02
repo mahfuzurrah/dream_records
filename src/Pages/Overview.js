@@ -27,7 +27,7 @@ function Earning() {
       <div className="chart_area">
         <div className="chart_top_content">
           <h3>
-            Total Earning:<span>₹</span>
+            Total Earning:<span className="ms-3">₹</span>
             <span>1,20,000.00</span>
           </h3>
           <div>
