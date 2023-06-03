@@ -21,20 +21,23 @@ Header {
 }
 
 .sm-logo {
-    display: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-.ant-layout-sider-collapsed .sm-logo {
+/* .ant-layout-sider-collapsed .sm-logo {
     display: block;
 }
 
 .ant-layout-sider-collapsed .lg-logo {
     display: none;
-}
+} */
 
-.ant-layout {
+/* .ant-layout {
     min-height: 100vh;
-}
+    overflow-y: auto;
+} */
 
 .ant-layout-sider-children {
     background: var(--white-color);
@@ -48,4 +51,51 @@ Header {
 .ant-menu .ant-menu-item-selected {
     background: var(--primary-color);
     color: var(--white-color);
+}
+
+
+aside.ant-layout-sider.ant-layout-sider-dark.fixed-sider {
+    position: fixed;
+    height: 100vh;
+}
+
+header.ant-layout-header.fixed-header.css-dev-only-do-not-override-w8mnev {
+    min-height: 65px !important;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.2s ease-out;
+    margin-top: 0 !important;
+}
+
+.body_content {
+    margin-top: 80px !important;
+    transition: all 0.2s ease-out;
+}
+
+ul.ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-light.ant-menu-inline-collapsed.css-dev-only-do-not-override-w8mnev,
+ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.css-dev-only-do-not-override-w8mnev {
+    margin-top: 150px;
+}
+
+aside li {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+svg.ant-menu-item-icon {
+    font-size: 16px !important;
+}
+
+.ant-btn-icon svg {
+    font-size: 20px !important;
+    transition: all 0.2s ease-out;
+}
+
+@media screen and (max-width: 991px) {
+    
 }

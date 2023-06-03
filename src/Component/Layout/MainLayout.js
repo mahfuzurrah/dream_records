@@ -4,7 +4,7 @@ import { BiArrowToRight, BiArrowToLeft } from "react-icons/bi";
 import { Button, Layout, Menu } from "antd";
 import "../Layout/Navbar.css";
 import Logo from "../assets/img/Logo.svg";
-import Bg_logo from "../assets/img/Bg_logo.png";
+// import Bg_logo from "../assets/img/Bg_logo.png";
 import {
   FaHome,
   FaFolderPlus,
@@ -26,16 +26,22 @@ const MainLayout = () => {
   const navigate = useNavigate();
 
   return (
-    <Layout>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
+    <Layout style={{ minHeight: "100vh" }}>
+      <Sider
+        className="fixed-sider"
+        trigger={null}
+        collapsible
+        collapsed={collapsed}
+        width={250}
+      >
         <div className="logo">
           <h2 className="text-white fs-5 text-center mb-0">
             <span className="sm-logo">
               <img src={Logo} alt="Logo" />
             </span>
-            <span className="lg-logo">
+            {/* <span className="lg-logo">
               <img src={Bg_logo} alt="Logo" />
-            </span>
+            </span> */}
           </h2>
         </div>
         <Menu
@@ -121,7 +127,13 @@ const MainLayout = () => {
         />
       </Sider>
       <Layout>
-        <Header>
+        <Header className={`fixed-header ${collapsed ? "collapsed" : ""}`}
+        style={{
+            margin: "24px 24px",
+            padding: 24,
+            minHeight: 100,
+            marginLeft: collapsed ? 80 : 250,
+          }}>
           <Button
             type="text"
             icon={collapsed ? <BiArrowToRight /> : <BiArrowToLeft />}
@@ -132,12 +144,14 @@ const MainLayout = () => {
               height: 64,
             }}
           />
+          
         </Header>
-        <Content
+        <Content className="body_content"
           style={{
-            margin: "16px 16px",
+            margin: "24px 24px",
             padding: 24,
-            minHeight: 280,
+            minHeight: 100,
+            marginLeft: collapsed ? 80 : `calc(200px + ${collapsed ? 0 : 80}px)`,
           }}
         >
           <Outlet />

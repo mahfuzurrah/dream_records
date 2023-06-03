@@ -19,7 +19,8 @@ function AddClaimRelease() {
       </div>
       <div className='row'>
         <div className="col-lg-6 col-md-12">
-        <InputField label="URL" value={name} onChange={handleNameChange} />
+        <InputField label="URL" star="*" type="text" value={name} onChange={handleNameChange} />
+        <InputField label="UPC/EAN" star="*" type="text" value={name} onChange={handleNameChange} />
         <button className='btn mt-4'>Submit</button>
         </div>
       </div>

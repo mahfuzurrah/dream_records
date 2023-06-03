@@ -9,6 +9,10 @@ const columns = [
     dataIndex: "url",
   },
   {
+    title: "UPC/EAN",
+    dataIndex: "UPC_EAN",
+  },
+  {
     title: "Status",
     dataIndex: "status",
     render: (status) => {
@@ -31,18 +35,21 @@ const data = [
     key: "1",
     date: "27-10-2001",
     url: "url.com",
+    UPC_EAN: "upc/ean",
     status: "Approved",
   },
   {
     key: "2",
     date: "27-10-2001",
     url: "url.com",
+    UPC_EAN: "upc/ean",
     status: "Pending",
   },
   {
     key: "3",
     date: "27-10-2001",
     url: "url.com",
+    UPC_EAN: "upc/ean",
     status: "Failed",
   },
 ];
