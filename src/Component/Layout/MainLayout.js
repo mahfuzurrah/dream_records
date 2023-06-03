@@ -126,7 +126,7 @@ const MainLayout = () => {
           ]}
         />
       </Sider>
-      <Layout>
+      <Layout className="site-layout">
         <Header className={`fixed-header ${collapsed ? "collapsed" : ""}`}
         style={{
             margin: "24px 24px",
