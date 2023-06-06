@@ -2,10 +2,9 @@ import React from "react";
 import Card from "./Card";
 import CoverImg from "../assets/img/cover.jpg";
 import Approve from "../assets/icons/S.svg";
-import Draft from "../assets/icons/D.svg";
-import Pending from "../assets/icons/P.svg";
+import { Link } from "react-router-dom";
 
-const CardList = () => {
+const ApprovedCardList = () => {
   const cardData = [
     {
       sImg: CoverImg,
@@ -17,13 +16,7 @@ const CardList = () => {
       sImg: CoverImg,
       title: "Song Title",
       sTitle: "Song Title",
-      status: Draft,
-    },
-    {
-      sImg: CoverImg,
-      title: "Song Title",
-      sTitle: "Song Title",
-      status: Pending,
+      status: Approve,
     },
     {
       sImg: CoverImg,
@@ -35,32 +28,15 @@ const CardList = () => {
       sImg: CoverImg,
       title: "Song Title",
       sTitle: "Song Title",
-      status: Draft,
-    },
-    {
-      sImg: CoverImg,
-      title: "Song Title",
-      sTitle: "Song Title",
       status: Approve,
-    },
-    {
-      sImg: CoverImg,
-      title: "Song Title",
-      sTitle: "Song Title",
-      status: Draft,
-    },
-    {
-      sImg: CoverImg,
-      title: "Song Title",
-      sTitle: "Song Title",
-      status: Pending,
-    },
+    }
   ];
 
   return (
     <div className="row">
       {cardData.map((card, index) => (
         <div className="col-lg-3 col-md-6 col-sm-12">
+        <Link to='/catalog_details'>
           <Card
             key={index}
             sImg={card.sImg}
@@ -68,10 +44,11 @@ const CardList = () => {
             sTitle={card.sTitle}
             status={card.status}
           />
+          </Link>
         </div>
       ))}
     </div>
   );
 };
 
-export default CardList;
+export default ApprovedCardList;

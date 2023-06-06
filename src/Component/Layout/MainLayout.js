@@ -4,7 +4,7 @@ import { BiArrowToRight, BiArrowToLeft } from "react-icons/bi";
 import { Button, Layout, Menu } from "antd";
 import "../Layout/Navbar.css";
 import Logo from "../assets/img/Logo.svg";
-// import Bg_logo from "../assets/img/Bg_logo.png";
+
 import {
   FaHome,
   FaFolderPlus,
@@ -17,7 +17,9 @@ import {
   FaOrcid,
   FaPlusSquare,
   FaRegShareSquare,
+  FaClipboardList
 } from "react-icons/fa";
+import Topbar from "./Topbar";
 
 const { Header, Sider, Content } = Layout;
 
@@ -66,8 +68,25 @@ const MainLayout = () => {
             },
             {
               key: "catalog", // Unique key
-              icon: <FaTag />,
+              icon: <FaClipboardList />,
               label: "Catalog",
+              children: [
+                {
+                  key: "approved", // Unique key
+                  icon: <FaPlusSquare />,
+                  label: "Approved",
+                },
+                {
+                  key: "draft", // Unique key
+                  icon: <FaOrcid />,
+                  label: "Draft",
+                },
+                {
+                  key: "pending", // Unique key
+                  icon: <FaRegShareSquare />,
+                  label: "Pending",
+                },
+              ],
             },
             {
               key: "analytics", // Unique key
@@ -78,6 +97,11 @@ const MainLayout = () => {
               key: "primary_artist_manage", // Unique key
               icon: <FaUserPlus />,
               label: "Primary Artist Manage",
+            },
+            {
+              key: "label_manage", // Unique key
+              icon: <FaTag />,
+              label: "Label Manage",
             },
             {
               key: "youtube-request", // Unique key
@@ -127,13 +151,15 @@ const MainLayout = () => {
         />
       </Sider>
       <Layout className="site-layout">
-        <Header className={`fixed-header ${collapsed ? "collapsed" : ""}`}
-        style={{
+        <Header
+          className={`fixed-header ${collapsed ? "collapsed" : ""}`}
+          style={{
             margin: "24px 24px",
             padding: 24,
             minHeight: 100,
             marginLeft: collapsed ? 80 : 250,
-          }}>
+          }}
+        >
           <Button
             type="text"
             icon={collapsed ? <BiArrowToRight /> : <BiArrowToLeft />}
@@ -144,14 +170,17 @@ const MainLayout = () => {
               height: 64,
             }}
           />
-          
+        <Topbar/>
         </Header>
-        <Content className="body_content"
+        <Content
+          className="body_content"
           style={{
             margin: "24px 24px",
             padding: 24,
             minHeight: 100,
-            marginLeft: collapsed ? 80 : `calc(200px + ${collapsed ? 0 : 80}px)`,
+            marginLeft: collapsed
+              ? 80
+              : `calc(200px + ${collapsed ? 0 : 80}px)`,
           }}
         >
           <Outlet />

@@ -3,8 +3,9 @@ import shortid from "shortid";
 import UploadIcon from "../assets/icons/Upload.svg";
 
 const ImageUploadForm = () => {
-  const [selectedfile, setSelectedFile] = useState([]);
-  const [Files, setFiles] = useState([]);
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [fileInfo, setFileInfo] = useState(null);
+  const [files, setFiles] = useState([]);
 
   const filesizes = (bytes, decimals = 2) => {
     if (bytes === 0) return "0 Bytes";
@@ -15,66 +16,44 @@ const ImageUploadForm = () => {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i];
   };
 
-  const InputChange = (e) => {
-    // --For Multiple File Input
-    let images = [];
-    for (let i = 0; i < e.target.files.length; i++) {
-      images.push(e.target.files[i]);
-      let reader = new FileReader();
-      let file = e.target.files[i];
+  const handleFileUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
       reader.onloadend = () => {
-        setSelectedFile((prevValue) => {
-          return [
-            ...prevValue,
-            {
-              id: shortid.generate(),
-              filename: e.target.files[i].name,
-              fileimage: reader.result,
-              datetime:
-                e.target.files[i].lastModifiedDate.toLocaleString("en-IN"),
-              filesize: filesizes(e.target.files[i].size),
-            },
-          ];
+        setSelectedFile(reader.result);
+        setFileInfo({
+          id: shortid.generate(),
+          filename: file.name,
+          fileimage: reader.result,
+          datetime: file.lastModifiedDate.toLocaleString("en-IN"),
+          filesize: filesizes(file.size),
         });
       };
-      if (e.target.files[i]) {
-        reader.readAsDataURL(file);
-      }
+      reader.readAsDataURL(file);
     }
   };
 
-  const DeleteSelectFile = (id) => {
-    if (window.confirm("Are you sure you want to delete this Image?")) {
-      const result = selectedfile.filter((data) => data.id !== id);
-      setSelectedFile(result);
-    } else {
-      // alert('No');
-    }
+  const deleteFile = () => {
+    setSelectedFile(null);
+    setFileInfo(null);
   };
 
-  const FileUploadSubmit = async (e) => {
-    e.preventDefault();
-
-    // form reset on submit
-    e.target.reset();
-    if (selectedfile.length > 0) {
-      for (let index = 0; index < selectedfile.length; index++) {
-        setFiles((prevValue) => {
-          return [...prevValue, selectedfile[index]];
-        });
-      }
-      setSelectedFile([]);
-    } else {
-      alert("Please select a file");
-    }
-  };
-
-  const DeleteFile = async (id) => {
-    if (window.confirm("Are you sure you want to delete this Image?")) {
-      const result = Files.filter((data) => data.id !== id);
+  const handleDeleteFile = (id) => {
+    if (window.confirm("Are you sure you want to delete this image?")) {
+      const result = files.filter((data) => data.id !== id);
       setFiles(result);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (fileInfo) {
+      setFiles((prevFiles) => [...prevFiles, fileInfo]);
+      // Reset the form
+      deleteFile();
     } else {
-      // alert('No');
+      alert("Please select an image file");
     }
   };
 
@@ -86,110 +65,82 @@ const ImageUploadForm = () => {
             <div className="card">
               <div className="card-body">
                 <div className="kb-data-box">
-                  <form onSubmit={FileUploadSubmit}>
+                  <form onSubmit={handleSubmit}>
                     <div className="kb-file-upload">
                       <div className="file-upload-box">
                         <input
                           type="file"
                           id="fileupload"
                           className="file-upload-input"
-                          onChange={InputChange}
-                          multiple
+                          accept="image/*"
+                          onChange={handleFileUpload}
                         />
                         <div className="img_Up_info">
                           <img src={UploadIcon} alt="" className="mb-2" />
                           <span>
                             Drag and drop or
-                            <span className="file-link">Choose your files</span>
+                            <span className="file-link">Choose your file</span>
                           </span>
                           <span>- Size: 3000*3000px</span>
                           <span>- Format: .jpeg</span>
                         </div>
                       </div>
                     </div>
-                    <div className="kb-attach-box mb-3">
-                      {selectedfile.map((data, index) => {
-                        const {
-                          id,
-                          filename,
-                          fileimage,
-                          datetime,
-                          filesize,
-                        } = data;
-                        return (
-                          <div className="file-atc-box" key={id}>
-                            {filename.match(/.(jpg|jpeg|png|gif|svg)$/i) ? (
-                              <div className="file-image">
-                                <img src={fileimage} alt="" />
-                              </div>
-                            ) : (
-                              <div className="file-image">
-                                <i className="far fa-file-alt"></i>
-                              </div>
-                            )}
-                            <div className="file-detail">
-                              <h6>{filename}</h6>
-                              <p>
-                                <span>Size : {filesize}</span>
-                                <span className="ml-2">
-                                  Modified Time : {datetime}
-                                </span>
-                              </p>
-                              <div className="file-actions">
-                                <button
-                                  type="button"
-                                  className="file-action-btn"
-                                  onClick={() => DeleteSelectFile(id)}
-                                >
-                                  Delete
-                                </button>
-                              </div>
+                    {selectedFile && (
+                      <div className="kb-attach-box mb-3">
+                        <div className="file-atc-box">
+                          <div className="file-image">
+                            <img src={selectedFile} alt="" />
+                          </div>
+                          <div className="file-detail">
+                            <h6>{fileInfo.filename}</h6>
+                            <p>
+                              <span>Size: {fileInfo.filesize}</span>
+                              <span className="ml-2">
+                                Modified Time: {fileInfo.datetime}
+                              </span>
+                            </p>
+                            <div className="file-actions">
+                              <button
+                                type="button"
+                                className="file-action-btn"
+                                onClick={deleteFile}
+                              >
+                                Delete
+                              </button>
                             </div>
                           </div>
-                        );
-                      })}
-                    </div>
+                        </div>
+                      </div>
+                    )}
                     <div className="kb-buttons-box">
                       <button type="submit" className="btn">
                         Upload
                       </button>
                     </div>
                   </form>
-                  {Files.length > 0 ? (
+                  {files.length > 0 && (
                     <div className="kb-attach-box">
                       <hr />
-                      {Files.map((data, index) => {
-                        const {
-                          id,
-                          filename,
-                          fileimage,
-                          datetime,
-                          filesize,
-                        } = data;
+                      {files.map((data) => {
+                        const { id, filename, fileimage, datetime, filesize } = data;
                         return (
-                          <div className="file-atc-box" key={index}>
-                            {filename.match(/.(jpg|jpeg|png|gif|svg)$/i) ? (
-                              <div className="file-image">
-                                {" "}
-                                <img src={fileimage} alt="" />
-                              </div>
-                            ) : (
-                              <div className="file-image">
-                                <i className="far fa-file-alt"></i>
-                              </div>
-                            )}
+                          <div className="file-atc-box" key={id}>
+                            <div className="file-image">
+                              <img src={fileimage} alt="" />
+                            </div>
                             <div className="file-detail">
                               <h6>{filename}</h6>
                               <p>
-                                <span>Size : {filesize}</span>
+                                <span>Size: {filesize}</span>
                                 <span className="ml-3">
-                                  Modified Time : {datetime}
+                                  Modified Time: {datetime}
                                 </span>
                               </p>
                               <div className="file-actions">
                                 <button
                                   className="file-action-btn"
-                                  onClick={() => DeleteFile(id)}
+                                  onClick={() => handleDeleteFile(id)}
                                 >
                                   Delete
                                 </button>
@@ -206,8 +157,6 @@ const ImageUploadForm = () => {
                         );
                       })}
                     </div>
-                  ) : (
-                    ""
                   )}
                 </div>
               </div>

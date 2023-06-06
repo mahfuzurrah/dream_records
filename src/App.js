@@ -6,13 +6,16 @@ import ReleaseAudio from './Pages/ReleaseAudio';
 import ArtistChannelRequest from './Pages/ArtistChannelRequest';
 import Overview from './Pages/Overview';
 import Analytics from './Pages/Analytics';
-import Catalog from './Pages/Catalog';
+import ApprovedCatalog from './Pages/ApprovedCatalog';
+import DraftCatalog from './Pages/DraftCatalog';
+import PendingCatalog from './Pages/PendingCatalog';
 import ContentIdRequest from './Pages/ContentIdRequest';
 import PrimaryArtistManage from './Pages/PrimaryArtistManage';
 import AddClaimRelease from './Pages/AddClaimRelease';
 import AudioSubmission from './Pages/AudioSubmission';
 import EditPrimaryArtist from './Pages/EditPrimaryArtist';
 import WithdrawA from "./Pages/WithdrawA";
+import CatalogDetails from "./Pages/CatalogDetails";
 
 function App() {
   return (
@@ -22,7 +25,9 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="release-audio" element={<ReleaseAudio />} />
-          <Route path="catalog" element={<Catalog />} />
+          <Route path="approved" element={<ApprovedCatalog />} />
+          <Route path="draft" element={<DraftCatalog />} />
+          <Route path="pending" element={<PendingCatalog />} />
           <Route path="analytics" element={<Analytics />} />
           <Route path="primary_artist_manage" element={<PrimaryArtistManage />} />
           <Route path="add_claim_release" element={<AddClaimRelease />} />
@@ -32,6 +37,7 @@ function App() {
           <Route path="withdraw" element={<WithdrawA />} />
           <Route path="audio_submission" element={<AudioSubmission />} />
           <Route path="edit_primary_artist" element={<EditPrimaryArtist />} />
+          <Route path="catalog_details" element={<CatalogDetails />} />
         </Route>
         </Routes>
       </Router>

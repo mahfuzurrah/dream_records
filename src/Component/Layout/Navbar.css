@@ -77,10 +77,10 @@ header.ant-layout-header.fixed-header.css-dev-only-do-not-override-w8mnev {
     transition: all 0.2s ease-out;
 }
 
-ul.ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-light.ant-menu-inline-collapsed.css-dev-only-do-not-override-w8mnev,
+/* ul.ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-light.ant-menu-inline-collapsed.css-dev-only-do-not-override-w8mnev,
 ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.css-dev-only-do-not-override-w8mnev {
     margin-top: 150px;
-}
+} */
 
 aside li {
     margin-top: 20px;
@@ -98,5 +98,37 @@ svg.ant-menu-item-icon {
 
 
 @media screen and (max-width: 991px) {
-    
+    aside.ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-collapsed.fixed-sider{
+        position: fixed;
+        left: 100%;
+    }
+
+    aside.ant-layout-sider.ant-layout-sider-dark.fixed-sider{
+        z-index: 100;
+    }
+
+    main.ant-layout-content.body_content.css-dev-only-do-not-override-w8mnev{
+        margin-left: 0 !important;
+    }
+
+    header.ant-layout-header.fixed-header.collapsed.css-dev-only-do-not-override-w8mnev{
+        margin-left: 0 !important;
+    }
+
+    main.ant-layout-content.body_content.css-dev-only-do-not-override-w8mnev{
+        margin-right: 0 !important;
+    }
 }
+
+/* main {
+    height: 85vh;
+    overflow-y: scroll;
+    background-color: transparent !important;
+  } */
+
+  .site-layout Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }

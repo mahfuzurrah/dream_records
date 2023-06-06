@@ -165,7 +165,6 @@ label {
   display: flex;
   align-items: center;
   gap: 20px;
-
 }
 
 .modal-footer .btn_area {
@@ -359,7 +358,11 @@ label {
 
 .file-detail {
   flex: 1;
-  width: calc(100% - 210px);
+  width: 100%;
+}
+
+audio{
+  width: 100%;
 }
 
 .file-detail h6 {
@@ -448,7 +451,6 @@ Earning page
   margin-bottom: 30px;
 }
 
-
 /*===============================
 Withdraw page
 =============================== */
@@ -480,16 +482,13 @@ Withdraw page
   margin: 30px 0;
 }
 
-
 .bank_add_card h2 {
   color: var(--title-color) !important;
 }
 
-
 .withdraw_content .card h2 {
   color: var(--description-color);
 }
-
 
 .withdraw_content .btn_area {
   display: flex;
@@ -570,7 +569,7 @@ Catalog Page
   margin-top: 20px;
 }
 
-.catalog_card .card img.cover_img{
+.catalog_card .card img.cover_img {
   width: 100%;
   height: 250px;
 }
@@ -588,4 +587,141 @@ Catalog Page
 .catalog_card .card h2 {
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+.catalog_details {
+  background-image: linear-gradient(0deg,
+      rgba(9, 9, 9, 0.8),
+      rgba(9, 9, 9, 0.8)),
+    url(./Component/assets/img/cover.jpg);
+  border-radius: 24px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 60px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.catalog_details .card {
+  max-width: 250px;
+  background: transparent;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: self-start;
+}
+
+.catalog_details .card img {
+  border-radius: 8px;
+}
+
+/* =================
+Submission Page
+================= */
+.input_desc {
+  font-size: var(--small-font-size);
+  margin-top: 8px;
+}
+
+.new-input-field {
+  position: relative;
+  margin-top: 15px;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 42px;
+  right: -25px;
+}
+
+.icon-input-field {
+  position: absolute;
+  top: 38px;
+  right: -35px;
+  width: 24px;
+  height: 24px;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  color: var(--white-color) !important;
+  cursor: pointer;
+}
+
+.add-icon {
+  color: var(--white-color) !important;
+}
+
+.input-row label {
+  margin-bottom: 8px;
+}
+
+/* =================
+Submission Page
+================= */
+.s_info .items {
+  padding: 20px;
+  background: var(--white-color);
+  border-radius: 8px;
+  width: 100%;
+}
+
+.s_info .items .item .input_value {
+  display: flex;
+  margin-top: 8px;
+}
+
+.s_info .items .item p.input_name {
+  width: 150px !important;
+}
+
+.s_info .items .item span {
+  display: flex;
+  flex-direction: row;
+  width: 150px !important;
+}
+
+
+.upload_info .card {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.upload_info .card.audio {
+  height: 300px;
+}
+
+.upload_info .card img {
+  border-radius: 8px;
+}
+
+.upload_info .card .icons {
+  width: auto;
+  height: 80px;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+
+
+
+/*===============================
+Responcive part
+=============================== */
+
+
+@media screen and (max-width: 991px) {
+  .input_group{
+    display: block;
+    padding-right: 30px
+  }
 }

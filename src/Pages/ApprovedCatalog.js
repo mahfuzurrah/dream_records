@@ -1,13 +1,13 @@
 import React from "react";
 import SearchBar from "../Component/SearchBar/SearchBar";
-import CardList from "../Component/CatalogsCard/CardList";
+import ApprovedCardList from "../Component/CatalogsCard/ApprovedCardList";
 
-function Catalog() {
+function ApprovedCatalog() {
   return (
     <>
       <div className="section_title">
         <div className="text_area">
-          <h2>Catalogs</h2>
+          <h2>Approved Catalogs</h2>
           <p>Exploring our collections</p>
         </div>
         <div className="btn_area">
@@ -20,11 +20,11 @@ function Catalog() {
           <SearchBar />
         </div>
         {/* <div className="col-lg-4"> */}
-        <CardList/>
+        <ApprovedCardList />
           {/* </div> */}
       </div>
     </>
   );
 }
 
-export default Catalog;
+export default ApprovedCatalog;
