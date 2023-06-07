@@ -11,7 +11,7 @@ const columns = [
     },
   },
   {
-    title: "Chinese Score",
+    title: "Name",
     dataIndex: "name",
     sorter: {
       compare: (a, b) => a.name - b.name,
