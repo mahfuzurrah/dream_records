@@ -98,7 +98,14 @@ img {
   height: auto;
 }
 
-/* Common Css*/
+.icons {
+  font-size: 18px;
+  color: var(--description-color);
+}
+
+/*===================== 
+Common CSS
+=====================*/
 
 .button {
   border: none !important;
@@ -230,7 +237,109 @@ label {
   width: 100%;
 }
 
-/* Primary Artist Manage */
+/* =========================================== */
+/* =========================================== */
+
+/*=====================
+Dashboard
+ ===================== */
+.news {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: linear-gradient(180deg, #453E71 0%, #3E6B97 117.5%), #3E4B75;
+  border-radius: 8px;
+  color: var(--white-color);
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.news .icons,
+.news p {
+  color: var(--white-color);
+}
+
+.Ds_card .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 20px;
+}
+
+.Ds_card .card .Ds_icon {
+  width: 35px;
+  height: 35px;
+  background: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Ds_card .card .Ds_icon .icons {
+  color: var(--white-color);
+}
+
+.Ds_row_card .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.Ds_row_card .card .cover_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.draft_list {
+  border-radius: 8px;
+  padding-bottom: 20px;
+  background: var(--white-color);
+}
+
+.draft_list .draft_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 20px;
+  background: var(--white-color);
+  border-radius: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.draft_list .card {
+  margin-top: 20px;
+}
+
+.Ds_row_card .card p {
+  color: var(--title-color);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.Ds_row_card .card span {
+  color: var(--description-color);
+}
+
+.draft_header a{
+  color: var(--primary-color);
+  font-weight: var(--font-medium);
+}
+
+/*=====================
+ Primary Artist Manage
+ ===================== */
 
 .table_content {
   margin-top: 50px;
@@ -245,7 +354,9 @@ label {
   gap: 20px;
 }
 
-/* Edit Primary Artist */
+/*=====================
+Edit Primary Artist
+=====================*/
 
 .edit_container {
   max-width: 900px;
@@ -361,7 +472,7 @@ label {
   width: 100%;
 }
 
-audio{
+audio {
   width: 100%;
 }
 
@@ -619,7 +730,7 @@ Catalog Page
 }
 
 /* =================
-Submission Page
+Release Information Page
 ================= */
 .input_desc {
   font-size: var(--small-font-size);
@@ -720,7 +831,7 @@ Responcive part
 
 
 @media screen and (max-width: 991px) {
-  .input_group{
+  .input_group {
     display: block;
     padding-right: 30px
   }

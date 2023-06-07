@@ -1,6 +1,6 @@
 import React from "react";
 import SearchBar from "../Component/SearchBar/SearchBar";
-import PendingCardList from "../Component/CatalogsCard/PendingCardList";
+import DraftCardList from "../Component/CatalogsCard/DraftCardList";
 
 function DraftCatalog() {
   return (
@@ -19,9 +19,7 @@ function DraftCatalog() {
           <p>Show 4 entries</p>
           <SearchBar />
         </div>
-        {/* <div className="col-lg-4"> */}
-        <PendingCardList/>
-          {/* </div> */}
+        <DraftCardList/>
       </div>
     </>
   );

@@ -19,9 +19,7 @@ function ApprovedCatalog() {
           <p>Show 4 entries</p>
           <SearchBar />
         </div>
-        {/* <div className="col-lg-4"> */}
         <ApprovedCardList />
-          {/* </div> */}
       </div>
     </>
   );
