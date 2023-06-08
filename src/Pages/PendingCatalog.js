@@ -4,7 +4,7 @@ import PendingCardList from "../Component/CatalogsCard/PendingCardList";
 
 function PendingCatalog() {
   return (
-    <>
+    <div className="pending_page">
       <div className="section_title">
         <div className="text_area">
           <h2>Pending Catalogs</h2>
@@ -21,7 +21,7 @@ function PendingCatalog() {
         </div>
         <PendingCardList/>
       </div>
-    </>
+    </div>
   );
 }
 

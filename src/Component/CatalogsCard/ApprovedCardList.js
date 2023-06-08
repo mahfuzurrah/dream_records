@@ -1,8 +1,10 @@
 import React from "react";
 import Card from "./Card";
 import CoverImg from "../assets/img/cover.jpg";
+import RingtoneImg from "../assets/icons/ringtone.svg";
 import Approve from "../assets/icons/S.svg";
 import { Link } from "react-router-dom";
+
 
 const ApprovedCardList = () => {
   const cardData = [
@@ -11,24 +13,28 @@ const ApprovedCardList = () => {
       title: "Song Title",
       sTitle: "Song Title",
       status: Approve,
+      ringtone: RingtoneImg
     },
     {
       sImg: CoverImg,
       title: "Song Title",
       sTitle: "Song Title",
       status: Approve,
+      ringtone: RingtoneImg,
     },
     {
       sImg: CoverImg,
       title: "Song Title",
       sTitle: "Song Title",
       status: Approve,
+      ringtone: RingtoneImg,
     },
     {
       sImg: CoverImg,
       title: "Song Title",
       sTitle: "Song Title",
       status: Approve,
+      ringtone: RingtoneImg,
     }
   ];
 
@@ -43,6 +49,7 @@ const ApprovedCardList = () => {
             title={card.title}
             sTitle={card.sTitle}
             status={card.status}
+            ringtone={card.ringtone}
           />
           </Link>
         </div>

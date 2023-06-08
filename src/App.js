@@ -16,6 +16,8 @@ import AudioSubmission from './Pages/AudioSubmission';
 import EditPrimaryArtist from './Pages/EditPrimaryArtist';
 import WithdrawA from "./Pages/WithdrawA";
 import CatalogDetails from "./Pages/CatalogDetails";
+import SupportCenter from "./Pages/SupportCenter";
+import LabelManage from "./Pages/LabelManage";
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
           <Route path="audio_submission" element={<AudioSubmission />} />
           <Route path="edit_primary_artist" element={<EditPrimaryArtist />} />
           <Route path="catalog_details" element={<CatalogDetails />} />
+          <Route path="support_center" element={<SupportCenter />} />
+          <Route path="label_manage" element={<LabelManage />} />
         </Route>
         </Routes>
       </Router>

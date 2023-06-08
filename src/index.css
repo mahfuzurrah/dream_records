@@ -168,7 +168,7 @@ label {
   border: 1px solid transparent !important;
 }
 
-.btn_group{
+.btn_group {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -339,7 +339,7 @@ Dashboard
   color: var(--description-color);
 }
 
-.draft_header a{
+.draft_header a {
   color: var(--primary-color);
   font-weight: var(--font-medium);
 }
@@ -347,33 +347,33 @@ Dashboard
 /*=====================
  Primary Artist Manage
  ===================== */
- .nav-pills .nav-link{
+.nav-pills .nav-link {
   padding: 0;
- }
+}
 
- .nav-pills .nav-link.active {
+.nav-pills .nav-link.active {
   padding: 0;
   background: none;
- }
+}
 
- .nav-pills .nav-link.active .card{
+.nav-pills .nav-link.active .card {
   background: var(--primary-color);
   color: var(--white-color);
- }
+}
 
- .nav-pills .nav-link.active .card .Ds_icon{
+.nav-pills .nav-link.active .card .Ds_icon {
   background: #0000002c;
- }
+}
 
- .nav-pills .nav-link.active .card .Ds_icon .icons{
+.nav-pills .nav-link.active .card .Ds_icon .icons {
   color: var(--white-color);
   font-size: 24px;
- }
+}
 
- .nav-pills .nav-link.active .card p,
- .nav-pills .nav-link.active .card h1{
+.nav-pills .nav-link.active .card p,
+.nav-pills .nav-link.active .card h1 {
   color: var(--white-color);
- }
+}
 
 
 
@@ -728,12 +728,21 @@ Catalog Page
 
 .catalog_card .card img {
   border-radius: 24px;
+  width: 30px;
+  height: 30px;
+}
+
+.catalog_card .card img.ringtone {
+  border: 2px solid var(--white-color);
 }
 
 .status_icon {
   position: absolute;
   right: 40px;
   top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .catalog_card .card h2 {
@@ -766,7 +775,7 @@ Catalog Page
   gap: 20px;
 }
 
-.catalog_details .card img{
+.catalog_details .card img {
   height: 250px;
 }
 
@@ -774,9 +783,14 @@ Catalog Page
   border-radius: 8px;
 }
 
-.c_top_info h2{
-color: var(--white-color);
-width: 100%;
+.c_top_info h2 {
+  color: var(--white-color);
+  width: 100%;
+}
+
+.draft_page .catalog_card .card img.ringtone,
+.pending_page .catalog_card .card img.ringtone {
+  display: none;
 }
 
 /* =================
@@ -871,6 +885,17 @@ Submission Page
   margin-bottom: 20px;
   color: var(--primary-color);
 }
+
+/* =================
+Support Page
+================= */
+.s_problem_box{
+  padding: 20px;
+  background: var(--white-color);
+  border-radius: 8px;
+  filter: drop-shadow(12px 12px 36px rgba(0, 0, 0, 0.08));
+}
+
 
 
 

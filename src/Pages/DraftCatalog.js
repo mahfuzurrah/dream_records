@@ -4,7 +4,7 @@ import DraftCardList from "../Component/CatalogsCard/DraftCardList";
 
 function DraftCatalog() {
   return (
-    <>
+    <div className="draft_page">
       <div className="section_title">
         <div className="text_area">
           <h2>Draft Catalogs</h2>
@@ -21,7 +21,7 @@ function DraftCatalog() {
         </div>
         <DraftCardList/>
       </div>
-    </>
+    </div>
   );
 }
 
