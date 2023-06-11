@@ -143,34 +143,28 @@ svg.ant-menu-item-icon {
 }
 
 @media screen and (max-width: 991px) {
-
-
-    main.ant-layout-content.body_content.css-dev-only-do-not-override-w8mnev {
+    .body_content {
         margin-left: 0 !important;
-    }
-
-    header.ant-layout-header.fixed-header.collapsed.css-dev-only-do-not-override-w8mnev {
-        margin-left: 0 !important;
-    }
-
-    main.ant-layout-content.body_content.css-dev-only-do-not-override-w8mnev {
         margin-right: 0 !important;
     }
 
-    button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-icon-only {
+    .fixed-header.collapsed {
+        margin-left: 0 !important;
+    }
+
+    .ant-btn.ant-btn-text.ant-btn-icon-only {
         background: var(--primary-color);
         color: var(--white-color);
         z-index: 9999;
         margin-left: 20px;
     }
 
-
-    aside.ant-layout-sider.ant-layout-sider-dark.fixed-sider {
+    .fixed-sider {
         z-index: 100 !important;
         left: -100% !important;
     }
 
-    aside.ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-collapsed.fixed-sider {
+    .fixed-sider.ant-layout-sider-collapsed {
         max-width: 250px !important;
         min-width: 250px !important;
         width: 250px !important;
@@ -178,16 +172,12 @@ svg.ant-menu-item-icon {
         left: 0 !important;
     }
 
-    header.ant-layout-header.fixed-header.css-dev-only-do-not-override-w8mnev {
-        margin-left: 0 !important;
-    }
-
-    header.ant-layout-header.fixed-header.collapsed.css-dev-only-do-not-override-w8mnev {
+    .fixed-header.collapsed {
         margin-left: 250px !important;
     }
 
-    :where(.css-dev-only-do-not-override-w8mnev).ant-menu-inline-collapsed>.ant-menu-item,
-    :where(.css-dev-only-do-not-override-w8mnev).ant-menu-inline-collapsed>.ant-menu-submenu>.ant-menu-submenu-title {
+    .ant-menu-inline-collapsed > .ant-menu-item,
+    .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
         padding-inline: calc(24px - 8px - 4px) !important;
     }
 
@@ -203,14 +193,12 @@ svg.ant-menu-item-icon {
     .connect_wp {
         margin-top: 20px;
     }
-
 }
 
 @media screen and (max-width: 768px) {
     .account_info .name {
         display: none;
     }
-
 }
 
 @media screen and (max-width: 576px) {}
