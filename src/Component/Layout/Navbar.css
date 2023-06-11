@@ -148,11 +148,12 @@ svg.ant-menu-item-icon {
         margin-right: 0 !important;
     }
 
+    header.ant-layout-header.fixed-header.css-w8mnev,
     header.ant-layout-header.fixed-header.css-dev-only-do-not-override-w8mnev {
         margin-left: 0 !important;
     }
 
-    header.ant-layout-header.fixed-header.collapsed.css-dev-only-do-not-override-w8mnev{
+    header.ant-layout-header.fixed-header.collapsed.css-dev-only-do-not-override-w8mnev {
         margin-left: 250px !important;
     }
 
@@ -180,8 +181,8 @@ svg.ant-menu-item-icon {
         margin-left: 250px !important;
     }
 
-    .ant-menu-inline-collapsed > .ant-menu-item,
-    .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
+    .ant-menu-inline-collapsed>.ant-menu-item,
+    .ant-menu-inline-collapsed>.ant-menu-submenu>.ant-menu-submenu-title {
         padding-inline: calc(24px - 8px - 4px) !important;
     }
 
