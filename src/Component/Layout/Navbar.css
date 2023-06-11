@@ -148,15 +148,19 @@ svg.ant-menu-item-icon {
         margin-right: 0 !important;
     }
 
-    .fixed-header.collapsed {
+    header.ant-layout-header.fixed-header.css-dev-only-do-not-override-w8mnev {
         margin-left: 0 !important;
+    }
+
+    header.ant-layout-header.fixed-header.collapsed.css-dev-only-do-not-override-w8mnev{
+        margin-left: 250px !important;
     }
 
     .ant-btn.ant-btn-text.ant-btn-icon-only {
         background: var(--primary-color);
         color: var(--white-color);
         z-index: 9999;
-        margin-left: 20px;
+        margin-left: 5px;
     }
 
     .fixed-sider {
