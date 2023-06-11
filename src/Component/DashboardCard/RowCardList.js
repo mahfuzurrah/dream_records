@@ -34,10 +34,9 @@ const RowCardList = () => {
   return (
     <div className="row">
       {cardData.map((card, index) => (
-        <div className="col-lg-12">
+        <div className="col-lg-12" key={index}>
           <Link to="/draft">
             <RowCard
-              key={index}
               rImg={card.rImg}
               title={card.title}
               name={card.name}

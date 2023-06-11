@@ -5,7 +5,6 @@ import RingtoneImg from "../assets/icons/ringtone.svg";
 import Approve from "../assets/icons/S.svg";
 import { Link } from "react-router-dom";
 
-
 const ApprovedCardList = () => {
   const cardData = [
     {
@@ -41,16 +40,15 @@ const ApprovedCardList = () => {
   return (
     <div className="row">
       {cardData.map((card, index) => (
-        <div className="col-lg-3 col-md-6 col-sm-12">
-        <Link to='/catalog_details'>
-          <Card
-            key={index}
-            sImg={card.sImg}
-            title={card.title}
-            sTitle={card.sTitle}
-            status={card.status}
-            ringtone={card.ringtone}
-          />
+        <div className="col-lg-3 col-md-6 col-sm-12" key={index}>
+          <Link to='/catalog_details'>
+            <Card
+              sImg={card.sImg}
+              title={card.title}
+              sTitle={card.sTitle}
+              status={card.status}
+              ringtone={card.ringtone}
+            />
           </Link>
         </div>
       ))}

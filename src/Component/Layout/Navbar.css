@@ -166,8 +166,8 @@ svg.ant-menu-item-icon {
 
 
     aside.ant-layout-sider.ant-layout-sider-dark.fixed-sider {
-        z-index: 100;
-        left: -100%;
+        z-index: 100 !important;
+        left: -100% !important;
     }
 
     aside.ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-collapsed.fixed-sider {
@@ -175,7 +175,7 @@ svg.ant-menu-item-icon {
         min-width: 250px !important;
         width: 250px !important;
         transition: all 0.3s ease-in-out;
-        left: 0;
+        left: 0 !important;
     }
 
     header.ant-layout-header.fixed-header.css-dev-only-do-not-override-w8mnev {
