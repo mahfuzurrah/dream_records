@@ -14,7 +14,7 @@ function PendingCatalog() {
           <button className="btn">Create Release</button>
         </div>
       </div>
-      <div className="row mt-5 catalog_card_list">
+      <div className="mt-5">
         <div className="table_title">
           <p>Show 4 entries</p>
           <SearchBar />

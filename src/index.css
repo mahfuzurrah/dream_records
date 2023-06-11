@@ -111,6 +111,7 @@ Common CSS
   border: none !important;
 }
 
+textarea,
 input {
   padding: 8px 16px;
   border: 1px solid var(--border-color);
@@ -159,6 +160,15 @@ label {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn_s .icons {
+  color: var(--primary-color);
 }
 
 .btn_s:hover,
@@ -167,6 +177,7 @@ label {
   color: var(--white-color);
   border: 1px solid transparent !important;
 }
+
 
 .btn_group {
   display: flex;
@@ -206,9 +217,10 @@ label {
 
 .search_bar {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  max-width: 400px;
   border: 1px solid var(--border-color);
-  max-width: 280px;
   border-radius: 8px;
 }
 
@@ -219,14 +231,14 @@ label {
 
 .search_bar input {
   width: 100%;
-  padding: 12px 20px;
+  padding: 10px 20px;
   border: none transparent;
   border-radius: 8px 0 0 8px;
 }
 
 .search_bar .submit {
   background: var(--primary-color);
-  padding: 10px 20px;
+  padding: 9px 20px;
   border-radius: 0 8px 8px 0;
   color: var(--white-color);
   font-size: 18px;
@@ -342,6 +354,30 @@ Dashboard
 .draft_header a {
   color: var(--primary-color);
   font-weight: var(--font-medium);
+}
+
+
+/*=====================
+Analytics Page
+ ===================== */
+
+.analytics_area {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  align-items: center;
+}
+
+.analytics_area .btn {
+  padding: 7px 30px
+}
+
+.analytics_page .table_content {
+  padding: 30px;
+  background: var(--white-color);
+  border-radius: 8px;
+  box-shadow: 12px 12px 36px rgba(0, 0, 0, 0.08);
+
 }
 
 /*=====================
@@ -695,12 +731,20 @@ Withdraw page
   color: var(--white-color);
 }
 
+.bank_card.active .icons {
+  color: var(--white-color);
+}
+
 .bank_card.active p {
   color: var(--white-color);
 }
 
 .modal-footer {
   justify-content: flex-start;
+}
+
+.modal-title {
+  font-size: var(--h2-font-size);
 }
 
 .dot_toggle .icons {
@@ -723,7 +767,7 @@ Catalog Page
 
 .catalog_card .card img.cover_img {
   width: 100%;
-  height: 250px;
+  height: auto;
 }
 
 .catalog_card .card img {
@@ -889,15 +933,124 @@ Submission Page
 /* =================
 Support Page
 ================= */
-.s_problem_box{
+.s_problem_box {
   padding: 20px;
   background: var(--white-color);
   border-radius: 8px;
-  filter: drop-shadow(12px 12px 36px rgba(0, 0, 0, 0.08));
+  box-shadow: 12px 12px 36px rgba(0, 0, 0, 0.08);
+}
+
+.s_problem_box .btn {
+  width: 100%;
+}
+
+.text_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.support_file .card {
+  padding: 0;
+  margin-top: 20px;
+  box-shadow: none;
+}
+
+.support_file .card .btn {
+  display: none;
+}
+
+.support_file .img_Up_info img {
+  display: none;
+}
+
+.support_file .img_Up_info span {
+  display: none;
+}
+
+.support_file .img_Up_info span:nth-child(1),
+.support_file .img_Up_info span:nth-child(2) {
+  display: block;
+}
+
+
+.s_problem_box .btn_s {
+  width: 100%;
+}
+
+.connect_wp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--white-color);
+  border-radius: 8px;
+  box-shadow: 12px 12px 36px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  padding: 40px 30px;
+}
+
+.connect_wp .icons {
+  width: 80px;
+  height: 80px;
+  color: #60D669;
+}
+
+.connect_wp p {
+  margin: 20px 0;
+}
+
+
+.s_history {
+  padding: 30px;
+  background: var(--white-color);
+  border-radius: 8px;
+  box-shadow: 12px 12px 36px rgba(0, 0, 0, 0.08);
+}
+
+.reply_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: none;
+  background: transparent;
+}
+
+.s-popup .message-box .box {
+  padding: 12px 20px;
+  background: rgba(120, 62, 253, 0.1);
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.s-popup .message-box h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.s-popup .message-box.author_box .box {
+  background: rgba(255, 204, 64, 0.1);
+}
+
+.s-popup .message-box.author_box {
+  text-align: end;
+}
+
+.s-popup .btn_area {
+  align-items: flex-start;
+}
+
+:where(.css-dev-only-do-not-override-w8mnev).ant-btn {
+  height: auto;
+  display: flex;
+  align-items: center;
 }
 
 
 
+.support_page :where(.css-dev-only-do-not-override-w8mnev).ant-upload-wrapper .ant-upload-select {
+  width: 100%;
+}
 
 
 /*===============================
@@ -909,5 +1062,19 @@ Responcive part
   .input_group {
     display: block;
     padding-right: 30px
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .analytics_area {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .analytics_area {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
 }

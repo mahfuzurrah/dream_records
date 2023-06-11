@@ -41,9 +41,6 @@ const MainLayout = () => {
             <span className="sm-logo">
               <img src={Logo} alt="Logo" />
             </span>
-            {/* <span className="lg-logo">
-              <img src={Bg_logo} alt="Logo" />
-            </span> */}
           </h2>
         </div>
         <Menu
@@ -155,7 +152,7 @@ const MainLayout = () => {
           className={`fixed-header ${collapsed ? "collapsed" : ""}`}
           style={{
             margin: "24px 24px",
-            padding: 24,
+            padding: 0,
             minHeight: 100,
             marginLeft: collapsed ? 80 : 250,
           }}

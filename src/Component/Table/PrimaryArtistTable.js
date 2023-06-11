@@ -1,5 +1,5 @@
 import { Table } from "antd";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const columns = [
   {
@@ -102,7 +102,7 @@ const onChange = (pagination, filters, sorter, extra) => {
   console.log("params", pagination, filters, sorter, extra);
 };
 const PrimaryArtistTable = () => (
-  <Table columns={columns} dataSource={data} onChange={onChange} />
+  <Table columns={columns} dataSource={data} onChange={onChange} scroll={{ x: 991}}/>
 );
 
 export default PrimaryArtistTable;

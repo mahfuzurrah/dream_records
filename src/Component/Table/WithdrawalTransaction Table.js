@@ -48,7 +48,7 @@ const data = [
 ];
 
 const WithdrawalTransactionTable = () => (
-  <Table columns={columns} dataSource={data} bordered />
+  <Table columns={columns} dataSource={data} bordered scroll={{ x: 991}}/>
 );
 
 export default WithdrawalTransactionTable;

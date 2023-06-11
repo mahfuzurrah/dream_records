@@ -48,7 +48,7 @@ const data = [
 ];
 
 const ContentIdRequestTable = () => (
-  <Table columns={columns} dataSource={data} bordered />
+  <Table columns={columns} dataSource={data} bordered scroll={{ x: 768}}/>
 );
 
 export default ContentIdRequestTable;
