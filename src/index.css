@@ -1078,3 +1078,226 @@ Responcive part
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
 }
+
+Header {
+  padding: 0 !important;
+  background: var(--white-color) !important;
+}
+
+.trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+}
+
+.sm-logo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.ant-layout-sider-children {
+  background: var(--white-color);
+}
+
+.ant-menu .ant-menu-item,
+.ant-menu-submenu {
+  color: var(--description-color);
+}
+
+.ant-menu .ant-menu-item-selected {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+aside.ant-layout-sider.ant-layout-sider-dark.fixed-sider {
+  position: fixed;
+  height: 100vh;
+}
+
+header.ant-layout-header.fixed-header.css-dev-only-do-not-override-w8mnev {
+  min-height: 75px !important;
+}
+
+button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-icon-only {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.2s ease-out;
+  margin-top: 0 !important;
+}
+
+.body_content {
+  margin-top: 80px !important;
+  transition: all 0.2s ease-out;
+}
+
+aside li {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+svg.ant-menu-item-icon {
+  font-size: 16px !important;
+}
+
+.ant-btn-icon svg {
+  font-size: 20px !important;
+  transition: all 0.2s ease-out;
+}
+
+.site-layout Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.topbar_item {
+  position: fixed;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar_item .account_info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.topbar_item .account_info img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+}
+
+.topbar_item .icons {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.toggle_account_info {
+  position: relative;
+}
+
+.toggle_account_info .menu_item {
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  padding: 20px 30px;
+  width: 250px;
+  background: var(--white-color);
+  box-shadow: 12px 12px 36px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.toggle_account_info .menu_item p {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.ant-row.ant-form-item-row.css-dev-only-do-not-override-w8mnev {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 991px) {
+
+
+  main.ant-layout-content.body_content.css-dev-only-do-not-override-w8mnev {
+      margin-left: 0 !important;
+  }
+
+  header.ant-layout-header.fixed-header.collapsed.css-dev-only-do-not-override-w8mnev {
+      margin-left: 0 !important;
+  }
+
+  main.ant-layout-content.body_content.css-dev-only-do-not-override-w8mnev {
+      margin-right: 0 !important;
+  }
+
+  button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-icon-only {
+      background: var(--primary-color);
+      color: var(--white-color);
+      z-index: 9999;
+      margin-left: 20px;
+  }
+
+
+  aside.ant-layout-sider.ant-layout-sider-dark.fixed-sider {
+      z-index: 100;
+      left: -100%;
+  }
+
+  aside.ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-collapsed.fixed-sider {
+      max-width: 250px !important;
+      min-width: 250px !important;
+      width: 250px !important;
+      transition: all 0.3s ease-in-out;
+      left: 0;
+  }
+
+  header.ant-layout-header.fixed-header.css-dev-only-do-not-override-w8mnev {
+      margin-left: 0 !important;
+  }
+
+  header.ant-layout-header.fixed-header.collapsed.css-dev-only-do-not-override-w8mnev {
+      margin-left: 250px !important;
+  }
+
+  :where(.css-dev-only-do-not-override-w8mnev).ant-menu-inline-collapsed>.ant-menu-item,
+  :where(.css-dev-only-do-not-override-w8mnev).ant-menu-inline-collapsed>.ant-menu-submenu>.ant-menu-submenu-title {
+      padding-inline: calc(24px - 8px - 4px) !important;
+  }
+
+  .ant-menu-title-content,
+  .ant-menu-submenu-arrow {
+      opacity: 1 !important;
+  }
+
+  .Ds_card .card {
+      margin-top: 20px;
+  }
+
+  .connect_wp {
+      margin-top: 20px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .account_info .name {
+      display: none;
+  }
+
+}
+
+@media screen and (max-width: 576px) {}
+
+@media screen and (max-width: 480px) {
+  .search_container {
+      width: 100%;
+  }
+}
