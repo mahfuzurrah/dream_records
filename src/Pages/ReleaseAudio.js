@@ -52,8 +52,9 @@ const ReleaseAudio = () => {
           <form className="input_group">
             <div>
               <InputField
-                label="Full Name"
+                label="Release Title"
                 value={name}
+                star="*"
                 onChange={handleNameChange}
               />
               <InputField
@@ -67,6 +68,7 @@ const ReleaseAudio = () => {
                 placeholders={[null, null]}
                 onChange={handlePrimaryArtistChange}
                 value={primaryArtist}
+                star="*"
               />
               <IconInputField
                 labels={["Featuring", "Secondary Artist"]}
@@ -83,6 +85,7 @@ const ReleaseAudio = () => {
                   label="Song Writer"
                   value={version_S}
                   onChange={handleversion_SChange}
+                  star="*"
                 />
                 <p className="input_desc">
                   Digital Audio Stores required Full First & Last Name
@@ -95,6 +98,7 @@ const ReleaseAudio = () => {
                   placeholders={[null, null]}
                   onChange={handlePrimaryArtistChange}
                   value={primaryArtist}
+                  star="*"
                 />
                 <p className="input_desc">
                   Digital Audio Stores required Full First & Last Name
@@ -110,6 +114,7 @@ const ReleaseAudio = () => {
                 label="Main Release Date"
                 value={name}
                 onChange={handleNameChange}
+                star="*"
               />
               <IconInputField
                 labels={["Arranger", "Secondary Arranger"]}
@@ -125,28 +130,29 @@ const ReleaseAudio = () => {
                 label="Original Release Date"
                 value={name}
                 onChange={handleNameChange}
+                star="*"
               />
               <div className="mt-3">
                 <label htmlFor="" className="mb-2">
-                  Lyrics Language
+                  Lyrics Language <span className="input_star">*</span>
                 </label>
                 <Selector />
               </div>
               <div className="mt-3">
                 <label htmlFor="" className="mb-2">
-                  Genre
+                  Genre <span className="input_star">*</span>
                 </label>
                 <Selector />
               </div>
               <div className="mt-3">
                 <label htmlFor="" className="mb-2">
-                  Subgenre
+                  Subgenre <span className="input_star">*</span>
                 </label>
                 <Selector />
               </div>
               <div className="mt-3">
                 <label htmlFor="" className="mb-2">
-                  Label Name
+                  Label Name <span className="input_star">*</span>
                 </label>
                 <Selector />
               </div>
@@ -158,7 +164,7 @@ const ReleaseAudio = () => {
             <div>
               <div className="mt-3">
                 <label htmlFor="" className="mb-2">
-                  Format
+                  Format <span className="input_star">*</span>
                 </label>
                 <Selector />
               </div>
@@ -166,11 +172,14 @@ const ReleaseAudio = () => {
                 label="℗ line"
                 value={name}
                 onChange={handleNameChange}
+                star="*"
+                
               />
               <InputField
                 label="© line"
                 value={name}
                 onChange={handleNameChange}
+                star="*"
               />
               <InputField
                 label="UPC/EAN"

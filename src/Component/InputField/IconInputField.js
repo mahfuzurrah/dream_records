@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {BsTrash } from 'react-icons/bs';
 import { AiOutlinePlus } from "react-icons/ai";
 
-const IconInputField = ({ labels, ids, placeholders }) => {
+const IconInputField = ({ labels, ids, placeholders, star }) => {
   const [inputFields, setInputFields] = useState([{ id: 1, value: '' }]);
 
   const handleAddInputField = () => {
@@ -30,7 +30,7 @@ const IconInputField = ({ labels, ids, placeholders }) => {
       {inputFields.map((field, index) => (
         <div className="new-input-field" key={field.id}>
           <div className="input-row">
-            <label htmlFor={ids[index]}>{labels[index]}</label>
+            <label htmlFor={ids[index]}>{labels[index]} <span className='input_star'>{star}</span> </label>
             <input
               id={ids[index]}
               type="text"

@@ -14,10 +14,10 @@ function Topbar() {
 
   return (
     <div className="topbar_item">
-      <div className="account_info">
+      <Link to="/profile" className="account_info">
         <p className="name">Mahfuzur Rahman</p>
         <img src={userImg} alt="" />
-      </div>
+      </Link>
       <div className="toggle_account_info">
         <AiFillSetting className="icons" onClick={toggleMenu} />
         {isOpen && (

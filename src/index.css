@@ -126,6 +126,7 @@ label {
 
 .input_star {
   color: red;
+  font-size: 16px;
 }
 
 .check_box {
@@ -1049,6 +1050,10 @@ Support Page
 
 
 .support_page :where(.css-dev-only-do-not-override-w8mnev).ant-upload-wrapper .ant-upload-select {
+  width: 100%;
+}
+
+.ant-col.ant-col-16.ant-form-item-control.css-dev-only-do-not-override-w8mnev{
   width: 100%;
 }
 

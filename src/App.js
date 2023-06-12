@@ -18,6 +18,7 @@ import WithdrawA from "./Pages/WithdrawA";
 import CatalogDetails from "./Pages/CatalogDetails";
 import SupportCenter from "./Pages/SupportCenter";
 import LabelManage from "./Pages/LabelManage";
+import Profile from "./Pages/Profile";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="catalog_details" element={<CatalogDetails />} />
           <Route path="support_center" element={<SupportCenter />} />
           <Route path="label_manage" element={<LabelManage />} />
+          <Route path="profile" element={<Profile />} />
         </Route>
         </Routes>
       </Router>

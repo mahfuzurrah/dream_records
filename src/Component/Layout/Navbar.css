@@ -143,6 +143,16 @@ svg.ant-menu-item-icon {
     align-items: flex-start;
 }
 
+.password-input-container{
+    position: relative;
+}
+
+.password-toggle-icon{
+    position: absolute;
+    right: 15px;
+    top: 9px;
+}
+
 @media screen and (max-width: 991px) {
     .body_content {
         margin-left: 0 !important;
@@ -199,6 +209,10 @@ svg.ant-menu-item-icon {
 
     .connect_wp {
         margin-top: 20px;
+    }
+
+    button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-icon-only{
+        margin-left: 25px;
     }
 }
 
