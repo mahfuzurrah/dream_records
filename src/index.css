@@ -140,7 +140,7 @@ label {
 }
 
 .btn {
-  padding: 12px 26px;
+  padding: 10px 25px;
   background: var(--primary-color);
   color: var(--white-color);
   transition: all 0.3s ease-in-out;
@@ -152,7 +152,7 @@ label {
 }
 
 .btn_s {
-  padding: 12px 26px;
+  padding: 10px 25px;
   color: var(--primary-color);
   border: 1px solid var(--primary-color) !important;
   transition: all 0.3s ease-in-out;
@@ -161,7 +161,6 @@ label {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   cursor: pointer;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -838,6 +837,17 @@ Catalog Page
   display: none;
 }
 
+.c_top_info .icon-list{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.c_top_info img.ringtone{
+  width: 24px;
+  height: 24px;
+}
+
 /* =================
 Release Information Page
 ================= */
@@ -1053,8 +1063,38 @@ Support Page
   width: 100%;
 }
 
-.ant-col.ant-col-16.ant-form-item-control.css-dev-only-do-not-override-w8mnev{
+.ant-col.ant-col-16.ant-form-item-control.css-dev-only-do-not-override-w8mnev {
   width: 100%;
+}
+
+/*===============================
+Profile Pages
+=============================== */
+.user_profile_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.user_profile_top .user_p_info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+}
+
+span.ant-upload-wrapper.ant-upload-picture-circle-wrapper.css-dev-only-do-not-override-w8mnev {
+  width: 100px;
+  height: 100px;
+}
+
+.ant-upload-list.ant-upload-list-picture-circle {
+  width: 50px;
+}
+
+button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-sm.ant-btn-icon-only.ant-upload-list-item-action{
+  margin-left: 5px;
 }
 
 
@@ -1083,4 +1123,3 @@ Responcive part
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
 }
-

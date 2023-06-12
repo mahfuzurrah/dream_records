@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import { BiArrowToRight, BiArrowToLeft } from "react-icons/bi";
-import { Button, Layout, Menu } from "antd";
+import { Button, Layout } from "antd";
+import { Menu } from 'antd';
 import "../Layout/Navbar.css";
 import Logo from "../assets/img/Logo.svg";
 
@@ -17,7 +18,10 @@ import {
   FaOrcid,
   FaPlusSquare,
   FaRegShareSquare,
-  FaClipboardList
+  FaClipboardList,
+  FaCheckCircle,
+  FaClock,
+  FaFirstdraft,
 } from "react-icons/fa";
 import Topbar from "./Topbar";
 
@@ -70,17 +74,17 @@ const MainLayout = () => {
               children: [
                 {
                   key: "approved", // Unique key
-                  icon: <FaPlusSquare />,
+                  icon: <FaCheckCircle />,
                   label: "Approved",
                 },
                 {
                   key: "draft", // Unique key
-                  icon: <FaOrcid />,
+                  icon: <FaFirstdraft />,
                   label: "Draft",
                 },
                 {
                   key: "pending", // Unique key
-                  icon: <FaRegShareSquare />,
+                  icon: <FaClock />,
                   label: "Pending",
                 },
               ],
@@ -167,7 +171,7 @@ const MainLayout = () => {
               height: 64,
             }}
           />
-        <Topbar/>
+          <Topbar />
         </Header>
         <Content
           className="body_content"

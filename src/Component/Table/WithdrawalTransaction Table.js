@@ -1,4 +1,5 @@
 import { Table } from "antd";
+import { Link } from "react-router-dom";
 const columns = [
   {
     title: "Date",
@@ -24,6 +25,11 @@ const columns = [
       }
       return <span style={{ color }}>{status}</span>;
     },
+  },
+  {
+    title: "Action",
+    // dataIndex: "AId",
+    render: () => <Link to="">Download</Link>,
   },
 ];
 const data = [
