@@ -61,7 +61,7 @@ function Analytics() {
             placeholder="All Labels"
             value={selectedOptionL}
           />
-          <button className="btn">Filter</button>
+          <button className="btn">Submit</button>
         </div>
         <div className="table_content">
           <h2 className="mb-3">User Analytics History</h2>
