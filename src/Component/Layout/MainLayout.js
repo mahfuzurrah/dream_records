@@ -22,6 +22,7 @@ import {
   FaCheckCircle,
   FaClock,
   FaFirstdraft,
+  FaPhoneVolume
 } from "react-icons/fa";
 import Topbar from "./Topbar";
 
@@ -86,6 +87,11 @@ const MainLayout = () => {
                   key: "pending", // Unique key
                   icon: <FaClock />,
                   label: "Pending",
+                },
+                {
+                  key: "caller_tune", // Unique key
+                  icon: <FaPhoneVolume />,
+                  label: "Caller Tune",
                 },
               ],
             },

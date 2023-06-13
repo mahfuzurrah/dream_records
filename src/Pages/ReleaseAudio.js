@@ -47,7 +47,7 @@ const ReleaseAudio = () => {
           </button>
         </div>
       </div>
-      <div className="row">
+      <div className="row release-row">
         <div className="col-lg-3 mt-4">
           <form className="input_group">
             <div>

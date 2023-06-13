@@ -19,6 +19,7 @@ import CatalogDetails from "./Pages/CatalogDetails";
 import SupportCenter from "./Pages/SupportCenter";
 import LabelManage from "./Pages/LabelManage";
 import Profile from "./Pages/Profile";
+import CallerTune from "./Pages/CallerTune";
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
             <Route path="support_center" element={<SupportCenter />} />
             <Route path="label_manage" element={<LabelManage />} />
             <Route path="profile" element={<Profile />} />
+            <Route path="caller_tune" element={<CallerTune />} />
           </Route>
         </Routes>
       </Router>

@@ -815,6 +815,7 @@ Catalog Page
   padding: 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: flex-start;
   gap: 20px;
 }
@@ -1097,6 +1098,38 @@ button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-sm.ant-b
   margin-left: 5px;
 }
 
+.c_tune_table_title,
+.sim_icons{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.table_img{
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+/*===============================
+Label Manage
+=============================== */
+
+.label_manage .btn_area .btn.add_label_btn{
+  width: min-content;
+}
+
+
+
+
 
 /*===============================
 Responcive part
@@ -1107,6 +1140,14 @@ Responcive part
   .input_group {
     display: block;
     padding-right: 30px
+  }
+
+  .catalog_details{
+    height: auto; 
+  }
+
+  .catalog_details .card img{
+    height: 100%;
   }
 }
 
