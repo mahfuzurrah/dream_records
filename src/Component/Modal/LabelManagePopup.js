@@ -52,7 +52,6 @@ function LabelManagePopup() {
             />
             <TextField
                 label="Messages"
-                star="*"
                 type="text"
                 value={comment}
                 onChange={handleCommentChange}
