@@ -198,7 +198,7 @@ label {
 
 .btn_area .btn,
 .btn_area .btn_s {
-  width: 100% !important;
+  width: 100%;
 }
 
 .section_title {
@@ -838,13 +838,13 @@ Catalog Page
   display: none;
 }
 
-.c_top_info .icon-list{
+.c_top_info .icon-list {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.c_top_info img.ringtone{
+.c_top_info img.ringtone {
   width: 24px;
   height: 24px;
 }
@@ -852,6 +852,7 @@ Catalog Page
 /* =================
 Release Information Page
 ================= */
+
 .input_desc {
   font-size: var(--small-font-size);
   margin-top: 8px;
@@ -864,27 +865,28 @@ Release Information Page
 
 .delete-icon {
   position: absolute;
-  top: 42px;
-  right: -25px;
+  top: 8px;
+  right: 0;
+  cursor: pointer;
 }
 
 .icon-input-field {
   position: absolute;
-  top: 38px;
-  right: -35px;
+  top: 0;
+  right: 0;
   width: 24px;
   height: 24px;
-  background: var(--primary-color);
+  background: #00000017;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  color: var(--white-color) !important;
+  color: var(--title-color) !important;
   cursor: pointer;
 }
 
 .add-icon {
-  color: var(--white-color) !important;
+  color: var(--title-color) !important;
 }
 
 .input-row label {
@@ -1094,18 +1096,18 @@ span.ant-upload-wrapper.ant-upload-picture-circle-wrapper.css-dev-only-do-not-ov
   width: 50px;
 }
 
-button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-sm.ant-btn-icon-only.ant-upload-list-item-action{
+button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-sm.ant-btn-icon-only.ant-upload-list-item-action {
   margin-left: 5px;
 }
 
 .c_tune_table_title,
-.sim_icons{
+.sim_icons {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.table_img{
+.table_img {
   width: 35px;
   height: 35px;
   border-radius: 4px;
@@ -1114,22 +1116,17 @@ button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-sm.ant-b
 
 
 
-
-
-
-
-
 /*===============================
 Label Manage
 =============================== */
 
-.label_manage .btn_area .btn.add_label_btn{
-  width: min-content;
+.label_manage .btn_area .btn.add_label_btn {
+  width: 150px !important;
 }
 
-
-
-
+.add_label .input_group .mt-3 {
+  width: 100%;
+}
 
 /*===============================
 Responcive part
@@ -1142,12 +1139,18 @@ Responcive part
     padding-right: 30px
   }
 
-  .catalog_details{
-    height: auto; 
+  .catalog_details {
+    height: auto;
   }
 
-  .catalog_details .card img{
+  .catalog_details .card img {
     height: 100%;
+  }
+
+  .delete-icon,
+  .icon-input-field {
+    top: 45px;
+    right: -35px;
   }
 }
 

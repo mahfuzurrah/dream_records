@@ -48,7 +48,7 @@ const ReleaseAudio = () => {
         </div>
       </div>
       <div className="row release-row">
-        <div className="col-lg-3 mt-4">
+        <div className="col-xl-3 col-lg-6 mt-4">
           <form className="input_group">
             <div>
               <InputField
@@ -107,7 +107,7 @@ const ReleaseAudio = () => {
             </div>
           </form>
         </div>
-        <div className="col-lg-3 mt-4">
+        <div className="col-xl-3 col-lg-6 mt-4">
           <form className="input_group">
             <div>
               <InputField
@@ -159,7 +159,7 @@ const ReleaseAudio = () => {
             </div>
           </form>
         </div>
-        <div className="col-lg-3 mt-4">
+        <div className="col-xl-3 col-lg-6 mt-4">
           <form className="input_group">
             <div>
               <div className="mt-3">
@@ -205,7 +205,7 @@ const ReleaseAudio = () => {
             </div>
           </form>
         </div>
-        <div className="col-lg-3 mt-5">
+        <div className="col-xl-3 col-lg-6 mt-5">
           <div><ImageUploadForm/></div>
           <div className="mt-4"><AudioUploadForm/></div>
         </div>
