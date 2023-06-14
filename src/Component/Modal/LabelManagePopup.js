@@ -39,12 +39,14 @@ function LabelManagePopup() {
         <Modal.Body>
           <div className="input_group">
             <InputField
-              label="Full Name"
+              label="Title"
+              star="*"
               value={title}
               onChange={handleTitleChange}
             />
             <InputField
               label="Youtube URL"
+              star="*"
               value={ytLink}
               onChange={handleYtChange}
             />
