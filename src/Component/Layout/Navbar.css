@@ -117,8 +117,20 @@ svg.ant-menu-item-icon {
     font-size: 24px;
 }
 
+.toggle_not_info,
 .toggle_account_info {
     position: relative;
+}
+
+.toggle_not_info .menu_item{
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    width: 380px;
+    padding: 10px 10px;
+    background: var(--white-color);
+    box-shadow: 12px 12px 36px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
 }
 
 .toggle_account_info .menu_item {
@@ -131,6 +143,22 @@ svg.ant-menu-item-icon {
     box-shadow: 12px 12px 36px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
 }
+
+.news {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: linear-gradient(180deg, #453E71 0%, #3E6B97 117.5%), #3E4B75;
+    border-radius: 8px;
+    color: var(--white-color);
+    gap: 20px;
+  }
+  
+  .news .icons,
+  .news p {
+    color: var(--white-color);
+  }
 
 .toggle_account_info .menu_item p {
     margin: 10px 0;

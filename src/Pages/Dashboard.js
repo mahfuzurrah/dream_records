@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaBullhorn, FaTimes } from "react-icons/fa";
 import DashboardCardList from "../Component/DashboardCard/DashboardCardList";
 import ApprovedCardList from "../Component/CatalogsCard/ApprovedCardList";
 import RowCardList from "../Component/DashboardCard/RowCardList";
@@ -8,11 +7,6 @@ import RowCardList from "../Component/DashboardCard/RowCardList";
 const Dashboard = () => {
   return (
     <>
-      <div className="news mb-5">
-        <FaBullhorn className="icons" />
-        <p>Saturday & Sunday is our off day</p>
-        <FaTimes className="icons" />
-      </div>
       <div>
         <DashboardCardList />
       </div>

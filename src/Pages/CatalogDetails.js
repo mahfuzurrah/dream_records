@@ -3,6 +3,7 @@ import Ct_Img from "../Component/assets/img/cover.jpg";
 import CatalogsInfo from "../Component/CatalogsInfo/CatalogsInfo";
 import RingtoneImg from "../Component/assets/icons/ringtone.svg";
 import Approve from "../Component/assets/icons/S.svg";
+import CallerTunePopup from "../Component/Modal/CallerTunePopup";
 
 function CatalogDetails() {
   return (
@@ -23,7 +24,7 @@ function CatalogDetails() {
       <div className="container mt-5">
         <CatalogsInfo />
         <div className="btn_group mt-4">
-          <button className="btn">Apply For Ringtone</button>
+          <CallerTunePopup/>
           <button className="btn_s">Edit</button>
         </div>
       </div>

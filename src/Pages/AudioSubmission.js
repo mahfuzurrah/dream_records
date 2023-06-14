@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import CatalogsInfo from "../Component/CatalogsInfo/CatalogsInfo";
 import { BiMusic } from "react-icons/bi";
 import Cover_img from '../Component/assets/img/cover.jpg'
+import SubmitConfirmationPopup from "../Component/Modal/SubmitConfirmationPopup";
 
 const AudioSubmission = () => {
   return (
@@ -13,8 +14,8 @@ const AudioSubmission = () => {
           <p>Release your submission</p>
         </div>
         <div className="btn_area">
-        <Link to="/"><button className="btn">Submit My Release</button></Link>
-        <Link to="/"><button className="btn_s">Edit</button></Link>
+          <SubmitConfirmationPopup />
+          <Link to="/release-audio" className="btn_s">Edit</Link>
         </div>
       </div>
       <div className="row mt-5">

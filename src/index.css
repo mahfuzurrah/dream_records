@@ -119,6 +119,10 @@ input {
   width: 100%;
 }
 
+input[type="checkbox"] {
+  width: 16px;
+}
+
 label {
   font-size: 14px;
   font-weight: var(--font-medium);
@@ -196,10 +200,11 @@ label {
   width: 100%;
 }
 
-.btn_area .btn,
-.btn_area .btn_s {
+.modal-footer .btn_area .btn,
+.modal-footer .btn_area .btn_s {
   width: 100%;
 }
+
 
 .section_title {
   display: flex;
@@ -262,22 +267,6 @@ label {
 /*=====================
 Dashboard
  ===================== */
-.news {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
-  background: linear-gradient(180deg, #453E71 0%, #3E6B97 117.5%), #3E4B75;
-  border-radius: 8px;
-  color: var(--white-color);
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.news .icons,
-.news p {
-  color: var(--white-color);
-}
 
 .Ds_card .card {
   display: flex;
@@ -756,6 +745,8 @@ Withdraw page
   cursor: pointer;
 }
 
+
+
 /*===============================
 Catalog Page
 =============================== */
@@ -847,6 +838,30 @@ Catalog Page
 .c_top_info img.ringtone {
   width: 24px;
   height: 24px;
+}
+
+.cTune .item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.cTune .item .card {
+  border-radius: 24px;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+
+.cTune .item .card.active {
+  border: 2px solid var(--primary-color) !important;
+}
+
+.cTune .item .card img {
+  width: 24px;
+  height: 24px;
+  margin: auto;
 }
 
 /* =================
