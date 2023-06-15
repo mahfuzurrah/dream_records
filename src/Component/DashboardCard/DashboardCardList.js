@@ -11,12 +11,12 @@ const DashboardCardList = () => {
     },
     {
       icon: <MdAlarm className="icons" />,
-      title: "Total Created Audio",
+      title: "Total Pending Audio",
       bgTitle: "5",
     },
     {
       icon: <MdDone className="icons" />,
-      title: "Total Created Audio",
+      title: "Total Pending Audio",
       bgTitle: "5",
     },
   ];

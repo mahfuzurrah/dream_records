@@ -9,24 +9,28 @@ const RowCardList = () => {
       rImg: Approve,
       title: "Song Title",
       name: "Mahfuzur Rahman",
+      dateTitle: 'Release Date',
       date: "27-10-2001",
     },
     {
       rImg: Approve,
       title: "Song Title",
       name: "Mahfuzur Rahman",
+      dateTitle: 'Release Date',
       date: "27-10-2001",
     },
     {
       rImg: Approve,
       title: "Song Title",
       name: "Mahfuzur Rahman",
+      dateTitle: 'Release Date',
       date: "27-10-2001",
     },
     {
       rImg: Approve,
       title: "Song Title",
       name: "Mahfuzur Rahman",
+      dateTitle: 'Release Date',
       date: "27-10-2001",
     },
   ];
@@ -40,6 +44,7 @@ const RowCardList = () => {
               rImg={card.rImg}
               title={card.title}
               name={card.name}
+              dateTitle= {card.dateTitle}
               date={card.date}
             />
           </Link>

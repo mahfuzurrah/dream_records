@@ -1169,10 +1169,16 @@ Responcive part
   }
 }
 
-
 @media screen and (max-width: 768px) {
   .analytics_area {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .toggle_not_info .menu_item{
+    right: -60px;
+    transform: translateX(60px)
   }
 }
 
@@ -1180,5 +1186,11 @@ Responcive part
 @media screen and (max-width: 480px) {
   .analytics_area {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+
+  .toggle_not_info .menu_item{
+    right: -60px;
+    transform: translateX(60px);
+    width: 300px;
   }
 }

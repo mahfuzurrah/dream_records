@@ -1,6 +1,6 @@
 import React from "react";
 
-const RowCard = ({ rImg, title, name, date }) => {
+const RowCard = ({ rImg, title, name, date, dateTitle }) => {
   return (
     <div className="Ds_row_card">
       <div className="card">
@@ -12,7 +12,7 @@ const RowCard = ({ rImg, title, name, date }) => {
           </div>
         </div>
         <div>
-          <span>{title}</span>
+          <span>{dateTitle}</span>
           <p className="date">{date}</p>
         </div>
       </div>

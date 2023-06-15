@@ -29,7 +29,7 @@ const Dashboard = () => {
         <div className="col-lg-6 col-md-6 col-sm-12">
           <div className="draft_list">
             <div className="draft_header">
-              <h2>Correction Requested</h2>
+              <h2>Latest Pending</h2>
               <Link to="/pending">See More</Link>
             </div>
             <div className="ps-3 pe-3 mt-1">

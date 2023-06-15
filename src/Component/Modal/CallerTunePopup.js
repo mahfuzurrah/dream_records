@@ -8,17 +8,23 @@ import TermsAndConditionsCheckbox from "../Checkbox/TermsAndConditionsCheckbox";
 
 function CallerTunePopup() {
   const [show, setShow] = useState(false);
-  const [selectedCard, setSelectedCard] = useState(null);
+  const [selectedCards, setSelectedCards] = useState([]);
 
   const handleClose = () => {
     setShow(false);
-    setSelectedCard(null);
+    setSelectedCards([]);
   };
 
   const handleShow = () => setShow(true);
 
   const handleCardClick = (cardName) => {
-    setSelectedCard(cardName);
+    const isSelected = selectedCards.includes(cardName);
+
+    if (isSelected) {
+      setSelectedCards(selectedCards.filter((card) => card !== cardName));
+    } else {
+      setSelectedCards([...selectedCards, cardName]);
+    }
   };
 
   return (
@@ -33,16 +39,16 @@ function CallerTunePopup() {
         <Modal.Body>
           <div className="cTune">
             <div className="items">
-              <h2>Select Method</h2>
+              <h2>Select CRBT</h2>
               <div className="item">
                 <div
-                  className={`card ${selectedCard === 'Airtel' ? 'active' : ''}`}
+                  className={`card ${selectedCards.includes('Airtel') ? 'active' : ''}`}
                   onClick={() => handleCardClick('Airtel')}
                 >
                   <img src={AirtelLogo} alt="" />
                 </div>
                 <div
-                  className={`card ${selectedCard === 'Jio' ? 'active' : ''}`}
+                  className={`card ${selectedCards.includes('Jio') ? 'active' : ''}`}
                   onClick={() => handleCardClick('Jio')}
                 >
                   <img src={jioLogo} alt="" />
@@ -50,10 +56,9 @@ function CallerTunePopup() {
               </div>
             </div>
             <div className="items mt-4">
-              <h2>Coming Soon Method</h2>
+              <h2>Coming Soon CRBT</h2>
               <div className="item">
-                <div
-                  className="card">
+                <div className="card">
                   <img src={VodafoneLogo} alt="" />
                 </div>
               </div>

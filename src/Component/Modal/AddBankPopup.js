@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import InputField from "../InputField/InputField";
-import Selector from "../Selector/Selector";
 
 function Example() {
   const [show, setShow] = useState(false);
@@ -9,10 +8,15 @@ function Example() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [bname, setBName] = useState("");
   const [name, setName] = useState("");
   const [aNumber, setAnumber] = useState("");
   const [reaNumber, setReAnumber] = useState("");
   const [ifsc, setIFSC] = useState("");
+
+  const handleBNameChange = (event) => {
+    setBName(event.target.value);
+  };
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -30,18 +34,6 @@ function Example() {
     setIFSC(event.target.value);
   };
 
-  const options = [
-    { value: "A Bank", label: "A Bank" },
-    { value: "B Bank", label: "B Bank" },
-    { value: "C Bank", label: "C Bank" },
-  ];
-
-  const [selectedOption, setSelectedOption] = useState(null);
-
-  const handleChange = (selectedOption) => {
-    setSelectedOption(selectedOption);
-    console.log(`Selected: ${selectedOption.label}`);
-  };
 
   return (
     <>
@@ -53,17 +45,13 @@ function Example() {
           <Modal.Title>Enter bank details</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div>
-            <label className="mb-2">
-              Bank Name <span className="input_star">*</span>
-            </label>
-            <Selector
-              options={options}
-              onChange={handleChange}
-              placeholder="This Year"
-              value={selectedOption}
-            />
-          </div>
+          <InputField
+            type="text"
+            label="Bank Name"
+            value={bname}
+            star="*"
+            onChange={handleBNameChange}
+          />
           <InputField
             type="text"
             label="Name On Bank Account"

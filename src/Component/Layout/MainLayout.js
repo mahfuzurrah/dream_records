@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import { BiArrowToRight, BiArrowToLeft } from "react-icons/bi";
+import { BsMusicNote, BsBank2 } from "react-icons/bs";
 import { Button, Layout } from "antd";
 import { Menu } from 'antd';
 import "../Layout/Navbar.css";
@@ -17,7 +18,7 @@ import {
   FaHeadset,
   FaOrcid,
   FaPlusSquare,
-  FaRegShareSquare,
+  // FaRegShareSquare,
   FaClipboardList,
   FaCheckCircle,
   FaClock,
@@ -127,7 +128,7 @@ const MainLayout = () => {
                 },
                 {
                   key: "artist_channel_request", // Unique key
-                  icon: <FaRegShareSquare />,
+                  icon: <BsMusicNote />,
                   label: "Artist Channel Request",
                 },
               ],
@@ -144,7 +145,7 @@ const MainLayout = () => {
                 },
                 {
                   key: "withdraw", // Unique key
-                  icon: <FaOrcid />,
+                  icon: <BsBank2 />,
                   label: "Withdraw",
                 },
               ],
