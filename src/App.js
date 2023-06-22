@@ -20,12 +20,14 @@ import SupportCenter from "./Pages/SupportCenter";
 import LabelManage from "./Pages/LabelManage";
 import Profile from "./Pages/Profile";
 import CallerTune from "./Pages/CallerTune";
+import LogIn from "./Pages/LogIn";
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
+        <Route path="/" element={<LogIn />} />
           <Route path="/" element={<MainLayout />}>
             <Route path="/" element={<Dashboard />} />
             <Route path="release-audio" element={<ReleaseAudio />} />

@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from "../Component/SearchBar/SearchBar";
 import ApprovedCardList from "../Component/CatalogsCard/ApprovedCardList";
+import PaginationList from "../Component/Pagination/PaginationList";
 
 function ApprovedCatalog() {
   return (
@@ -14,12 +15,15 @@ function ApprovedCatalog() {
           <button className="btn">Create Release</button>
         </div>
       </div>
-      <div className="mt-5 ">
+      <div className="mt-5">
         <div className="table_title">
           <p>Show 4 entries</p>
           <SearchBar />
         </div>
         <ApprovedCardList />
+        <div className="mt-5">
+          <PaginationList/>
+        </div>
       </div>
     </>
   );
