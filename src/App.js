@@ -27,9 +27,9 @@ function App() {
     <>
       <Router>
         <Routes>
-        <Route path="/" element={<LogIn />} />
+          <Route path="/" element={<LogIn />} />
           <Route path="/" element={<MainLayout />}>
-            <Route path="/" element={<Dashboard />} />
+            <Route path="dashboard" element={<Dashboard />} />
             <Route path="release-audio" element={<ReleaseAudio />} />
             <Route path="approved" element={<ApprovedCatalog />} />
             <Route path="draft" element={<DraftCatalog />} />

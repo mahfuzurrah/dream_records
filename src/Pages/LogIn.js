@@ -1,77 +1,48 @@
-import { Button, Checkbox, Form, Input } from "antd";
-const onFinish = (values) => {
-  console.log("Success:", values);
-};
-const onFinishFailed = (errorInfo) => {
-  console.log("Failed:", errorInfo);
-};
-const LogIn = () => (
-  <Form className="logIn_from"
-    name="basic"
-    labelCol={{
-      span: 8,
-    }}
-    wrapperCol={{
-      span: 16,
-    }}
-    style={{
-      maxWidth: 600,
-    }}
-    initialValues={{
-      remember: true,
-    }}
-    onFinish={onFinish}
-    onFinishFailed={onFinishFailed}
-    autoComplete="off"
-  >
-    <Form.Item
-      label="Username"
-      name="username"
-      rules={[
-        {
-          required: true,
-          message: "Please input your username!",
-        },
-      ]}
-    >
-      <Input />
-    </Form.Item>
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import InputField from "../Component/InputField/InputField";
+import logIn_logo from "../Component/assets/img/Logo.svg";
 
-    <Form.Item
-      label="Password"
-      name="password"
-      rules={[
-        {
-          required: true,
-          message: "Please input your password!",
-        },
-      ]}
-    >
-      <Input.Password />
-    </Form.Item>
+function LogIn() {
+  const [name, setName] = useState("");
+  const [pass, setPass] = useState("");
 
-    <Form.Item
-      name="remember"
-      valuePropName="checked"
-      wrapperCol={{
-        offset: 8,
-        span: 16,
-      }}
-    >
-      <Checkbox>Remember me</Checkbox>
-    </Form.Item>
-
-    <Form.Item
-      wrapperCol={{
-        offset: 8,
-        span: 16,
-      }}
-    >
-      <Button type="primary" htmlType="submit">
-        Submit
-      </Button>
-    </Form.Item>
-  </Form>
-);
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+  const handlepassChange = (event) => {
+    setPass(event.target.value);
+  };
+  return (
+    <div className="logIn_from">
+      <div className="logIn_logo mb-5">
+        <img src={logIn_logo} alt="" />
+        <h1>Dream Record</h1>
+      </div>
+      <form action="" className="input_form">
+        <InputField
+          label="User Name"
+          value={name}
+          star="*"
+          onChange={handleNameChange}
+        />
+        <InputField
+          label="Password"
+          value={pass}
+          star="*"
+          onChange={handlepassChange}
+        />
+        <Link to="#" className="mt-3">
+          Forget your password?
+        </Link>
+        <Link to="/dashboard" className="mt-3">
+          <button className="btn">Log In</button>
+        </Link>
+        <Link to="" className="mt-3 text-center">Create an account
+        </Link>
+      </form>
+    </div>
+  );
+}
 
 export default LogIn;

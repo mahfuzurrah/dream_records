@@ -44,7 +44,7 @@ function Topbar() {
         {isOpen && (
           <div className="menu_item" ref={menuRef}>
             <ChangePasswordPopup />
-            <Link onClick={handleSignOut}>
+            <Link to="/" onClick={handleSignOut}>
               <p>Sign Out</p>
             </Link>
           </div>

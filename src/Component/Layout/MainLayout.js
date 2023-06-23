@@ -60,7 +60,7 @@ const MainLayout = () => {
           }}
           items={[
             {
-              key: "/", // Unique key
+              key: "dashboard", // Unique key
               icon: <FaHome />,
               label: "Dashboard",
             },

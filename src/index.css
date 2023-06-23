@@ -1148,8 +1148,42 @@ LogIn part
 =============================== */
 
 .logIn_from{
-  margin: auto;
-  height: 100vh;
+  width: 420px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.logIn_logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.input_form{
+  display: flex;
+  flex-direction: column;
+}
+
+.logIn_logo img{
+  width: 80px;
+}
+
+.logIn_logo h1{
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.logIn_from .btn{
+  width: 100%;
+}
+
+.logIn_from a{
+  text-decoration: underline !important;
+  color: var(--description-color);
 }
 
 
@@ -1190,6 +1224,11 @@ Responcive part
     right: -60px;
     transform: translateX(60px)
   }
+
+  .logIn_from{
+    width: 100%;
+    padding: 0 30px;
+  }
 }
 
 
@@ -1202,5 +1241,9 @@ Responcive part
     right: -60px;
     transform: translateX(60px);
     width: 300px;
+  }
+
+  .logIn_from h1{
+    font-size: 30px;
   }
 }
