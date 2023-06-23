@@ -17,7 +17,7 @@ function LogIn() {
     <div className="logIn_from">
       <div className="logIn_logo mb-5">
         <img src={logIn_logo} alt="" />
-        <h1>Dream Record</h1>
+        <h1>Dream Records</h1>
       </div>
       <form action="" className="input_form">
         <InputField
@@ -37,8 +37,6 @@ function LogIn() {
         </Link>
         <Link to="/dashboard" className="mt-3">
           <button className="btn">Log In</button>
-        </Link>
-        <Link to="" className="mt-3 text-center">Create an account
         </Link>
       </form>
     </div>
