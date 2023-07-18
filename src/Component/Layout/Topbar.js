@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState} from "react";
 import userImg from "../assets/img/user.png";
 import { AiFillSetting } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -7,25 +7,25 @@ import Notification from "../Notification/Notification";
 
 function Topbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef(null);
+  // const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleOutsideClick = (e) => {
-    if (menuRef.current && !menuRef.current.contains(e.target)) {
-      setIsOpen(false);
-    }
-  };
+  // const handleOutsideClick = (e) => {
+  //   if (menuRef.current && !menuRef.current.contains(e.target)) {
+  //     setIsOpen(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    document.addEventListener("mousedown", handleOutsideClick);
+  // useEffect(() => {
+  //   document.addEventListener("mousedown", handleOutsideClick);
 
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleOutsideClick);
+  //   };
+  // }, []);
 
   const handleSignOut = () => {
     setIsOpen(false);
@@ -42,7 +42,7 @@ function Topbar() {
       <div className="toggle_account_info">
         <AiFillSetting className="icons" onClick={toggleMenu} />
         {isOpen && (
-          <div className="menu_item" ref={menuRef}>
+          <div className="menu_item">
             <ChangePasswordPopup />
             <Link to="/" onClick={handleSignOut}>
               <p>Sign Out</p>
