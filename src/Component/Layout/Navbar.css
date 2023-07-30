@@ -1,7 +1,12 @@
-Header {
+/* General styles for the Header */
+.Header {
     padding: 0 !important;
+    /* background: var(--white-color) !important;
+    border-bottom: 1px solid var(--border-color); */
+}
+
+header.ant-layout-header.fixed-header.css-dev-only-do-not-override-w8mnev{
     background: var(--white-color) !important;
-    border-bottom: 1px solid var(--border-color)
 }
 
 .trigger {
@@ -17,8 +22,12 @@ Header {
 }
 
 .logo {
-    height: 32px;
-    margin: 16px;
+    width: 210px;
+}
+
+.logo img {
+    width: 80px;
+    margin: auto;
 }
 
 .sm-logo {
@@ -32,33 +41,23 @@ Header {
     padding: 15px;
 }
 
-ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.css-dev-only-do-not-override-w8mnev {
-    margin-top: 20px;
-}
-
-.ant-menu-item,
-.ant-menu-submenu-title {
-    padding-left: 10px !important;
-}
-
 .ant-menu .ant-menu-item,
 .ant-menu-submenu {
     color: var(--description-color);
 }
 
-ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.css-dev-only-do-not-override-w8mnev{
+ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.css-dev-only-do-not-override-w8mnev {
     border: none;
+    margin-top: 30px;
+    height: 100%;
 }
 
-.ant-menu .ant-menu-item-selected {
-    background: var(--primary-color);
-    color: var(--white-color);
-}
 
 aside.ant-layout-sider.ant-layout-sider-dark.fixed-sider {
     position: fixed;
     height: 100vh;
     top: 75px;
+    min-width: 260px !important;
 }
 
 header.ant-layout-header.fixed-header.css-w8mnev,
@@ -72,11 +71,6 @@ button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-icon-onl
     justify-content: center;
     display: none;
 }
-
-button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-icon-only {
-    display: none;
-}
-
 
 .fixed-header {
     position: fixed;
@@ -105,12 +99,12 @@ svg.ant-menu-item-icon {
     transition: all 0.2s ease-out;
 }
 
-
+/* Site Layout Header */
 .site-layout Header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
 }
 
 .topbar_item {
@@ -214,33 +208,46 @@ svg.ant-menu-item-icon {
 }
 
 /* nav_list_item */
+li.ant-menu-item,
+li.ant-menu-item:hover {
+    height: 45px !important;
+}
+
+.ant-menu-item,
+.ant-menu-submenu-title {
+    padding: 0 10px !important;
+}
+
+.ant-menu .ant-menu-item-selected {
+    background: #4576fc28;
+    color: var(--title-color) !important;
+}
 
 li.release-audio {
-    background: linear-gradient(140deg, #3497FC 0%, rgba(57, 63, 140, 0.17) 100%), linear-gradient(140deg, #65E3DF 0%, #8266F6 100%), #4575FC;
+    background: linear-gradient(140deg, #3497FC 0%, rgba(57, 63, 140, 0.17) 100%), linear-gradient(140deg, #65E3DF 0%, #8266F6 100%), #4575FC !important;
     color: var(--white-color) !important;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
     padding-left: 0 !important;
+    border-radius: 16px !important;
 }
 
-li.dashboard{
+li.dashboard {
     margin-top: 30px !important;
 }
 
 li.release-audio:hover {
-    background: linear-gradient(140deg, #3497FC 0%, rgba(57, 63, 140, 0.17) 100%), linear-gradient(140deg, #65E3DF 0%, #8266F6 100%), #4575FC;
+    background: linear-gradient(140deg, #3497FC 0%, rgba(57, 63, 140, 0.17) 100%), linear-gradient(140deg, #65E3DF 0%, #8266F6 100%), #4575FC !important;
     color: var(--white-color) !important;
-
 }
 
 li.release-audio .ant-menu-title-content {
     flex: inherit !important;
 }
 
-button.ant-btn.css-w8mnev.ant-btn-text.ant-btn-icon-only{
+button.ant-btn.css-w8mnev.ant-btn-text.ant-btn-icon-only {
     display: none;
 }
 
@@ -280,6 +287,14 @@ button.ant-btn.css-w8mnev.ant-btn-text.ant-btn-icon-only{
         justify-content: center;
         color: var(--white-color);
     }
+
+    button.ant-btn.css-w8mnev.ant-btn-text.ant-btn-icon-only {
+        display: block;
+    }
+
+    .logo{
+        width: auto;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -287,7 +302,6 @@ button.ant-btn.css-w8mnev.ant-btn-text.ant-btn-icon-only{
         display: none;
     }
 }
-
 
 @media screen and (max-width: 480px) {
     .search_container {
