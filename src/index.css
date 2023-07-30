@@ -2,7 +2,7 @@
 
 :root {
   /* COLOR */
-  --primary-color: #783efd;
+  --primary-color: #4575FC;
   --secondary-color: #ffcc40;
   --title-color: #0d1118;
   --description-color: #8a8b9f;
@@ -101,6 +101,10 @@ img {
 .icons {
   font-size: 18px;
   color: var(--description-color);
+}
+
+.body_content {
+  margin-left: 250px !important;
 }
 
 /*===================== 
@@ -1147,7 +1151,7 @@ Label Manage
 LogIn part
 =============================== */
 
-.logIn_from{
+.logIn_from {
   width: 420px;
   position: absolute;
   top: 30%;
@@ -1155,7 +1159,7 @@ LogIn part
   transform: translate(-50%, -30%);
 }
 
-.logIn_logo{
+.logIn_logo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1163,25 +1167,25 @@ LogIn part
   gap: 30px;
 }
 
-.input_form{
+.input_form {
   display: flex;
   flex-direction: column;
 }
 
-.logIn_logo img{
+.logIn_logo img {
   width: 80px;
 }
 
-.logIn_logo h1{
+.logIn_logo h1 {
   font-size: 36px;
   font-weight: 700;
 }
 
-.logIn_from .btn{
+.logIn_from .btn {
   width: 100%;
 }
 
-.logIn_from a{
+.logIn_from a {
   text-decoration: underline !important;
   color: var(--description-color);
 }
@@ -1211,6 +1215,10 @@ Responcive part
     top: 45px;
     right: -35px;
   }
+
+  .body_content {
+    margin-left: 0 !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1220,12 +1228,12 @@ Responcive part
 }
 
 @media screen and (max-width: 576px) {
-  .toggle_not_info .menu_item{
+  .toggle_not_info .menu_item {
     right: -60px;
     transform: translateX(60px)
   }
 
-  .logIn_from{
+  .logIn_from {
     width: 100%;
     padding: 0 30px;
   }
@@ -1237,13 +1245,13 @@ Responcive part
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
 
-  .toggle_not_info .menu_item{
+  .toggle_not_info .menu_item {
     right: -60px;
     transform: translateX(60px);
     width: 300px;
   }
 
-  .logIn_from h1{
+  .logIn_from h1 {
     font-size: 30px;
   }
 }

@@ -4,10 +4,10 @@ import { AiFillSetting } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import ChangePasswordPopup from "../Modal/ChangePasswordPopup";
 import Notification from "../Notification/Notification";
+import Logo from "../assets/img/Logo.svg";
 
 function Topbar() {
   const [isOpen, setIsOpen] = useState(false);
-  // const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -29,11 +29,18 @@ function Topbar() {
 
   const handleSignOut = () => {
     setIsOpen(false);
-    // Perform sign out logic here
   };
 
   return (
     <div className="topbar_item">
+      <div className="logo">
+          <h2 className="text-white fs-5 text-center mb-0">
+            <span className="sm-logo">
+              <img src={Logo} alt="Logo" />
+            </span>
+          </h2>
+        </div>
+      <div className="nav_right">
       <Notification />
       <Link to="/profile" className="account_info">
         <p className="name">Mahfuzur Rahman</p>
@@ -49,6 +56,7 @@ function Topbar() {
             </Link>
           </div>
         )}
+      </div>
       </div>
     </div>
   );

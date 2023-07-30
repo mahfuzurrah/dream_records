@@ -1,7 +1,6 @@
 Header {
     padding: 0 !important;
     background: var(--white-color) !important;
-    border-bottom: 1px solid var(--border-color)
 }
 
 .trigger {
@@ -29,25 +28,11 @@ Header {
 
 .ant-layout-sider-children {
     background: var(--white-color);
-    padding: 15px;
-}
-
-ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.css-dev-only-do-not-override-w8mnev {
-    margin-top: 20px;
-}
-
-.ant-menu-item,
-.ant-menu-submenu-title {
-    padding-left: 10px !important;
 }
 
 .ant-menu .ant-menu-item,
 .ant-menu-submenu {
     color: var(--description-color);
-}
-
-ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.css-dev-only-do-not-override-w8mnev{
-    border: none;
 }
 
 .ant-menu .ant-menu-item-selected {
@@ -58,7 +43,6 @@ ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.css-dev-only-do-not-ove
 aside.ant-layout-sider.ant-layout-sider-dark.fixed-sider {
     position: fixed;
     height: 100vh;
-    top: 75px;
 }
 
 header.ant-layout-header.fixed-header.css-w8mnev,
@@ -70,13 +54,7 @@ button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-icon-onl
     display: flex;
     align-items: center;
     justify-content: center;
-    display: none;
 }
-
-button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-icon-only {
-    display: none;
-}
-
 
 .fixed-header {
     position: fixed;
@@ -102,9 +80,9 @@ svg.ant-menu-item-icon {
 }
 
 .ant-btn-icon svg {
+    font-size: 20px !important;
     transition: all 0.2s ease-out;
 }
-
 
 .site-layout Header {
     display: flex;
@@ -114,18 +92,8 @@ svg.ant-menu-item-icon {
 }
 
 .topbar_item {
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 50px;
-}
-
-.nav_right {
+    position: fixed;
+    right: 50px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -154,7 +122,7 @@ svg.ant-menu-item-icon {
     position: relative;
 }
 
-.toggle_not_info .menu_item {
+.toggle_not_info .menu_item{
     position: absolute;
     right: 0;
     margin-top: 10px;
@@ -185,12 +153,12 @@ svg.ant-menu-item-icon {
     border-radius: 8px;
     color: var(--white-color);
     gap: 20px;
-}
-
-.news .icons,
-.news p {
+  }
+  
+  .news .icons,
+  .news p {
     color: var(--white-color);
-}
+  }
 
 .toggle_account_info .menu_item p {
     margin: 10px 0;
@@ -203,43 +171,15 @@ svg.ant-menu-item-icon {
     align-items: flex-start;
 }
 
-.password-input-container {
+.password-input-container{
     position: relative;
 }
 
-.password-toggle-icon {
+.password-toggle-icon{
     position: absolute;
     right: 15px;
     top: 9px;
 }
-
-/* nav_list_item */
-
-li.release-audio {
-    background: linear-gradient(140deg, #3497FC 0%, rgba(57, 63, 140, 0.17) 100%), linear-gradient(140deg, #65E3DF 0%, #8266F6 100%), #4575FC;
-    color: var(--white-color) !important;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    padding-left: 0 !important;
-}
-
-li.dashboard{
-    margin-top: 30px !important;
-}
-
-li.release-audio:hover {
-    background: linear-gradient(140deg, #3497FC 0%, rgba(57, 63, 140, 0.17) 100%), linear-gradient(140deg, #65E3DF 0%, #8266F6 100%), #4575FC;
-    color: var(--white-color) !important;
-
-}
-
-li.release-audio .ant-menu-title-content {
-    flex: inherit !important;
-}
-
 
 @media screen and (max-width: 991px) {
     .body_content {
@@ -247,19 +187,48 @@ li.release-audio .ant-menu-title-content {
         margin-right: 0 !important;
     }
 
-    button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-icon-only {
-        display: block;
+    header.ant-layout-header.fixed-header.css-w8mnev,
+    header.ant-layout-header.fixed-header.css-dev-only-do-not-override-w8mnev {
+        margin-left: 0 !important;
+    }
+
+    header.ant-layout-header.fixed-header.collapsed.css-w8mnev,
+    header.ant-layout-header.fixed-header.collapsed.css-dev-only-do-not-override-w8mnev {
+        margin-left: 250px !important;
+    }
+
+    .ant-btn.ant-btn-text.ant-btn-icon-only {
         background: var(--primary-color);
+        color: var(--white-color);
+        z-index: 9999;
+        margin-left: 5px;
     }
 
-    aside.ant-layout-sider.ant-layout-sider-dark.fixed-sider {
+    .fixed-sider {
+        z-index: 100 !important;
         left: -100% !important;
-        z-index: 999999;
     }
 
-    aside.ant-layout-sider.ant-layout-sider-dark.fixed-sider.sider-collapsed {
-        z-index: 999999;
+    .fixed-sider.ant-layout-sider-collapsed {
+        max-width: 250px !important;
+        min-width: 250px !important;
+        width: 250px !important;
+        transition: all 0.3s ease-in-out;
         left: 0 !important;
+    }
+
+    .fixed-header.collapsed {
+        margin-left: 250px !important;
+    }
+
+    .ant-menu-inline-collapsed>.ant-menu-item,
+    .ant-menu-inline-collapsed>.ant-menu-submenu>.ant-menu-submenu-title {
+        padding-inline: calc(24px - 8px - 4px) !important;
+    }
+
+    .ant-menu-title-content,
+    .ant-menu-submenu-arrow {
+        opacity: 1 !important;
     }
 
     .Ds_card .card {
@@ -270,12 +239,8 @@ li.release-audio .ant-menu-title-content {
         margin-top: 20px;
     }
 
-    button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-icon-only {
+    button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-icon-only{
         margin-left: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--white-color);
     }
 }
 
@@ -285,6 +250,7 @@ li.release-audio .ant-menu-title-content {
     }
 }
 
+@media screen and (max-width: 576px) {}
 
 @media screen and (max-width: 480px) {
     .search_container {

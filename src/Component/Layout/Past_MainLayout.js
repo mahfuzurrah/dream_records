@@ -1,34 +1,30 @@
-import { Button, Layout, Menu } from "antd";
 import React, { useState } from "react";
-import { BiMenu, BiX } from "react-icons/bi";
-import { BsBank2, BsMusicNote } from "react-icons/bs";
-import { Outlet, useNavigate } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
+import { BiArrowToRight, BiArrowToLeft } from "react-icons/bi";
+import { BsMusicNote, BsBank2 } from "react-icons/bs";
+import { Button, Layout } from "antd";
+import { Menu } from 'antd';
 import "../Layout/Navbar.css";
+import Logo from "../assets/img/Logo.svg";
 
 import {
-  // FaChartLine,
+  FaHome,
+  FaFolderPlus,
+  FaTag,
+  FaChartLine,
+  FaUserPlus,
+  FaYoutube,
+  FaWallet,
+  FaHeadset,
+  FaOrcid,
+  FaPlusSquare,
+  // FaRegShareSquare,
+  FaClipboardList,
   FaCheckCircle,
-  // FaClipboardList,
   FaClock,
   FaFirstdraft,
-  FaPlus,
-  // FaHeadset,
-  // FaHome,
-  FaOrcid,
-  FaPhoneVolume,
-  FaPlusSquare,
-  // FaTag,
-  // FaUserPlus,
-  // FaWallet,
-  // FaYoutube,
+  FaPhoneVolume
 } from "react-icons/fa";
-import Dashboard from "../assets/icons/Dashboard.svg";
-import Label from "../assets/icons/Label.svg";
-import Analytics from "../assets/icons/Analytics.svg";
-import P_A_M from "../assets/icons/P_A_M.svg";
-import Y_T from "../assets/icons/YouTube_Request.svg";
-import Earning from "../assets/icons/Earning.svg";
-import Support_Center from "../assets/icons/Support Center.svg";
 import Topbar from "./Topbar";
 
 const { Header, Sider, Content } = Layout;
@@ -37,19 +33,22 @@ const MainLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
   const navigate = useNavigate();
 
-  const handleToggle = () => {
-    setCollapsed((prevCollapsed) => !prevCollapsed);
-  };
-
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <Sider
-        className={`fixed-sider ${collapsed ? "sider-collapsed" : ""}`}
+        className="fixed-sider"
         trigger={null}
-        // collapsible
-        // collapsed={collapsed}
+        collapsible
+        collapsed={collapsed}
         width={250}
       >
+        <div className="logo">
+          <h2 className="text-white fs-5 text-center mb-0">
+            <span className="sm-logo">
+              <img src={Logo} alt="Logo" />
+            </span>
+          </h2>
+        </div>
         <Menu
           mode="inline"
           defaultSelectedKeys={["/"]}
@@ -61,20 +60,18 @@ const MainLayout = () => {
           }}
           items={[
             {
-              key: "release-audio", // Unique key
-              label: "Release Audio",
-              icon: <FaPlus />,
-              className: "release-audio",
+              key: "dashboard", // Unique key
+              icon: <FaHome />,
+              label: "Dashboard",
             },
             {
-              key: "dashboard", // Unique key
-              icon: <img src={Dashboard} alt="" />,
-              label: "Dashboard",
-              className: "dashboard",
+              key: "release-audio", // Unique key
+              icon: <FaFolderPlus />,
+              label: "Release Audio",
             },
             {
               key: "catalog", // Unique key
-              icon: <img src={Label} alt="" />,
+              icon: <FaClipboardList />,
               label: "Catalog",
               children: [
                 {
@@ -101,22 +98,22 @@ const MainLayout = () => {
             },
             {
               key: "analytics", // Unique key
-              icon: <img src={Analytics} alt="" />,
+              icon: <FaChartLine className="icons" />,
               label: "Analytics",
             },
             {
               key: "primary_artist_manage", // Unique key
-              icon: <img src={P_A_M} alt="" />,
+              icon: <FaUserPlus />,
               label: "Primary Artist Manage",
             },
             {
               key: "label_manage", // Unique key
-              icon: <img src={Label} alt="" />,
+              icon: <FaTag />,
               label: "Label Manage",
             },
             {
               key: "youtube-request", // Unique key
-              icon: <img src={Y_T} alt="" />,
+              icon: <FaYoutube />,
               label: "YouTube Request",
               children: [
                 {
@@ -138,7 +135,7 @@ const MainLayout = () => {
             },
             {
               key: "earning", // Unique key
-              icon: <img src={Earning} alt="" />,
+              icon: <FaWallet />,
               label: "Earning",
               children: [
                 {
@@ -155,7 +152,7 @@ const MainLayout = () => {
             },
             {
               key: "support_center", // Unique key
-              icon: <img src={Support_Center} alt="" />,
+              icon: <FaHeadset />,
               label: "Support Center",
             },
           ]}
@@ -163,20 +160,22 @@ const MainLayout = () => {
       </Sider>
       <Layout className="site-layout">
         <Header
-          className="fixed-header"
+          className={`fixed-header ${collapsed ? "collapsed" : ""}`}
           style={{
+            margin: "24px 24px",
             padding: 0,
             minHeight: 100,
+            marginLeft: collapsed ? 80 : 250,
           }}
         >
           <Button
             type="text"
-            icon={collapsed ? <BiX className="toggle_icons" /> : <BiMenu />}
-            onClick={handleToggle}
+            icon={collapsed ? <BiArrowToRight /> : <BiArrowToLeft />}
+            onClick={() => setCollapsed(!collapsed)}
             style={{
-              fontSize: "30px",
-              width: 58,
-              height: 50,
+              fontSize: "16px",
+              width: 64,
+              height: 64,
             }}
           />
           <Topbar />
@@ -187,6 +186,9 @@ const MainLayout = () => {
             margin: "24px 24px",
             padding: 24,
             minHeight: 100,
+            marginLeft: collapsed
+              ? 80
+              : `calc(200px + ${collapsed ? 0 : 80}px)`,
           }}
         >
           <Outlet />
