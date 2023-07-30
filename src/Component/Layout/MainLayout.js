@@ -29,6 +29,7 @@ import P_A_M from "../assets/icons/P_A_M.svg";
 import Y_T from "../assets/icons/YouTube_Request.svg";
 import Earning from "../assets/icons/Earning.svg";
 import Support_Center from "../assets/icons/Support Center.svg";
+import Cataog from "../assets/icons/Cataog.svg";
 import Topbar from "./Topbar";
 
 const { Header, Sider, Content } = Layout;
@@ -74,7 +75,7 @@ const MainLayout = () => {
             },
             {
               key: "catalog", // Unique key
-              icon: <img src={Label} alt="" />,
+              icon: <img src={Cataog} alt="" />,
               label: "Catalog",
               children: [
                 {
