@@ -72,6 +72,11 @@ button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-icon-onl
     display: none;
 }
 
+ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.css-w8mnev{
+    border: none;
+    height: 100%;
+}
+
 .fixed-header {
     position: fixed;
     top: 0;
