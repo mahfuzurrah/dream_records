@@ -2,7 +2,7 @@
 header {
     padding: 0 !important;
     background: var(--white-color) !important;
-    border-bottom: 1px solid var(--border-color);
+    /* border-bottom: 1px solid var(--border-color); */
 }
 
 /* header.ant-layout-header.fixed-header.css-dev-only-do-not-override-w8mnev{
