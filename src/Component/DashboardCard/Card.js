@@ -1,12 +1,14 @@
 import React from "react";
 
-const Card = ({ icon, title, bgTitle }) => {
+const Card = ({ d_bg, title, bgTitle }) => {
   return (
     <div className="Ds_card">
       <div className="card">
-        <div className="Ds_icon">{ icon }</div>
-        <p>{title}</p>
+        <img src={d_bg} className="d_bg" alt="" />
+        <div className="card-body">
+        <h3>{title}</h3>
         <h1>{bgTitle}</h1>
+        </div>
       </div>
     </div>
   );

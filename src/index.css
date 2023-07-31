@@ -14,7 +14,7 @@
   /* Font Size */
   --h1-font-size: 26px;
   --h2-font-size: 24px;
-  --h2-font-size: 20px;
+  --h3-font-size: 20px;
   --normal-font-size: 15px;
   --small-font-size: 12px;
   /* Font Weight */
@@ -71,6 +71,12 @@ h1 {
 
 h2 {
   font-size: var(--h2-font-size);
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--h3-font-size);
   color: var(--title-color);
   font-weight: 600;
 }
@@ -273,82 +279,69 @@ Dashboard
  ===================== */
 
 .Ds_card .card {
+  padding: 0;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 15px 20px;
+  max-height: 110px;
+  border-radius: 8px;
+  position: relative;
 }
 
-.Ds_card .card .Ds_icon {
-  width: 35px;
-  height: 35px;
-  background: var(--primary-color);
-  color: var(--white-color);
+.Ds_card .card .d_bg {
+  height: 100%;
   border-radius: 8px;
+}
+
+.Ds_card .card .card-body {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translate(-10%, -50%);
+}
+
+.Ds_card .card .card-body h3 {
+  color: var(--white-color);
+  margin-bottom: 10px;
+}
+
+.Ds_card .card .card-body h1 {
+  color: var(--white-color);
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+
+.artist_item ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.artist_item li {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+}
+
+.artist_item li.add_artist {
+  background: var(--primary-color);
+}
+
+.artist_item li.add_artist a {
+  color: var(--white-color);
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.Ds_card .card .Ds_icon .icons {
-  color: var(--white-color);
+.artist_item li a img {
+  width: 60px;
+  height: 60px;
 }
-
-.Ds_row_card .card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 20px;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.Ds_row_card .card .cover_img {
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
-  margin-right: 20px;
-}
-
-.draft_list {
-  border-radius: 8px;
-  padding-bottom: 20px;
-  background: var(--white-color);
-}
-
-.draft_list .draft_header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 20px 20px;
-  background: var(--white-color);
-  border-radius: 8px;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.draft_list .card {
-  margin-top: 20px;
-}
-
-.Ds_row_card .card p {
-  color: var(--title-color);
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
-}
-
-.Ds_row_card .card span {
-  color: var(--description-color);
-}
-
-.draft_header a {
-  color: var(--primary-color);
-  font-weight: var(--font-medium);
-}
-
 
 /*=====================
 Analytics Page
@@ -754,15 +747,25 @@ Withdraw page
 /*===============================
 Catalog Page
 =============================== */
-.catalog_card .card {
-  padding: 24px;
-  border-radius: 24px;
-  margin-top: 20px;
+.relese_card_list{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
 }
+
+.catalog_card .card {
+  padding: 0;
+  border-radius: 24px;
+  width: 290px;
+  height: 290px;
+}
+
 
 .catalog_card .card img.cover_img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .catalog_card .card img {
@@ -775,13 +778,37 @@ Catalog Page
   border: 2px solid var(--white-color);
 }
 
+.add_realese {
+  width: 290px;
+  height: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+  border-radius: 16px;
+  flex-wrap: wrap;
+}
+
+.add_realese .icons {
+  font-size: 35px;
+  color: var(--white-color);
+}
+
+/* .relese_card_list{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  width: 100%;
+} */
+
 .status_icon {
   position: absolute;
-  right: 40px;
-  top: 40px;
+  right: 20px;
+  top: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  display: none;
 }
 
 .catalog_card .card h2 {
@@ -1190,6 +1217,126 @@ LogIn part
   color: var(--description-color);
 }
 
+
+/*===============================
+Swiper part
+=============================== */
+.swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  position: relative;
+}
+
+.swiper-slide,
+.swipe_content {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  align-items: center;
+  height: 280px;
+  position: relative;
+  border-radius: 24px !important;
+}
+
+.swiper-slide img {
+  display: block;
+  width: auto;
+  height: 320px;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.swiper-slide .text_content {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  text-align: justify;
+}
+
+.swiper-slide .text_content h1 {
+  font-size: 36px;
+  color: var(--white-color);
+}
+
+.swiper-slide .text_content p {
+  font-size: 18px;
+  color: var(--white-color);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  height: 45px;
+  width: 45px;
+  border-radius: 100px;
+  background: var(--primary-color);
+}
+
+.swiper-button-prev {
+  position: absolute !important;
+  bottom: 30px !important;
+  left: 30px;
+  top: auto;
+}
+
+.swiper-button-next {
+  position: absolute !important;
+  bottom: 30px !important;
+  left: 90px;
+  top: auto;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 16px;
+  color: var(--white-color);
+}
+
+
+.announcement {
+  background-image: url(./Component/assets/img/announcement_bg.png);
+  width: 100%;
+  height: 280px;
+  border-radius: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.announcement .ann_header_title {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px 16px 0px 0px;
+  background: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(25px);
+}
+
+.announcement .ann_header_title h2 {
+  color: var(--white-color);
+}
+
+.announcement .ann_header_title .icons {
+  color: var(--white-color);
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.announcement .ann_area {
+  height: 80%;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+}
+
+.announcement .ann_area h1 {
+  color: var(--white-color);
+}
 
 /*===============================
 Responcive part
