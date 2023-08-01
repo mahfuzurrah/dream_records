@@ -6,38 +6,12 @@ import artist_img from "../Component/assets/img/user.png";
 import { FaBullhorn, FaPlus } from "react-icons/fa";
 import DashboardCardList from "../Component/DashboardCard/DashboardCardList";
 
-import Pending from "../Component/assets/icons/P.svg";
-import CoverImg from "../Component/assets/img/cover.jpg";
-import Card from "../Component/CatalogsCard/Card";
+
+
 import DashboardSlider from "../Component/Slider/DashboardSlider";
+import LatestReleaseCard from "../Component/CatalogsCard/LatestReleaseCard";
 
 const Dashboard = () => {
-  const cardData = [
-    {
-      sImg: CoverImg,
-      title: "Song Title",
-      sTitle: "Song Title",
-      status: Pending,
-    },
-    {
-      sImg: CoverImg,
-      title: "Song Title",
-      sTitle: "Song Title",
-      status: Pending,
-    },
-    {
-      sImg: CoverImg,
-      title: "Song Title",
-      sTitle: "Song Title",
-      status: Pending,
-    },
-    {
-      sImg: CoverImg,
-      title: "Song Title",
-      sTitle: "Song Title",
-      status: Pending,
-    },
-  ];
 
   return (
     <>
@@ -70,7 +44,7 @@ const Dashboard = () => {
             <h3>Label Manage</h3>
           </div>
           <div className="artist_item">
-            <ul className="mt-4">
+            <ul className="mt-2">
               <li className="add_artist">
                 <Link to="/primary_artist_manage">
                   <FaPlus />
@@ -99,21 +73,11 @@ const Dashboard = () => {
           <div className="section_title" style={{ border: "none" }}>
             <h3>Label Manage</h3>
           </div>
-          <div className="relese_card_list">
+          <div className="relese_card_list mt-2">
             <Link to="/contact" className="add_realese">
               <FaPlus className="icons" />
             </Link>
-            {cardData.map((card, index) => (
-                <Link to="/catalog_details">
-                  <Card
-                    key={index}
-                    sImg={card.sImg}
-                    title={card.title}
-                    sTitle={card.sTitle}
-                    status={card.status}
-                  />
-                </Link>
-            ))}
+            <LatestReleaseCard />
           </div>
         </div>
       </div>

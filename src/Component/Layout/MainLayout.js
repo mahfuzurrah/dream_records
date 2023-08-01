@@ -6,30 +6,25 @@ import { Outlet, useNavigate } from "react-router-dom";
 import "../Layout/Navbar.css";
 
 import {
-  // FaChartLine,
   FaCheckCircle,
   // FaClipboardList,
   FaClock,
   FaFirstdraft,
-  FaPlus,
   // FaHeadset,
   // FaHome,
   FaOrcid,
   FaPhoneVolume,
+  FaPlus,
   FaPlusSquare,
-  // FaTag,
-  // FaUserPlus,
-  // FaWallet,
-  // FaYoutube,
 } from "react-icons/fa";
-import Dashboard from "../assets/icons/Dashboard.svg";
-import Label from "../assets/icons/Label.svg";
 import Analytics from "../assets/icons/Analytics.svg";
-import P_A_M from "../assets/icons/P_A_M.svg";
-import Y_T from "../assets/icons/YouTube_Request.svg";
-import Earning from "../assets/icons/Earning.svg";
-import Support_Center from "../assets/icons/Support Center.svg";
 import Cataog from "../assets/icons/Cataog.svg";
+import Dashboard from "../assets/icons/Dashboard.svg";
+import Earning from "../assets/icons/Earning.svg";
+import Label from "../assets/icons/Label.svg";
+import P_A_M from "../assets/icons/P_A_M.svg";
+import Support_Center from "../assets/icons/Support Center.svg";
+import Y_T from "../assets/icons/YouTube_Request.svg";
 import Topbar from "./Topbar";
 
 const { Header, Sider, Content } = Layout;
@@ -41,6 +36,7 @@ const MainLayout = () => {
   const handleToggle = () => {
     setCollapsed((prevCollapsed) => !prevCollapsed);
   };
+
 
   return (
     <Layout style={{ minHeight: "100vh" }}>

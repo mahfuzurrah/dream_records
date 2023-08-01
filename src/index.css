@@ -41,7 +41,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) transparent;
 }
 
 html {
@@ -1339,6 +1339,11 @@ Responcive part
 =============================== */
 
 
+@media screen and (max-width: 1200px) {
+  .Ds_card .card{
+    margin-top: 20px !important;
+  }
+}
 @media screen and (max-width: 991px) {
   .input_group {
     display: block;
@@ -1361,6 +1366,10 @@ Responcive part
 
   .body_content {
     margin-left: 0 !important;
+  }
+
+  .announcement{
+    margin-top: 30px;
   }
 }
 

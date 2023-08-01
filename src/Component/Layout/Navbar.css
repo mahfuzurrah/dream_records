@@ -36,11 +36,6 @@ header {
     justify-content: flex-start;
 }
 
-.ant-layout-sider-children {
-    background: var(--white-color);
-    padding: 15px;
-}
-
 .ant-menu .ant-menu-item,
 .ant-menu-submenu {
     color: var(--description-color);
@@ -58,6 +53,16 @@ aside.ant-layout-sider.ant-layout-sider-dark.fixed-sider {
     height: 100vh;
     top: 75px;
     min-width: 260px !important;
+    background: var(--white-color);
+}
+
+.ant-layout-sider-children {
+    background: var(--white-color);
+    padding: 15px;
+    overflow-y: auto;
+    height: 90vh !important;
+    border-left: none !important;
+    padding-bottom: 30px !important;
 }
 
 header.ant-layout-header.fixed-header.css-w8mnev,
@@ -72,7 +77,7 @@ button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-icon-onl
     display: none;
 }
 
-ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.css-w8mnev{
+ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.css-w8mnev {
     border: none;
     height: 100%;
     margin-top: 30px;
@@ -93,7 +98,7 @@ ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.css-w8mnev{
 }
 
 aside li {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 16px;
 }
 
@@ -298,7 +303,7 @@ button.ant-btn.css-w8mnev.ant-btn-text.ant-btn-icon-only {
         display: block;
     }
 
-    .logo{
+    .logo {
         width: auto;
     }
 }
