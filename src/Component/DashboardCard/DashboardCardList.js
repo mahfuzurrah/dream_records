@@ -26,7 +26,7 @@ const DashboardCardList = () => {
   return (
     <div className="row">
       {cardData.map((card, index) => (
-        <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
+        <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12" key={index}>
           <Card
             d_bg={card.d_bg}
             title={card.title}

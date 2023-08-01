@@ -1,11 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 
-import swiper_img from "../Component/assets/img/Swiper_img/Swiper-bg.png";
 import artist_img from "../Component/assets/img/user.png";
 
 import { FaBullhorn, FaPlus } from "react-icons/fa";
@@ -14,6 +9,7 @@ import DashboardCardList from "../Component/DashboardCard/DashboardCardList";
 import Pending from "../Component/assets/icons/P.svg";
 import CoverImg from "../Component/assets/img/cover.jpg";
 import Card from "../Component/CatalogsCard/Card";
+import DashboardSlider from "../Component/Slider/DashboardSlider";
 
 const Dashboard = () => {
   const cardData = [
@@ -47,52 +43,10 @@ const Dashboard = () => {
     <>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-8">
-            <Swiper
-              navigation={true}
-              modules={[Navigation]}
-              className="mySwiper"
-            >
-              <SwiperSlide>
-                <div className="swipe_content">
-                  <img src={swiper_img} alt="" />
-                  <div className="text_content">
-                    <p>Hello,</p>
-                    <h1>Mahfuzur R.</h1>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="swipe_content">
-                  <img src={swiper_img} alt="" />
-                  <div className="text_content">
-                    <p>Hello,</p>
-                    <h1>Mahfuzur R.</h1>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="swipe_content">
-                  <img src={swiper_img} alt="" />
-                  <div className="text_content">
-                    <p>Hello,</p>
-                    <h1>Mahfuzur R.</h1>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="swipe_content">
-                  <img src={swiper_img} alt="" />
-                  <div className="text_content">
-                    <p>Hello,</p>
-                    <h1>Mahfuzur R.</h1>
-                  </div>
-                </div>
-              </SwiperSlide>
-              {/* Add more slides here */}
-            </Swiper>
+          <div className="col-xl-9 col-lg-7 col-md-6">
+            <DashboardSlider/>
           </div>
-          <div className="col-lg-4">
+          <div className="col-xl-3 col-lg-5 col-md-6">
             <div className="announcement">
               <div className="ann_header_title">
                 <h2>
@@ -106,9 +60,11 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="row mt-4">
+
+        <div className="mt-4">
           <DashboardCardList />
         </div>
+
         <div className="artist_row mt-4">
           <div className="section_title" style={{ border: "none" }}>
             <h3>Label Manage</h3>
@@ -138,6 +94,7 @@ const Dashboard = () => {
             </ul>
           </div>
         </div>
+
         <div className="row mt-4">
           <div className="section_title" style={{ border: "none" }}>
             <h3>Label Manage</h3>
@@ -147,7 +104,6 @@ const Dashboard = () => {
               <FaPlus className="icons" />
             </Link>
             {cardData.map((card, index) => (
-              <div className="card_area">
                 <Link to="/catalog_details">
                   <Card
                     key={index}
@@ -157,7 +113,6 @@ const Dashboard = () => {
                     status={card.status}
                   />
                 </Link>
-              </div>
             ))}
           </div>
         </div>

@@ -282,14 +282,16 @@ Dashboard
   padding: 0;
   display: flex;
   align-items: center;
-  max-height: 110px;
+  height: 110px;
   border-radius: 8px;
   position: relative;
 }
 
 .Ds_card .card .d_bg {
-  height: 100%;
+  width: 100%;
+  height: 110px;
   border-radius: 8px;
+ object-fit: cover;
 }
 
 .Ds_card .card .card-body {
@@ -748,30 +750,32 @@ Withdraw page
 Catalog Page
 =============================== */
 .relese_card_list{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
   align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
-  flex-wrap: wrap;
 }
 
 .catalog_card .card {
   padding: 0;
   border-radius: 24px;
-  width: 290px;
-  height: 290px;
+  width: 100%;
+  height: 300px;
 }
 
 
 .catalog_card .card img.cover_img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .catalog_card .card img {
   border-radius: 24px;
   width: 30px;
   height: 30px;
+  object-fit: cover;
 }
 
 .catalog_card .card img.ringtone {
@@ -779,8 +783,8 @@ Catalog Page
 }
 
 .add_realese {
-  width: 290px;
-  height: 290px;
+  width: 100%;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -793,13 +797,6 @@ Catalog Page
   font-size: 35px;
   color: var(--white-color);
 }
-
-/* .relese_card_list{
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
-  width: 100%;
-} */
 
 .status_icon {
   position: absolute;
@@ -1244,9 +1241,8 @@ Swiper part
 
 .swiper-slide img {
   display: block;
-  width: auto;
+  width: 100%;
   height: 320px;
-  height: 100% !important;
   object-fit: cover;
 }
 
@@ -1371,6 +1367,26 @@ Responcive part
 @media screen and (max-width: 768px) {
   .analytics_area {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .toggle_not_info .menu_item {
+    right: -60px;
+    transform: translateX(60px)
+  }
+
+  .logIn_from {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 678px) {
+  .relese_card_list{
+    display: block;
+  }
+  .relese_card_list .card{
+    margin-top: 30px;
   }
 }
 
