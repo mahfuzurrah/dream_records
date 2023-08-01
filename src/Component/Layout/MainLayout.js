@@ -8,8 +8,8 @@ import "../Layout/Navbar.css";
 import {
   FaCheckCircle,
   // FaClipboardList,
-  FaClock,
-  FaFirstdraft,
+  // FaClock,
+  // FaFirstdraft,
   // FaHeadset,
   // FaHome,
   FaOrcid,
@@ -75,20 +75,20 @@ const MainLayout = () => {
               label: "Catalog",
               children: [
                 {
-                  key: "approved", // Unique key
+                  key: "release-catalogs", // Unique key
                   icon: <FaCheckCircle />,
-                  label: "Approved",
+                  label: "Release Catalogs",
                 },
-                {
-                  key: "draft", // Unique key
-                  icon: <FaFirstdraft />,
-                  label: "Draft",
-                },
-                {
-                  key: "pending", // Unique key
-                  icon: <FaClock />,
-                  label: "Pending",
-                },
+                // {
+                //   key: "draft", // Unique key
+                //   icon: <FaFirstdraft />,
+                //   label: "Draft",
+                // },
+                // {
+                //   key: "pending", // Unique key
+                //   icon: <FaClock />,
+                //   label: "Pending",
+                // },
                 {
                   key: "caller_tune", // Unique key
                   icon: <FaPhoneVolume />,

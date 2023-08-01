@@ -6,9 +6,9 @@ import ReleaseAudio from "./Pages/ReleaseAudio";
 import ArtistChannelRequest from "./Pages/ArtistChannelRequest";
 import Overview from "./Pages/Overview";
 import Analytics from "./Pages/Analytics";
-import ApprovedCatalog from "./Pages/ApprovedCatalog";
-import DraftCatalog from "./Pages/DraftCatalog";
-import PendingCatalog from "./Pages/PendingCatalog";
+import ReleaseCatalogs from "./Pages/ReleaseCatalogs";
+// import DraftCatalog from "./Pages/DraftCatalog";
+// import PendingCatalog from "./Pages/PendingCatalog";
 import ContentIdRequest from "./Pages/ContentIdRequest";
 import PrimaryArtistManage from "./Pages/PrimaryArtistManage";
 import AddClaimRelease from "./Pages/AddClaimRelease";
@@ -31,9 +31,9 @@ function App() {
           <Route path="/" element={<MainLayout />}>
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="release-audio" element={<ReleaseAudio />} />
-            <Route path="approved" element={<ApprovedCatalog />} />
-            <Route path="draft" element={<DraftCatalog />} />
-            <Route path="pending" element={<PendingCatalog />} />
+            <Route path="release-catalogs" element={<ReleaseCatalogs />} />
+            {/* <Route path="draft" element={<DraftCatalog />} />
+            <Route path="pending" element={<PendingCatalog />} /> */}
             <Route path="analytics" element={<Analytics />} />
             <Route
               path="primary_artist_manage"

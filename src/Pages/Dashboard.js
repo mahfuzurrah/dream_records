@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import artist_img from "../Component/assets/img/user.png";
+import artist_img from "../Component/assets/img/artist.png";
 
-import { FaBullhorn, FaPlus } from "react-icons/fa";
+import { FaBullhorn, FaPlus, FaUserPlus, FaCheckCircle } from "react-icons/fa";
 import DashboardCardList from "../Component/DashboardCard/DashboardCardList";
 
 
@@ -41,7 +41,7 @@ const Dashboard = () => {
 
         <div className="artist_row mt-4">
           <div className="section_title" style={{ border: "none" }}>
-            <h3>Label Manage</h3>
+            <h3><FaUserPlus />Label Manage</h3>
           </div>
           <div className="artist_item">
             <ul className="mt-2">
@@ -71,10 +71,10 @@ const Dashboard = () => {
 
         <div className="row mt-4">
           <div className="section_title" style={{ border: "none" }}>
-            <h3>Label Manage</h3>
+            <h3> <FaCheckCircle /> Label Manage</h3>
           </div>
           <div className="relese_card_list mt-2">
-            <Link to="/contact" className="add_realese">
+            <Link to="/release-audio" className="add_realese">
               <FaPlus className="icons" />
             </Link>
             <LatestReleaseCard />
