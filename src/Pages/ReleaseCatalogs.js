@@ -8,7 +8,6 @@ function ReleaseCatalogs() {
       <div className="section_title">
         <div className="text_area">
           <h2>All Release Catalogs</h2>
-          <p>Exploring our collections</p>
         </div>
         <div className="btn_area">
           <Link to="/release-audio"><button className="btn">Create Release</button></Link>

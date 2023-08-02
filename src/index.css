@@ -2,7 +2,7 @@
 
 :root {
   /* COLOR */
-  --primary-color: #4575FC;
+  --primary-color: #4575fc;
   --secondary-color: #ffcc40;
   --title-color: #0d1118;
   --description-color: #8a8b9f;
@@ -192,7 +192,6 @@ label {
   border: 1px solid transparent !important;
 }
 
-
 .btn_group {
   display: flex;
   align-items: center;
@@ -215,13 +214,15 @@ label {
   width: 100%;
 }
 
-
 .section_title {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+.table_filter_btn {
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 20px;
 }
@@ -345,22 +346,22 @@ Dashboard
   height: 60px;
 }
 
-.artist_row .d_title h3{
+.artist_row .d_title h3 {
   display: flex;
   align-items: center;
 }
 
-.artist_row .d_title .icons{
-color: #3E7373;
-margin-right: 10px;
+.artist_row .d_title .icons {
+  color: #3e7373;
+  margin-right: 10px;
 }
 
-.d_title .circle{
-color: #57B948;
-margin-right: 10px;
+.d_title .circle {
+  color: #57b948;
+  margin-right: 10px;
 }
 
-.f_performance{
+.f_performance {
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -375,10 +376,9 @@ margin-right: 10px;
   border-radius: 24px;
 }
 
-.f_performance h1{
+.f_performance h1 {
   font-size: 36px;
 }
-
 
 /*=====================
 Analytics Page
@@ -392,7 +392,7 @@ Analytics Page
 }
 
 .analytics_area .btn {
-  padding: 7px 30px
+  padding: 7px 30px;
 }
 
 .analytics_page .table_content {
@@ -400,7 +400,6 @@ Analytics Page
   background: var(--white-color);
   border-radius: 8px;
   box-shadow: 12px 12px 36px rgba(0, 0, 0, 0.08);
-
 }
 
 /*=====================
@@ -433,9 +432,6 @@ Analytics Page
 .nav-pills .nav-link.active .card h1 {
   color: var(--white-color);
 }
-
-
-
 
 /*=====================
  Primary Artist Manage
@@ -779,8 +775,6 @@ Withdraw page
   cursor: pointer;
 }
 
-
-
 /*===============================
 Catalog Page
 =============================== */
@@ -798,7 +792,6 @@ Catalog Page
   width: 100%;
   height: 300px;
 }
-
 
 .catalog_card .card img.cover_img {
   width: 100%;
@@ -849,9 +842,11 @@ Catalog Page
 }
 
 .catalog_details {
-  background-image: linear-gradient(0deg,
+  background-image: linear-gradient(
+      0deg,
       rgba(9, 9, 9, 0.8),
-      rgba(9, 9, 9, 0.8)),
+      rgba(9, 9, 9, 0.8)
+    ),
     url(./Component/assets/img/cover.jpg);
   border-radius: 24px;
   background-size: cover;
@@ -939,12 +934,10 @@ Catalog Page
   padding: 10px;
   background: var(--primary-color);
   border-radius: 4px;
-
 }
 
 .r_edit_delete a:last-child {
-  background: #D42F2F;
-
+  background: #d42f2f;
 }
 
 .r_edit_delete a .edit,
@@ -952,24 +945,42 @@ Catalog Page
   color: var(--white-color);
 }
 
-.release_audio_table td.ant-table-cell.ant-table-cell-row-hover {
+td.ant-table-cell.ant-table-cell-row-hover {
   background: var(--primary-color) !important;
   color: var(--white-color) !important;
 }
 
-.release_audio_table td.ant-table-cell.ant-table-cell-row-hover .c_tune_table_title span {
+td.ant-table-cell.ant-table-cell-row-hover .c_tune_table_title span {
   color: var(--white-color) !important;
 }
 
-.release_audio_table td.ant-table-cell.ant-table-cell-row-hover .status {
+/* td.ant-table-cell.ant-table-cell-row-hover .status {
   color: var(--white-color) !important;
+} */
+
+td.ant-table-cell .status {
+  padding: 8px 20px;
+  border-radius: 100px;
 }
 
-.release_audio_table label.ant-checkbox-wrapper.css-dev-only-do-not-override-w8mnev {
+td.ant-table-cell .status.approved {
+  background: #8cf7a5 !important;
+}
+
+td.ant-table-cell .status.pending {
+  background: #fcd37b !important;
+}
+
+td.ant-table-cell .status.failed {
+  background: #e69dae !important;
+}
+
+.release_audio_table
+  label.ant-checkbox-wrapper.css-dev-only-do-not-override-w8mnev {
   margin-left: 10px !important;
 }
 
-:where(.css-dev-only-do-not-override-w8mnev).ant-divider-horizontal{
+:where(.css-dev-only-do-not-override-w8mnev).ant-divider-horizontal {
   margin: 0 0;
 }
 
@@ -1064,7 +1075,6 @@ Submission Page
   width: 150px !important;
 }
 
-
 .upload_info .card {
   text-align: center;
   display: flex;
@@ -1132,7 +1142,6 @@ Support Page
   display: block;
 }
 
-
 .s_problem_box .btn_s {
   width: 100%;
 }
@@ -1152,13 +1161,12 @@ Support Page
 .connect_wp .icons {
   width: 80px;
   height: 80px;
-  color: #60D669;
+  color: #60d669;
 }
 
 .connect_wp p {
   margin: 20px 0;
 }
-
 
 .s_history {
   padding: 30px;
@@ -1206,9 +1214,9 @@ Support Page
   align-items: center;
 }
 
-
-
-.support_page :where(.css-dev-only-do-not-override-w8mnev).ant-upload-wrapper .ant-upload-select {
+.support_page
+  :where(.css-dev-only-do-not-override-w8mnev).ant-upload-wrapper
+  .ant-upload-select {
   width: 100%;
 }
 
@@ -1230,7 +1238,6 @@ Profile Pages
   display: flex;
   align-items: center;
   gap: 20px;
-
 }
 
 span.ant-upload-wrapper.ant-upload-picture-circle-wrapper.css-dev-only-do-not-override-w8mnev {
@@ -1258,9 +1265,6 @@ button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-sm.ant-b
   height: 35px;
   border-radius: 4px;
 }
-
-
-
 
 /*===============================
 Label Manage
@@ -1316,7 +1320,6 @@ LogIn part
   text-decoration: underline !important;
   color: var(--description-color);
 }
-
 
 /*===============================
 Swiper part
@@ -1394,7 +1397,6 @@ Swiper part
   color: var(--white-color);
 }
 
-
 .announcement {
   background-image: url(./Component/assets/img/announcement_bg.png);
   width: 100%;
@@ -1412,7 +1414,7 @@ Swiper part
   align-items: center;
   justify-content: center;
   border-radius: 16px 16px 0px 0px;
-  background: rgba(255, 255, 255, 0.20);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(25px);
 }
 
@@ -1441,7 +1443,6 @@ Swiper part
 Responcive part
 =============================== */
 
-
 @media screen and (max-width: 1200px) {
   .Ds_card .card {
     margin-top: 20px !important;
@@ -1451,7 +1452,7 @@ Responcive part
 @media screen and (max-width: 991px) {
   .input_group {
     display: block;
-    padding-right: 30px
+    padding-right: 30px;
   }
 
   .catalog_details {
@@ -1486,7 +1487,7 @@ Responcive part
 @media screen and (max-width: 576px) {
   .toggle_not_info .menu_item {
     right: -60px;
-    transform: translateX(60px)
+    transform: translateX(60px);
   }
 
   .logIn_from {
@@ -1508,7 +1509,7 @@ Responcive part
 @media screen and (max-width: 576px) {
   .toggle_not_info .menu_item {
     right: -60px;
-    transform: translateX(60px)
+    transform: translateX(60px);
   }
 
   .logIn_from {
@@ -1516,7 +1517,6 @@ Responcive part
     padding: 0 30px;
   }
 }
-
 
 @media screen and (max-width: 480px) {
   .analytics_area {

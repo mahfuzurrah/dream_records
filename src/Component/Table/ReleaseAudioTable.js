@@ -32,17 +32,23 @@ const columns = [
     dataIndex: "status",
     render: (status) => {
       let color;
+      let className = ""; // Initialize className with an empty string
+  
       if (status === "Pending") {
-        color = "orange";
+        color = "black";
+        className = "pending"; // Set className to "pending" when status is "Pending"
       } else if (status === "Approved") {
-        color = "green";
+        color = "black";
+        className = "approved";
       } else if (status === "Failed") {
-        color = "red";
+        color = "black";
+        className = "failed";
       } else {
         color = "black";
       }
+  
       return (
-        <span className="status" style={{ color }}>
+        <span className={`status ${className}`} style={{ color }}>
           {status}
         </span>
       );
@@ -149,20 +155,6 @@ const CallerTuneTable = () => {
 
       <Table
         className="release_audio_table"
-        rowSelection={{
-          type: selectionType,
-          onChange: (selectedRowKeys, selectedRows) => {
-            console.log(
-              `selectedRowKeys: ${selectedRowKeys}`,
-              "selectedRows: ",
-              selectedRows
-            );
-          },
-          getCheckboxProps: (record) => ({
-            disabled: record.name === "Disabled User",
-            name: record.name,
-          }),
-        }}
         columns={columns}
         dataSource={getFilteredData(data)}
         scroll={{ x: 768 }}
