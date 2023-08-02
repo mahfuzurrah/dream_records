@@ -1,6 +1,7 @@
 import { Divider, Radio, Table } from "antd";
 import React, { useState } from "react";
 import { BiPencil, BiTrashAlt } from "react-icons/bi";
+import { FaRegEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import TableFilter from "../Filter/TableFilter";
 import SearchBar from "../SearchBar/SearchBar";
@@ -61,6 +62,9 @@ const columns = [
     title: "Action",
     render: () => (
       <div className="r_edit_delete">
+        <Link to="">
+          <FaRegEye className="icons eye" />
+        </Link>
         <Link to="">
           <BiPencil className="icons edit" />
         </Link>
