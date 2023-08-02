@@ -155,7 +155,7 @@ const CallerTuneTable = () => {
         handleFilter={handleFilter}
       />
 
-      <div className="table_title mt-5">
+      <div className="table_title mt-3">
         <p>Show 4 entries</p>
         <SearchBar />
       </div>
