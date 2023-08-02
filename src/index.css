@@ -291,7 +291,7 @@ Dashboard
   width: 100%;
   height: 110px;
   border-radius: 8px;
- object-fit: cover;
+  object-fit: cover;
 }
 
 .Ds_card .card .card-body {
@@ -749,7 +749,7 @@ Withdraw page
 /*===============================
 Catalog Page
 =============================== */
-.relese_card_list{
+.relese_card_list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   grid-gap: 20px;
@@ -890,6 +890,74 @@ Catalog Page
   width: 24px;
   height: 24px;
   margin: auto;
+}
+
+.r_edit_delete {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.r_edit_delete a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: var(--primary-color);
+  border-radius: 4px;
+
+}
+
+.r_edit_delete a:last-child {
+  background: #D42F2F;
+
+}
+
+.r_edit_delete a .edit,
+.r_edit_delete a .delete {
+  color: var(--white-color);
+}
+
+.release_audio_table td.ant-table-cell.ant-table-cell-row-hover {
+  background: var(--primary-color) !important;
+  color: var(--white-color) !important;
+}
+
+.release_audio_table td.ant-table-cell.ant-table-cell-row-hover .c_tune_table_title span {
+  color: var(--white-color) !important;
+}
+
+.release_audio_table td.ant-table-cell.ant-table-cell-row-hover .status {
+  color: var(--white-color) !important;
+}
+
+.release_audio_table label.ant-checkbox-wrapper.css-dev-only-do-not-override-w8mnev {
+  margin-left: 10px !important;
+}
+
+:where(.css-dev-only-do-not-override-w8mnev).ant-divider-horizontal{
+  margin: 0 0;
+}
+
+.table_filter_btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.table_filter_btn button {
+  padding: 10px 30px;
+  border-radius: 8px;
+  background: var(--border-color);
+  border: none;
+  font-size: var(--normal-font-size);
+  color: var(--description-color);
+}
+
+.table_filter_btn button:hover,
+.table_filter_btn button.active {
+  background: var(--primary-color);
+  color: var(--white-color);
+  transition: all 0.3s ease-in-out;
 }
 
 /* =================
@@ -1340,10 +1408,11 @@ Responcive part
 
 
 @media screen and (max-width: 1200px) {
-  .Ds_card .card{
+  .Ds_card .card {
     margin-top: 20px !important;
   }
 }
+
 @media screen and (max-width: 991px) {
   .input_group {
     display: block;
@@ -1368,7 +1437,7 @@ Responcive part
     margin-left: 0 !important;
   }
 
-  .announcement{
+  .announcement {
     margin-top: 30px;
   }
 }
@@ -1390,11 +1459,13 @@ Responcive part
     padding: 0 30px;
   }
 }
+
 @media screen and (max-width: 678px) {
-  .relese_card_list{
+  .relese_card_list {
     display: block;
   }
-  .relese_card_list .card{
+
+  .relese_card_list .card {
     margin-top: 30px;
   }
 }

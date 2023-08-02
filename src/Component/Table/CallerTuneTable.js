@@ -1,7 +1,11 @@
+import React, { useState } from "react";
 import { Table } from "antd";
 import coverImg from '../assets/img/cover.jpg'
 import airtelLogo from '../assets/img/Airtel.png'
 import vodafoneLogo from '../assets/img/vodafone.png'
+import TableFilter from "../Filter/TableFilter";
+import SearchBar from "../SearchBar/SearchBar";
+
 const columns = [
   {
     title: "Title",
@@ -115,8 +119,36 @@ const data = [
   },
 ];
 
-const CallerTuneTable = () => (
-  <Table columns={columns} dataSource={data} bordered scroll={{ x: 768 }} />
-);
+const CallerTuneTable = () => {
+  const [selectedStatus, setSelectedStatus] = useState("all");
+
+  const handleFilter = (status) => {
+    setSelectedStatus(status);
+  };
+
+  const getFilteredData = (data) => {
+    if (selectedStatus === "all") {
+      return data;
+    } else {
+      return data.filter((item) => item.status === selectedStatus);
+    }
+  };
+  return (
+    <>
+      {/* Filter Area */}
+      <TableFilter
+        selectedStatus={selectedStatus}
+        handleFilter={handleFilter}
+      />
+
+      <div className="table_title mt-5">
+        <p>Show 4 entries</p>
+        <SearchBar />
+      </div>
+
+    <Table columns={columns} dataSource={getFilteredData(data)} bordered scroll={{ x: 768 }} />
+    </>
+  )
+}
 
 export default CallerTuneTable;

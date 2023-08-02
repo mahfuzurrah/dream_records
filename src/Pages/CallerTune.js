@@ -1,6 +1,5 @@
 import React from 'react'
 import CallerTuneTable from "../Component/Table/CallerTuneTable";
-import SearchBar from "../Component/SearchBar/SearchBar";
 
 function CallerTune() {
   return (
@@ -11,10 +10,6 @@ function CallerTune() {
         </div>
           </div>
           <div className="table_content">
-        <div className="table_title">
-          <p>Show 4 entries</p>
-          <SearchBar/>
-        </div>
         <CallerTuneTable />
       </div>
     </>
