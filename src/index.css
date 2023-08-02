@@ -971,8 +971,12 @@ td.ant-table-cell .status.pending {
   background: #fcd37b !important;
 }
 
-td.ant-table-cell .status.failed {
+td.ant-table-cell .status.Rejected {
   background: #e69dae !important;
+}
+
+td.ant-table-cell .status.c_request {
+  background: #dfe088 !important;
 }
 
 .release_audio_table

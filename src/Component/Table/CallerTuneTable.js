@@ -1,10 +1,10 @@
-import React, { useState } from "react";
 import { Table } from "antd";
-import coverImg from '../assets/img/cover.jpg'
-import airtelLogo from '../assets/img/Airtel.png'
-import vodafoneLogo from '../assets/img/vodafone.png'
+import React, { useState } from "react";
 import TableFilter from "../Filter/TableFilter";
 import SearchBar from "../SearchBar/SearchBar";
+import airtelLogo from "../assets/img/Airtel.png";
+import coverImg from "../assets/img/cover.jpg";
+import vodafoneLogo from "../assets/img/vodafone.png";
 
 const columns = [
   {
@@ -28,16 +28,26 @@ const columns = [
     dataIndex: "status",
     render: (status) => {
       let color;
+      let className = ""; // Initialize className with an empty string
+
       if (status === "Pending") {
-        color = "orange";
+        color = "black";
+        className = "pending"; // Set className to "pending" when status is "Pending"
       } else if (status === "Approved") {
-        color = "green";
-      } else if (status === "Failed") {
-        color = "red";
+        color = "black";
+        className = "approved";
+      } else if (status === "Rejected") {
+        color = "black";
+        className = "Rejected";
       } else {
         color = "black";
       }
-      return <span style={{ color }}>{status}</span>;
+
+      return (
+        <span className={`status ${className}`} style={{ color }}>
+          {status}
+        </span>
+      );
     },
   },
 ];
@@ -45,8 +55,8 @@ const data = [
   {
     key: "1",
     title: (
-        <div className="c_tune_table_title">
-            <img src={coverImg} alt="" className="table_img"/>
+      <div className="c_tune_table_title">
+        <img src={coverImg} alt="" className="table_img" />
         <span>
           Title Here
           <br /> By Name
@@ -60,9 +70,9 @@ const data = [
       </span>
     ),
     stores: (
-        <div className="sim_icons">
-            <img src={airtelLogo} alt="" />
-            <img src={vodafoneLogo} alt="" />
+      <div className="sim_icons">
+        <img src={airtelLogo} alt="" />
+        <img src={vodafoneLogo} alt="" />
       </div>
     ),
     status: "Approved",
@@ -70,8 +80,8 @@ const data = [
   {
     key: "2",
     title: (
-        <div className="c_tune_table_title">
-            <img src={coverImg} alt="" className="table_img"/>
+      <div className="c_tune_table_title">
+        <img src={coverImg} alt="" className="table_img" />
         <span>
           Title Here
           <br /> By Name
@@ -85,9 +95,9 @@ const data = [
       </span>
     ),
     stores: (
-        <div className="sim_icons">
-            <img src={airtelLogo} alt="" />
-            <img src={vodafoneLogo} alt="" />
+      <div className="sim_icons">
+        <img src={airtelLogo} alt="" />
+        <img src={vodafoneLogo} alt="" />
       </div>
     ),
     status: "Pending",
@@ -95,8 +105,8 @@ const data = [
   {
     key: "3",
     title: (
-        <div className="c_tune_table_title">
-            <img src={coverImg} alt="" className="table_img"/>
+      <div className="c_tune_table_title">
+        <img src={coverImg} alt="" className="table_img" />
         <span>
           Title Here
           <br /> By Name
@@ -109,13 +119,13 @@ const data = [
         UPC: 10 <br /> CAT#: 10
       </span>
     ),
-      stores: (
-        <div className="sim_icons">
-            <img src={airtelLogo} alt="" />
-            <img src={vodafoneLogo} alt="" />
+    stores: (
+      <div className="sim_icons">
+        <img src={airtelLogo} alt="" />
+        <img src={vodafoneLogo} alt="" />
       </div>
     ),
-    status: "Failed",
+    status: "Rejected",
   },
 ];
 
@@ -146,9 +156,14 @@ const CallerTuneTable = () => {
         <SearchBar />
       </div>
 
-    <Table columns={columns} dataSource={getFilteredData(data)} bordered scroll={{ x: 768 }} />
+      <Table
+        columns={columns}
+        dataSource={getFilteredData(data)}
+        bordered
+        scroll={{ x: 768 }}
+      />
     </>
-  )
-}
+  );
+};
 
 export default CallerTuneTable;

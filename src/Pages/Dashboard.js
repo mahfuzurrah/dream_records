@@ -38,7 +38,7 @@ const Dashboard = () => {
 
         <div className="artist_row mt-4">
           <div className="section_title d_title" style={{ border: "none" }}>
-            <h3>
+            <h3 className="mb-4">
               <FaUserPlus className="icons" />
               Primary Artist
             </h3>
@@ -71,8 +71,7 @@ const Dashboard = () => {
 
         <div className="row mt-4">
           <div className="section_title d_title" style={{ border: "none" }}>
-            <h3>
-              {" "}
+            <h3 className="mb-4">
               <FaCheckCircle className="icons circle" />
               Latest Release
             </h3>

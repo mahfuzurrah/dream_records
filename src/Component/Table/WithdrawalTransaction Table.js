@@ -14,16 +14,26 @@ const columns = [
     dataIndex: "status",
     render: (status) => {
       let color;
+      let className = ""; // Initialize className with an empty string
+
       if (status === "Pending") {
-        color = "orange";
+        color = "black";
+        className = "pending"; // Set className to "pending" when status is "Pending"
       } else if (status === "Approved") {
-        color = "green";
-      } else if (status === "Failed") {
-        color = "red";
+        color = "black";
+        className = "approved";
+      } else if (status === "Rejected") {
+        color = "black";
+        className = "Rejected";
       } else {
         color = "black";
       }
-      return <span style={{ color }}>{status}</span>;
+
+      return (
+        <span className={`status ${className}`} style={{ color }}>
+          {status}
+        </span>
+      );
     },
   },
   {
@@ -49,12 +59,12 @@ const data = [
     key: "3",
     date: "27-10-2001",
     amount: "₹1235",
-    status: "Failed",
+    status: "Rejected",
   },
 ];
 
 const WithdrawalTransactionTable = () => (
-  <Table columns={columns} dataSource={data} bordered scroll={{ x: 991}}/>
+  <Table columns={columns} dataSource={data} scroll={{ x: 991 }} />
 );
 
 export default WithdrawalTransactionTable;

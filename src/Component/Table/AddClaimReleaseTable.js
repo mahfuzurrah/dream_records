@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import { Table } from "antd";
+import React, { useState } from "react";
 import TableFilter from "../Filter/TableFilter";
 import SearchBar from "../SearchBar/SearchBar";
 
@@ -29,16 +29,26 @@ const columns = [
     dataIndex: "status",
     render: (status) => {
       let color;
+      let className = ""; // Initialize className with an empty string
+
       if (status === "Pending") {
-        color = "orange";
+        color = "black";
+        className = "pending"; // Set className to "pending" when status is "Pending"
       } else if (status === "Approved") {
-        color = "green";
-      } else if (status === "Failed") {
-        color = "red";
+        color = "black";
+        className = "approved";
+      } else if (status === "Rejected") {
+        color = "black";
+        className = "Rejected";
       } else {
         color = "black";
       }
-      return <span style={{ color }}>{status}</span>;
+
+      return (
+        <span className={`status ${className}`} style={{ color }}>
+          {status}
+        </span>
+      );
     },
   },
 ];
@@ -68,7 +78,7 @@ const data = [
     UPC_EAN: "upc/ean",
     LNS: "name",
     LNR: "name",
-    status: "Failed",
+    status: "Rejected",
   },
 ];
 
@@ -99,7 +109,12 @@ const AddClaimReleaseTable = () => {
         <p>Show 4 entries</p>
         <SearchBar />
       </div>
-      <Table columns={columns} dataSource={getFilteredData(data)} bordered scroll={{ x: 768 }} />
+      <Table
+        columns={columns}
+        dataSource={getFilteredData(data)}
+        bordered
+        scroll={{ x: 768 }}
+      />
     </>
   );
 };

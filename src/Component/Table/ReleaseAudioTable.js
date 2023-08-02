@@ -33,20 +33,23 @@ const columns = [
     render: (status) => {
       let color;
       let className = ""; // Initialize className with an empty string
-  
+
       if (status === "Pending") {
         color = "black";
         className = "pending"; // Set className to "pending" when status is "Pending"
       } else if (status === "Approved") {
         color = "black";
         className = "approved";
-      } else if (status === "Failed") {
+      } else if (status === "Rejected") {
         color = "black";
-        className = "failed";
+        className = "Rejected";
+      } else if (status === "Correction Request") {
+        color = "black";
+        className = "c_request";
       } else {
         color = "black";
       }
-  
+
       return (
         <span className={`status ${className}`} style={{ color }}>
           {status}
@@ -99,7 +102,7 @@ const data = [
     status: "Pending",
   },
   {
-    key: "Failed",
+    key: "Rejected",
     title: (
       <Link to="/catalog_details" className="c_tune_table_title">
         <img src={coverImg} alt="" className="table_img" />
@@ -110,7 +113,21 @@ const data = [
     artist: "name here",
     releaseDate: "22-6-2023",
     upc: <span>UPC: empty</span>,
-    status: "Failed",
+    status: "Rejected",
+  },
+  {
+    key: "CorrectionRequest",
+    title: (
+      <Link to="/catalog_details" className="c_tune_table_title">
+        <img src={coverImg} alt="" className="table_img" />
+        <span>Title Here</span>
+      </Link>
+    ),
+    label: "no info",
+    artist: "name here",
+    releaseDate: "22-6-2023",
+    upc: <span>UPC: empty</span>,
+    status: "Correction Request",
   },
 ];
 
@@ -132,7 +149,7 @@ const CallerTuneTable = () => {
 
   return (
     <div>
-            {/* Filter Area */}
+      {/* Filter Area */}
       <TableFilter
         selectedStatus={selectedStatus}
         handleFilter={handleFilter}
