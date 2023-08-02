@@ -84,7 +84,7 @@ const data = [
     label: "no info",
     artist: "name here",
     releaseDate: "22-6-2023",
-    upc: <span>UPC: empty</span>,
+    upc: <span>123456</span>,
     status: "Approved",
   },
   {
@@ -98,7 +98,7 @@ const data = [
     label: "no info",
     artist: "name here",
     releaseDate: "22-6-2023",
-    upc: <span>UPC: empty</span>,
+    upc: <span>123456</span>,
     status: "Pending",
   },
   {
@@ -112,7 +112,7 @@ const data = [
     label: "no info",
     artist: "name here",
     releaseDate: "22-6-2023",
-    upc: <span>UPC: empty</span>,
+    upc: <span>123456</span>,
     status: "Rejected",
   },
   {
@@ -126,7 +126,7 @@ const data = [
     label: "no info",
     artist: "name here",
     releaseDate: "22-6-2023",
-    upc: <span>UPC: empty</span>,
+    upc: <span>123456</span>,
     status: "Correction Request",
   },
 ];
