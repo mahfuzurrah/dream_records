@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import InputField from '../Component/InputField/InputField'
-import SearchBar from '../Component/SearchBar/SearchBar';
 import AddClaimReleaseTable from '../Component/Table/AddClaimReleaseTable';
 
 function AddClaimRelease() {
