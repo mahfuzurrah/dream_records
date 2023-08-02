@@ -345,6 +345,41 @@ Dashboard
   height: 60px;
 }
 
+.artist_row .d_title h3{
+  display: flex;
+  align-items: center;
+}
+
+.artist_row .d_title .icons{
+color: #3E7373;
+margin-right: 10px;
+}
+
+.d_title .circle{
+color: #57B948;
+margin-right: 10px;
+}
+
+.f_performance{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 40px;
+  background-image: url(./Component//assets//img/d_performance_bg.png);
+  height: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.f_performance h1{
+  font-size: 36px;
+}
+
+
 /*=====================
 Analytics Page
  ===================== */

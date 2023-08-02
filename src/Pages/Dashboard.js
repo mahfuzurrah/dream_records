@@ -3,22 +3,19 @@ import { Link } from "react-router-dom";
 
 import artist_img from "../Component/assets/img/artist.png";
 
-import { FaBullhorn, FaPlus, FaUserPlus, FaCheckCircle } from "react-icons/fa";
+import { FaBullhorn, FaCheckCircle, FaPlus, FaUserPlus } from "react-icons/fa";
 import DashboardCardList from "../Component/DashboardCard/DashboardCardList";
 
-
-
-import DashboardSlider from "../Component/Slider/DashboardSlider";
 import LatestReleaseCard from "../Component/CatalogsCard/LatestReleaseCard";
+import DashboardSlider from "../Component/Slider/DashboardSlider";
 
 const Dashboard = () => {
-
   return (
     <>
       <div className="container-fluid">
         <div className="row">
           <div className="col-xl-9 col-lg-7 col-md-6">
-            <DashboardSlider/>
+            <DashboardSlider />
           </div>
           <div className="col-xl-3 col-lg-5 col-md-6">
             <div className="announcement">
@@ -40,8 +37,11 @@ const Dashboard = () => {
         </div>
 
         <div className="artist_row mt-4">
-          <div className="section_title" style={{ border: "none" }}>
-            <h3><FaUserPlus />Label Manage</h3>
+          <div className="section_title d_title" style={{ border: "none" }}>
+            <h3>
+              <FaUserPlus className="icons" />
+              Primary Artist
+            </h3>
           </div>
           <div className="artist_item">
             <ul className="mt-2">
@@ -70,14 +70,27 @@ const Dashboard = () => {
         </div>
 
         <div className="row mt-4">
-          <div className="section_title" style={{ border: "none" }}>
-            <h3> <FaCheckCircle /> Label Manage</h3>
+          <div className="section_title d_title" style={{ border: "none" }}>
+            <h3>
+              {" "}
+              <FaCheckCircle className="icons circle" />
+              Latest Release
+            </h3>
           </div>
           <div className="relese_card_list mt-2">
             <Link to="/release-audio" className="add_realese">
               <FaPlus className="icons" />
             </Link>
             <LatestReleaseCard />
+          </div>
+          <div className="f_performance mt-5">
+            <h3>
+              Your <br />
+              Financial <br />
+              Performance
+            </h3>
+            <h1><span>₹</span> 00.00</h1>
+            <button className="btn">Show more</button>
           </div>
         </div>
       </div>
