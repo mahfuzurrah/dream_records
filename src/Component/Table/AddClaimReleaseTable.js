@@ -1,4 +1,8 @@
+import React, { useState } from "react";
 import { Table } from "antd";
+import TableFilter from "../Filter/TableFilter";
+import SearchBar from "../SearchBar/SearchBar";
+
 const columns = [
   {
     title: "Date",
@@ -11,6 +15,14 @@ const columns = [
   {
     title: "UPC/EAN",
     dataIndex: "UPC_EAN",
+  },
+  {
+    title: "Lable Name (Who send a claim)",
+    dataIndex: "LNS",
+  },
+  {
+    title: "Lable Name (Who received a claim)",
+    dataIndex: "LNR",
   },
   {
     title: "Status",
@@ -36,6 +48,8 @@ const data = [
     date: "27-10-2001",
     url: "url.com",
     UPC_EAN: "upc/ean",
+    LNS: "name",
+    LNR: "name",
     status: "Approved",
   },
   {
@@ -43,6 +57,8 @@ const data = [
     date: "27-10-2001",
     url: "url.com",
     UPC_EAN: "upc/ean",
+    LNS: "name",
+    LNR: "name",
     status: "Pending",
   },
   {
@@ -50,12 +66,42 @@ const data = [
     date: "27-10-2001",
     url: "url.com",
     UPC_EAN: "upc/ean",
+    LNS: "name",
+    LNR: "name",
     status: "Failed",
   },
 ];
 
-const AddClaimReleaseTable = () => (
-  <Table columns={columns} dataSource={data} bordered scroll={{ x: 768}}/>
-);
+const AddClaimReleaseTable = () => {
+  const [selectedStatus, setSelectedStatus] = useState("all");
+
+  const handleFilter = (status) => {
+    setSelectedStatus(status);
+  };
+
+  const getFilteredData = (data) => {
+    if (selectedStatus === "all") {
+      return data;
+    } else {
+      return data.filter((item) => item.status === selectedStatus);
+    }
+  };
+
+  return (
+    <>
+      {/* Filter Area */}
+      <TableFilter
+        selectedStatus={selectedStatus}
+        handleFilter={handleFilter}
+      />
+
+      <div className="table_title mt-5">
+        <p>Show 4 entries</p>
+        <SearchBar />
+      </div>
+      <Table columns={columns} dataSource={getFilteredData(data)} bordered scroll={{ x: 768 }} />
+    </>
+  );
+};
 
 export default AddClaimReleaseTable;
