@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import CallerTuneTable from "../Component/Table/CallerTuneTable";
 
 function CallerTune() {
@@ -8,12 +8,12 @@ function CallerTune() {
         <div className="text_area">
           <h1>Caller Tune</h1>
         </div>
-          </div>
-          <div className="table_content">
-        <CallerTuneTable />
+      </div>
+      <div className="table_content">
+        <CallerTuneTable/>
       </div>
     </>
-  )
+  );
 }
 
-export default CallerTune
+export default CallerTune;

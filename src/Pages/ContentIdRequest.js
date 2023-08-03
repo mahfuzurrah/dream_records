@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import InputField from '../Component/InputField/InputField'
-import SearchBar from '../Component/SearchBar/SearchBar';
 import ContentIdRequestTable from '../Component/Table/ContentIdRequestTable';
 
 function ContentIdRequest() {
@@ -24,10 +23,7 @@ function ContentIdRequest() {
         </div>
       </div>
       <div className="table_content">
-        <div className="table_title">
-          <p>Show 4 entries</p>
-          <SearchBar/>
-        </div>
+      <h2 className='mb-5'>All History</h2>
         <ContentIdRequestTable />
       </div>
     </div>

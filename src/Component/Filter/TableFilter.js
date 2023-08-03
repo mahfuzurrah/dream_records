@@ -29,7 +29,7 @@ const TableFilter = ({ selectedStatus, handleFilter }) => {
       </button>
       <button
         onClick={() => handleFilter("Correction Request")}
-        className={selectedStatus === "c_request" ? "active" : ""}
+        className={selectedStatus === "Correction Request" ? "active" : ""}
       >
         Correction Request
       </button>

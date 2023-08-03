@@ -1,4 +1,7 @@
 import { Table } from "antd";
+import React, { useState } from "react";
+import TableFilter from "../Filter/TableFilter";
+import SearchBar from "../SearchBar/SearchBar";
 import { Link } from "react-router-dom";
 
 const columns = [
@@ -66,21 +69,52 @@ const data = [
     key: "3",
     years: "2023",
     month: "March",
-    status: "Cancel",
+    status: "Rejected",
     label: "label",
   },
 ];
 const onChange = (pagination, filters, sorter, extra) => {
   console.log("params", pagination, filters, sorter, extra);
 };
-const AnalyticsTable = () => (
-  <Table
-    columns={columns}
-    dataSource={data}
-    scroll={{ x: 768 }}
-    onChange={onChange}
-    bordered
-  />
-);
+
+const AnalyticsTable = () => {
+  const [selectedStatus, setSelectedStatus] = useState("all");
+
+  const handleFilter = (status) => {
+    setSelectedStatus(status);
+  };
+
+  const getFilteredData = (data) => {
+    if (selectedStatus === "all") {
+      return data;
+    } else {
+      return data.filter((item) => item.status === selectedStatus);
+    }
+  };
+
+  return (
+    <>
+      {/* Filter Area */}
+      <TableFilter
+        selectedStatus={selectedStatus}
+        handleFilter={handleFilter}
+      />
+
+      <div className="table_title mt-3">
+        <p>Show 4 entries</p>
+        <SearchBar />
+      </div>
+      
+      <Table
+        columns={columns}
+        dataSource={getFilteredData(data)}
+        bordered
+        scroll={{ x: 768 }}
+        onChange={onChange}
+      />
+    </>
+  );
+};
+
 
 export default AnalyticsTable;

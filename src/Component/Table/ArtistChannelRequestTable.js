@@ -1,4 +1,8 @@
 import { Table } from "antd";
+import React, { useState } from "react";
+import TableFilter from "../Filter/TableFilter";
+import SearchBar from "../SearchBar/SearchBar";
+
 const columns = [
   {
     title: "Date",
@@ -85,8 +89,41 @@ const data = [
   },
 ];
 
-const ArtistChannelRequestTable = () => (
-  <Table columns={columns} dataSource={data} bordered scroll={{ x: 768 }} />
-);
+const ArtistChannelRequestTable = () => {
+  const [selectedStatus, setSelectedStatus] = useState("all");
+
+  const handleFilter = (status) => {
+    setSelectedStatus(status);
+  };
+
+  const getFilteredData = (data) => {
+    if (selectedStatus === "all") {
+      return data;
+    } else {
+      return data.filter((item) => item.status === selectedStatus);
+    }
+  };
+
+  return (
+    <>
+      {/* Filter Area */}
+      <TableFilter
+        selectedStatus={selectedStatus}
+        handleFilter={handleFilter}
+      />
+
+      <div className="table_title mt-3">
+        <p>Show 4 entries</p>
+        <SearchBar />
+      </div>
+      <Table
+        columns={columns}
+        dataSource={getFilteredData(data)}
+        bordered
+        scroll={{ x: 768 }}
+      />
+    </>
+  );
+};
 
 export default ArtistChannelRequestTable;

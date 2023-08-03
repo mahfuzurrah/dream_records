@@ -441,6 +441,10 @@ Analytics Page
   margin-top: 50px;
 }
 
+.ant-table-wrapper{
+  margin-top: 20px;
+}
+
 .table_title {
   display: flex;
   align-items: center;
@@ -981,6 +985,7 @@ td.ant-table-cell .status.c_request {
   background: #dfe088 !important;
 }
 
+
 .release_audio_table label.ant-checkbox-wrapper.css-dev-only-do-not-override-w8mnev {
   margin-left: 10px !important;
 }
@@ -1009,6 +1014,18 @@ td.ant-table-cell .status.c_request {
   background: var(--primary-color);
   color: var(--white-color);
   transition: all 0.3s ease-in-out;
+}
+
+#hide_c_request {
+  display: none;
+}
+
+.relese_audio_filter_btn_add #hide_c_request {
+  display: block !important;
+}
+
+th.ant-table-cell.header_title{
+  padding-left: 82px !important;
 }
 
 /* =================

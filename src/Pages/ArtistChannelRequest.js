@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import InputField from '../Component/InputField/InputField'
-import SearchBar from '../Component/SearchBar/SearchBar';
 import ArtistChannelRequestTable from '../Component/Table/ArtistChannelRequestTable';
 
 function ArtistchannelRequest() {
@@ -28,10 +27,7 @@ function ArtistchannelRequest() {
         </div>
       </div>
       <div className="table_content">
-        <div className="table_title">
-          <p>Show 4 entries</p>
-          <SearchBar/>
-        </div>
+        <h2 className='mb-5'>All History</h2>
         <ArtistChannelRequestTable />
       </div>
     </div>

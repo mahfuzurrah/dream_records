@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import AnalyticsTable from "../Component/Table/AnalyticsTable";
-import SearchBar from "../Component/SearchBar/SearchBar";
 import Selector from "../Component/Selector/Selector";
 
 function Analytics() {
@@ -64,11 +63,7 @@ function Analytics() {
           <button className="btn">Submit</button>
         </div>
         <div className="table_content">
-          <h2 className="mb-3">User Analytics History</h2>
-          <div className="table_title">
-            <p>Show 4 entries</p>
-            <SearchBar />
-          </div>
+          <h2 className="mb-5">User Analytics History</h2>
           <AnalyticsTable />
         </div>
       </div>

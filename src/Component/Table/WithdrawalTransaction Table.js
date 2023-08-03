@@ -1,3 +1,6 @@
+import React, { useState } from "react";
+import TableFilter from "../Filter/TableFilter";
+import SearchBar from "../SearchBar/SearchBar";
 import { Table } from "antd";
 import { Link } from "react-router-dom";
 const columns = [
@@ -63,8 +66,37 @@ const data = [
   },
 ];
 
-const WithdrawalTransactionTable = () => (
-  <Table columns={columns} dataSource={data} scroll={{ x: 991 }} />
-);
+const WithdrawalTransactionTable = () => {
+  const [selectedStatus, setSelectedStatus] = useState("all");
+
+  const handleFilter = (status) => {
+    setSelectedStatus(status);
+  };
+
+  const getFilteredData = (data) => {
+    if (selectedStatus === "all") {
+      return data;
+    } else {
+      return data.filter((item) => item.status === selectedStatus);
+    }
+  };
+
+  return (
+    <>
+      {/* Filter Area */}
+      <TableFilter
+        selectedStatus={selectedStatus}
+        handleFilter={handleFilter}
+      />
+
+      <div className="table_title mt-5">
+        <p>Show 4 entries</p>
+        <SearchBar />
+      </div>
+
+      <Table columns={columns} dataSource={getFilteredData(data)} scroll={{ x: 991 }} />
+    </>
+  )
+};
 
 export default WithdrawalTransactionTable;

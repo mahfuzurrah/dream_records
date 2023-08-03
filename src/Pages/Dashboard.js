@@ -36,7 +36,7 @@ const Dashboard = () => {
           <DashboardCardList />
         </div>
 
-        <div className="artist_row mt-4">
+        <div className="artist_row mt-5">
           <div className="section_title d_title" style={{ border: "none" }}>
             <h3 className="mb-4">
               <FaUserPlus className="icons" />
@@ -69,7 +69,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="row mt-4">
+        <div className="row mt-5">
           <div className="section_title d_title" style={{ border: "none" }}>
             <h3 className="mb-4">
               <FaCheckCircle className="icons circle" />

@@ -51,7 +51,7 @@ function WithdrawA() {
         </div>
       </div>
       <div className="table_content">
-        <h1 className="mb-4">Recent Transactions</h1>
+        <h1 className="mb-5">Recent Transactions</h1>
         <WithdrawalTransactionTable/>
       </div>
     </div>

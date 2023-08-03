@@ -3,7 +3,6 @@ import InputField from "../Component/InputField/InputField";
 import TextField from "../Component/TextBox/TextField";
 import { IoLogoWhatsapp } from "react-icons/io";
 import SupportHistoryTable from "../Component/Table/SupportHistoryTable";
-import SearchBar from "../Component/SearchBar/SearchBar";
 import UploadButton from "../Component/UploadBtn/UploadButton";
 
 function SupportCenter() {
@@ -52,12 +51,8 @@ function SupportCenter() {
       <div className="row mt-5">
         <div className="col-lg-12 p-0">
           <div className="s_history">
-            <h2>History</h2>
+            <h2 className="mb-5">History</h2>
             <div className="table_content mt-3">
-              <div className="table_title">
-                <p>Show 4 entries</p>
-                <SearchBar />
-              </div>
               <SupportHistoryTable />
             </div>
           </div>

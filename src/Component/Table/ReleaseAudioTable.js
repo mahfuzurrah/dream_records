@@ -11,6 +11,7 @@ const columns = [
   {
     title: "Title",
     dataIndex: "title",
+    className: "header_title"
   },
   {
     title: "Label",
@@ -62,7 +63,7 @@ const columns = [
     title: "Action",
     render: () => (
       <div className="r_edit_delete">
-        <Link to="">
+        <Link to="/catalog_details">
           <FaRegEye className="icons eye" />
         </Link>
         <Link to="">
@@ -80,10 +81,10 @@ const data = [
   {
     key: "Approved",
     title: (
-      <Link to="/catalog_details" className="c_tune_table_title">
+      <div className="c_tune_table_title">
         <img src={coverImg} alt="" className="table_img" />
         <span>Title Here</span>
-      </Link>
+      </div>
     ),
     label: "no info",
     artist: "name here",
@@ -94,10 +95,10 @@ const data = [
   {
     key: "Pending",
     title: (
-      <Link to="/catalog_details" className="c_tune_table_title">
+      <div className="c_tune_table_title">
         <img src={coverImg} alt="" className="table_img" />
         <span>Title Here</span>
-      </Link>
+      </div>
     ),
     label: "no info",
     artist: "name here",
@@ -108,10 +109,10 @@ const data = [
   {
     key: "Rejected",
     title: (
-      <Link to="/catalog_details" className="c_tune_table_title">
+      <div className="c_tune_table_title">
         <img src={coverImg} alt="" className="table_img" />
         <span>Title Here</span>
-      </Link>
+      </div>
     ),
     label: "no info",
     artist: "name here",
@@ -122,10 +123,10 @@ const data = [
   {
     key: "CorrectionRequest",
     title: (
-      <Link to="/catalog_details" className="c_tune_table_title">
+      <div className="c_tune_table_title">
         <img src={coverImg} alt="" className="table_img" />
         <span>Title Here</span>
-      </Link>
+      </div>
     ),
     label: "no info",
     artist: "name here",

@@ -10,6 +10,7 @@ const columns = [
   {
     title: "Title",
     dataIndex: "title",
+    className: "header_title"
   },
   {
     title: "Label",
