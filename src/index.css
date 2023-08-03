@@ -997,6 +997,7 @@ td.ant-table-cell .status.c_request {
 .table_filter_btn {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
