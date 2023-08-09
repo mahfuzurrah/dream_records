@@ -11,7 +11,7 @@ const columns = [
   {
     title: "Title",
     dataIndex: "title",
-    className: "header_title"
+    className: "header_title",
   },
   {
     title: "Label",
@@ -34,11 +34,11 @@ const columns = [
     dataIndex: "status",
     render: (status) => {
       let color;
-      let className = ""; // Initialize className with an empty string
+      let className = "";
 
       if (status === "Pending") {
         color = "black";
-        className = "pending"; // Set className to "pending" when status is "Pending"
+        className = "pending";
       } else if (status === "Approved") {
         color = "black";
         className = "approved";
@@ -61,19 +61,55 @@ const columns = [
   },
   {
     title: "Action",
-    render: () => (
-      <div className="r_edit_delete">
-        <Link to="/catalog_details">
-          <FaRegEye className="icons eye" />
-        </Link>
-        <Link to="">
-          <BiPencil className="icons edit" />
-        </Link>
-        <Link to="">
-          <BiTrashAlt className="icons delete" />
-        </Link>
-      </div>
-    ),
+    render: (text, record) => {
+      const { status } = record;
+      let iconElement = null;
+
+      if (status === "Pending") {
+        iconElement = (
+          <div className="r_edit_delete">
+            <Link to="/catalog_details" className="eye">
+              <FaRegEye className="icons" />
+            </Link>
+          </div>
+        );
+      } else if (status === "Approved") {
+        iconElement = (
+          <div className="r_edit_delete">
+            <Link to="/catalog_details" className="eye">
+              <FaRegEye className="icons" />
+            </Link>
+          </div>
+        );
+      } else if (status === "Rejected") {
+        iconElement = (
+          <div className="r_edit_delete">
+            <Link to="/catalog_details" className="eye">
+              <FaRegEye className="icons" />
+            </Link>
+            <Link className="delete">
+              <BiTrashAlt className="icons" />
+            </Link>
+          </div>
+        );
+      } else if (status === "Correction Request") {
+        iconElement = (
+          <div className="r_edit_delete">
+            <Link to="/catalog_details" className="eye">
+              <FaRegEye className="icons" />
+            </Link>
+            <Link to="/release-audio" className="edit">
+              <BiPencil className="icons" />
+            </Link>
+            <Link className="delete">
+              <BiTrashAlt className="icons" />
+            </Link>
+          </div>
+        );
+      }
+
+      return iconElement; // Return the JSX element
+    },
   },
 ];
 
@@ -136,7 +172,7 @@ const data = [
   },
 ];
 
-const CallerTuneTable = () => {
+const ReleaseAudioTable = () => {
   const [selectionType, setSelectionType] = useState("checkbox");
   const [selectedStatus, setSelectedStatus] = useState("all");
 
@@ -185,4 +221,4 @@ const CallerTuneTable = () => {
   );
 };
 
-export default CallerTuneTable;
+export default ReleaseAudioTable;

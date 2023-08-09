@@ -14,6 +14,10 @@ const columns = [
     dataIndex: "month",
   },
   {
+    title: "Date",
+    dataIndex: "date",
+  },
+  {
     title: "Label",
     dataIndex: "label",
   },
@@ -57,6 +61,7 @@ const data = [
     month: "January",
     status: "Approved",
     label: "label",
+    date: "27"
   },
   {
     key: "2",
@@ -64,6 +69,7 @@ const data = [
     month: "February",
     status: "Pending",
     label: "label",
+    date: "27"
   },
   {
     key: "3",
@@ -71,6 +77,7 @@ const data = [
     month: "March",
     status: "Rejected",
     label: "label",
+    date: "27"
   },
 ];
 const onChange = (pagination, filters, sorter, extra) => {
