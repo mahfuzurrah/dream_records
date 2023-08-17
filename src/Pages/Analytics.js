@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import AnalyticsTable from "../Component/Table/AnalyticsTable";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Selector from "../Component/Selector/Selector";
+import AnalyticsTable from "../Component/Table/AnalyticsTable";
 
 function Analytics() {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -37,6 +39,9 @@ function Analytics() {
     { value: "2022", label: "2022" },
     { value: "2021", label: "2021" },
   ];
+
+  const notify = () => toast("Information Submitted");
+
   return (
     <>
       <div className="analytics_page">
@@ -60,11 +65,13 @@ function Analytics() {
             placeholder="All Labels"
             value={selectedOptionL}
           />
-          <button className="btn">Submit</button>
+          <button className="btn" onClick={notify}>
+            Submit <ToastContainer position="top-center" />
+          </button>
         </div>
         <div className="table_content">
           <h2 className="mb-5">User Analytics History</h2>
-          <AnalyticsTable />
+          <AnalyticsTable/>
         </div>
       </div>
     </>

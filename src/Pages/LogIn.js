@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import InputField from "../Component/InputField/InputField";
-import logIn_logo from "../Component/assets/img/Logo.svg";
+import PasswordInput from "../Component/InputField/PasswordInput";
+import LogIn_img from "../Component/assets/img/LogIn_img.jpeg";
 
 function LogIn() {
   const [name, setName] = useState("");
@@ -13,32 +14,40 @@ function LogIn() {
   const handlepassChange = (event) => {
     setPass(event.target.value);
   };
+
   return (
-    <div className="logIn_from">
-      <div className="logIn_logo mb-5">
-        <img src={logIn_logo} alt="" />
-        <h1>Dream Records</h1>
+    <div className="logIn_page">
+      <div className="log_container">
+        <div className="lgoIn_img">
+          <img src={LogIn_img} alt="" />
+        </div>
+        <div className="logIn_from">
+          <h1>Welcome To Dream Records</h1>
+          <form action="" className="input_form">
+            <InputField
+              label="User Name"
+              value={name}
+              star="*"
+              onChange={handleNameChange}
+            />
+            <PasswordInput
+              label="Password"
+              value={pass}
+              star="*"
+              onChange={handlepassChange}
+            />
+            <div className="btn_area">
+            <Link to="#" className="mt-3 forget">
+              Forget your password?
+            </Link>
+            <Link to="/dashboard" className="mt-3">
+              <button className="btn">Log In</button>
+            </Link>
+            </div>
+          </form>
+          <p className="copy_R">@ 2022 ALL RLGHTS RESERVED</p>
+        </div>
       </div>
-      <form action="" className="input_form">
-        <InputField
-          label="User Name"
-          value={name}
-          star="*"
-          onChange={handleNameChange}
-        />
-        <InputField
-          label="Password"
-          value={pass}
-          star="*"
-          onChange={handlepassChange}
-        />
-        <Link to="#" className="mt-3">
-          Forget your password?
-        </Link>
-        <Link to="/dashboard" className="mt-3">
-          <button className="btn">Log In</button>
-        </Link>
-      </form>
     </div>
   );
 }

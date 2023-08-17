@@ -17,16 +17,12 @@ const columns = [
     dataIndex: "t_link",
   },
   {
-    title: "UPC/EAN1",
-    dataIndex: "UPCC1",
+    title: "YTAF Activated",
+    dataIndex: "YTAF",
   },
   {
-    title: "UPC/EAN2",
-    dataIndex: "UPCC2",
-  },
-  {
-    title: "UPC/EAN3",
-    dataIndex: "UPCC3",
+    title: "UPC",
+    dataIndex: "UPC",
   },
   {
     title: "Status",
@@ -62,9 +58,8 @@ const data = [
     date: "27-10-2001",
     channel_link: "link",
     t_link: "link",
-    UPCC1: "upc1 here",
-    UPCC2: "upc2 here",
-    UPCC3: "upc3 here",
+    YTAF: "No",
+    UPC: "upc",
     status: "Approved",
   },
   {
@@ -72,9 +67,8 @@ const data = [
     date: "27-10-2001",
     channel_link: "link",
     t_link: "link",
-    UPCC1: "upc1 here",
-    UPCC2: "upc2 here",
-    UPCC3: "upc3 here",
+    YTAF: "Yes",
+    UPC: "upc",
     status: "Pending",
   },
   {
@@ -82,9 +76,8 @@ const data = [
     date: "27-10-2001",
     channel_link: "link",
     t_link: "link",
-    UPCC1: "upc1 here",
-    UPCC2: "upc2 here",
-    UPCC3: "upc3 here",
+    YTAF: "No",
+    UPC: "upc",
     status: "Rejected",
   },
 ];

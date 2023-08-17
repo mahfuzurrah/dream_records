@@ -1,7 +1,8 @@
 import { Button, Layout, Menu } from "antd";
 import React, { useState } from "react";
 import { BiMenu, BiX } from "react-icons/bi";
-import { BsBank2, BsMusicNote } from "react-icons/bs";
+import { BsBank2} from "react-icons/bs";
+// import { BsBank2, BsMusicNote } from "react-icons/bs";
 import { Outlet, useNavigate } from "react-router-dom";
 import "../Layout/Navbar.css";
 
@@ -12,7 +13,7 @@ import {
   // FaFirstdraft,
   // FaHeadset,
   // FaHome,
-  FaOrcid,
+  // FaOrcid,
   FaPhoneVolume,
   FaPlus,
   FaPlusSquare,
@@ -118,18 +119,23 @@ const MainLayout = () => {
               children: [
                 {
                   key: "add_claim_release", // Unique key
-                  icon: <FaPlusSquare />,
+                  // icon: <FaPlusSquare />,
                   label: "Add Claim Release",
                 },
                 {
                   key: "content_id_request", // Unique key
-                  icon: <FaOrcid />,
+                  // icon: <FaOrcid />,
                   label: "Content Id Request",
                 },
                 {
                   key: "artist_channel_request", // Unique key
-                  icon: <BsMusicNote />,
+                  // icon: <BsMusicNote />,
                   label: "Artist Channel Request",
+                },
+                {
+                  key: "manual_laim_request", // Unique key
+                  // icon: <BsMusicNote />,
+                  label: "Manual Claim Request",
                 },
               ],
             },

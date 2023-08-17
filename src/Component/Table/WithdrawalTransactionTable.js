@@ -1,32 +1,33 @@
-import { Divider, Radio, Table } from "antd";
-import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import TableFilter from "../Filter/TableFilter";
 import SearchBar from "../SearchBar/SearchBar";
+import { Table } from "antd";
+import { Link } from "react-router-dom";
+import { FaDownload } from "react-icons/fa";
 
 const columns = [
   {
-    title: "ID",
-    dataIndex: "id",
+    title: "Date",
+    dataIndex: "date",
   },
   {
-    title: "Title",
-    dataIndex: "name",
+    title: "Amount",
+    dataIndex: "amount",
   },
   {
-    title: "Youtube URL",
-    render: () => <Link to="/action_primary_artist">action</Link>,
+    title: "Bank Info",
+    dataIndex: "bank",
   },
   {
     title: "Status",
     dataIndex: "status",
     render: (status) => {
       let color;
-      let className = "";
+      let className = ""; // Initialize className with an empty string
 
       if (status === "Pending") {
         color = "black";
-        className = "pending";
+        className = "pending"; // Set className to "pending" when status is "Pending"
       } else if (status === "Approved") {
         color = "black";
         className = "approved";
@@ -43,35 +44,39 @@ const columns = [
         </span>
       );
     },
-  }
+  },
+  {
+    title: "Action",
+    // dataIndex: "AId",
+    render: () => <Link to=""><FaDownload className="icons"/></Link>,
+  },
 ];
+
 const data = [
   {
     key: "1",
-    id: "01",
-    name: "Title Here",
-    status: "Pending",
-  },
-  {
-    key: "2",
-    id: "02",
-    name: "Title Here",
+    date: "27-10-2001",
+    amount: "₹1235",
+    bank: "Bank Name",
     status: "Approved",
   },
   {
+    key: "2",
+    date: "27-10-2001",
+    amount: "₹1235",
+    bank: "Bank Name",
+    status: "Pending",
+  },
+  {
     key: "3",
-    id: "03",
-    name: "Title Here",
+    date: "27-10-2001",
+    amount: "₹1235",
+    bank: "Bank Name",
     status: "Rejected",
-  }
+  },
 ];
 
-const onChange = (pagination, filters, sorter, extra) => {
-  console.log("params", pagination, filters, sorter, extra);
-};
-
-const PrimaryArtistTable = () => {
-  const [selectionType, setSelectionType] = useState("checkbox");
+const WithdrawalTransactionTable = () => {
   const [selectedStatus, setSelectedStatus] = useState("all");
 
   const handleFilter = (status) => {
@@ -87,37 +92,21 @@ const PrimaryArtistTable = () => {
   };
 
   return (
-    <div>
+    <>
       {/* Filter Area */}
       <TableFilter
         selectedStatus={selectedStatus}
         handleFilter={handleFilter}
       />
 
-      <div className="table_title mt-3">
+      <div className="table_title mt-5">
         <p>Show 4 entries</p>
         <SearchBar />
       </div>
 
-      {/* Table Area */}
-      <Radio.Group
-        onChange={({ target: { value } }) => {
-          setSelectionType(value);
-        }}
-        value={selectionType}
-      ></Radio.Group>
-
-      <Divider />
-
-      <Table
-        className="release_audio_table"
-        onChange={onChange}
-        columns={columns}
-        dataSource={getFilteredData(data)}
-        scroll={{ x: 768 }}
-      />
-    </div>
-  );
+      <Table columns={columns} dataSource={getFilteredData(data)} scroll={{ x: 991 }} />
+    </>
+  )
 };
 
-export default PrimaryArtistTable;
+export default WithdrawalTransactionTable;

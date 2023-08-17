@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import InputField from "../Component/InputField/InputField";
-import ProfileImgUpload from "../Component/ImageUpload/ProfileImgUpload";
+import PhotoUploader from "../Component/ImageUpload/PhotoUploader";
 
 function Profile() {
   const [fname, setFName] = useState("");
@@ -57,7 +57,7 @@ function Profile() {
     <>
       <div className="user_profile_top mb-5">
         <div className="user_p_info">
-          <ProfileImgUpload />
+          <PhotoUploader />
           <div className="text_area">
             <h2>username</h2>
             <p className="mt-2">
@@ -104,7 +104,7 @@ function Profile() {
             onChange={handlepNumber}
             type="text"
             error={null}
-            disabled={!isEditable}
+            // disabled={!isEditable}
           />
           <InputField
             label="Country / Region"
@@ -163,7 +163,7 @@ function Profile() {
             onChange={handleEmail}
             type="text"
             error={null}
-            disabled={!isEditable}
+            // disabled={!isEditable}
           />
           <button className="btn_s mt-4">Add Email Address</button>
         </div>

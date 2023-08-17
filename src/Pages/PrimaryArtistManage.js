@@ -1,6 +1,7 @@
 import React from "react";
 import PrimaryArtistTable from "../Component/Table/PrimaryArtistTable";
 import SearchBar from "../Component/SearchBar/SearchBar";
+import PrimaryArtistAddPopup from "../Component/Modal/PrimaryArtistAddPopup";
 
 function PrimaryArtistManage() {
 
@@ -11,6 +12,7 @@ function PrimaryArtistManage() {
           <h1>Primary Artist</h1>
           <p>A primary artist is the main or lead artist</p>
         </div>
+        <PrimaryArtistAddPopup/>
       </div>
       <div className="table_content">
         <div className="table_title">

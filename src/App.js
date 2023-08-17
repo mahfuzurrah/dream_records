@@ -21,6 +21,7 @@ import LabelManage from "./Pages/LabelManage";
 import Profile from "./Pages/Profile";
 import CallerTune from "./Pages/CallerTune";
 import LogIn from "./Pages/LogIn";
+import ManualClaimRequest from "./Pages/ManualClaimRequest";
 
 function App() {
   return (
@@ -44,6 +45,10 @@ function App() {
             <Route
               path="artist_channel_request"
               element={<ArtistChannelRequest />}
+            />
+            <Route
+              path="manual_laim_request"
+              element={<ManualClaimRequest />}
             />
             <Route path="overview" element={<Overview />} />
             <Route path="withdraw" element={<WithdrawA />} />

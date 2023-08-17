@@ -29,7 +29,7 @@ function LabelManagePopup() {
 
   return (
     <>
-      <button className="btn add_label_btn mt-4" onClick={handleShow}>
+      <button className="btn add_label_btn" onClick={handleShow}>
         Add label
       </button>
       <Modal show={show} onHide={handleClose} className="add_label">

@@ -22,6 +22,12 @@ const TableFilter = ({ selectedStatus, handleFilter }) => {
         Pending
       </button>
       <button
+        onClick={() => handleFilter("Failed")}
+        className={selectedStatus === "Failed" ? "active" : "Failed"}
+      >
+        Failed
+      </button>
+      <button
         onClick={() => handleFilter("Rejected")}
         className={selectedStatus === "Rejected" ? "active" : ""}
       >

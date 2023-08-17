@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import EarningOverviewChart from "../Component/Chart/EarningOverviewChart";
+// import EarningOverviewChart from "../Component/Chart/EarningOverviewChart";
 import Selector from "../Component/Selector/Selector";
 import EarningHistoryTable from "../Component/Table/EarningHistoryTable";
 
@@ -18,13 +18,13 @@ function Earning() {
   };
   return (
     <div>
-      <div className="section_title">
+      {/* <div className="section_title">
         <div className="text_area">
           <h2>Earning Overview</h2>
           <p>A deep dive into your financial situation</p>
         </div>
-      </div>
-      <div className="chart_area">
+      </div> */}
+      {/* <div className="chart_area">
         <div className="chart_top_content">
           <h3>
             Total Earning:<span className="ms-3">₹</span>
@@ -40,9 +40,9 @@ function Earning() {
           </div>
         </div>
         <EarningOverviewChart className="chart" />
-      </div>
+      </div> */}
       <div className="table_content">
-        <h2>All Time Transactions</h2>
+        <h2>All Time Earning Transactions</h2>
       <div className="table_title">
           <p>Show 4 entries</p>
           <Selector

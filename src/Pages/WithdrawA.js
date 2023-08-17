@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CardList from "../Component/BankCard/CardList";
 import AddBankPopup from "../Component/Modal/AddBankPopup";
-import WithdrawalTransactionTable from "../Component/Table/WithdrawalTransaction Table";
+import WithdrawalTransactionTable from "../Component/Table/WithdrawalTransactionTable";
 
 function WithdrawA() {
   const [balance, setBalance] = useState(0);

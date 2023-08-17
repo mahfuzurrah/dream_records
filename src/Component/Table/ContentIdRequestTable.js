@@ -9,20 +9,8 @@ const columns = [
     dataIndex: "date",
   },
   {
-    title: "URL",
-    dataIndex: "url",
-  },
-  {
     title: "UPC/EAN",
     dataIndex: "UPC_EAN",
-  },
-  {
-    title: "Lable Name (Who send a claim)",
-    dataIndex: "LNS",
-  },
-  {
-    title: "Lable Name (Who received a claim)",
-    dataIndex: "LNR",
   },
   {
     title: "Status",
@@ -58,8 +46,6 @@ const data = [
     date: "27-10-2001",
     url: "url.com",
     UPC_EAN: "upc/ean",
-    LNS: "name",
-    LNR: "name",
     status: "Approved",
   },
   {
@@ -67,8 +53,6 @@ const data = [
     date: "27-10-2001",
     url: "url.com",
     UPC_EAN: "upc/ean",
-    LNS: "name",
-    LNR: "name",
     status: "Pending",
   },
   {
@@ -76,8 +60,6 @@ const data = [
     date: "27-10-2001",
     url: "url.com",
     UPC_EAN: "upc/ean",
-    LNS: "name",
-    LNR: "name",
     status: "Rejected",
   },
 ];

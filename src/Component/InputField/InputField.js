@@ -4,7 +4,7 @@ const InputField = ({ label, star, value, onChange, type, error, disabled }) => 
   const inputId = label.replace(/\s+/g, '-').toLowerCase();
 
   return (
-    <div className='mt-3'>
+    <div className='input_f mt-3'>
       <label htmlFor={inputId} className='mb-2' key={inputId}>
         {label} <span className='input_star'>{star}</span>
       </label>

@@ -79,6 +79,7 @@ const Dashboard = () => {
           <div className="relese_card_list mt-2">
             <Link to="/release-audio" className="add_realese">
               <FaPlus className="icons" />
+              <p>Create New Release</p>
             </Link>
             <LatestReleaseCard />
           </div>

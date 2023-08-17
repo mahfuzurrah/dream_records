@@ -104,6 +104,10 @@ img {
   height: auto;
 }
 
+hr {
+  border: 1px solid var(--border-color);
+}
+
 .icons {
   font-size: 18px;
   color: var(--description-color);
@@ -373,6 +377,7 @@ Dashboard
   background-position: center;
   background-size: cover;
   object-fit: cover;
+  flex-wrap: wrap;
   border-radius: 24px;
 }
 
@@ -441,7 +446,7 @@ Analytics Page
   margin-top: 50px;
 }
 
-.ant-table-wrapper{
+.ant-table-wrapper {
   margin-top: 20px;
 }
 
@@ -789,6 +794,18 @@ Catalog Page
   align-items: center;
 }
 
+.relese_card_list a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.relese_card_list a p {
+  color: var(--white-color);
+  font-size: 20px;
+}
+
 .catalog_card .card {
   padding: 0;
   border-radius: 24px;
@@ -937,32 +954,50 @@ Catalog Page
   border-radius: 4px;
 }
 
-.r_edit_delete a:first-child {
+
+.r_edit_delete svg.icons {
+  color: var(--white-color);
+}
+
+.r_edit_delete a.edit,
+.r_edit_delete a.delete,
+.r_edit_delete a.eye {
+  color: var(--white-color) !important;
+}
+
+.r_edit_delete a.edit {
   background: #57B948;
 }
 
-.r_edit_delete a:last-child {
-  background: #d42f2f;
+.r_edit_delete a.delete {
+  background: #ff2600;
 }
 
-.r_edit_delete a .edit,
-.r_edit_delete a .delete,
-.r_edit_delete a .eye {
-  color: var(--white-color);
+.filter_failed {
+  background: #f38d8d;
 }
+
+.Failed {
+  display: none !important;
+}
+
+.relese_audio_filter_btn_add .Failed {
+  display: block !important;
+}
+
 
 td.ant-table-cell.ant-table-cell-row-hover {
   background: var(--primary-color) !important;
   color: var(--white-color) !important;
 }
 
-td.ant-table-cell.ant-table-cell-row-hover .c_tune_table_title span {
+td.ant-table-cell.ant-table-cell-row-hover a {
   color: var(--white-color) !important;
 }
 
-/* td.ant-table-cell.ant-table-cell-row-hover .status {
+td.ant-table-cell.ant-table-cell-row-hover .c_tune_table_title span {
   color: var(--white-color) !important;
-} */
+}
 
 td.ant-table-cell .status {
   padding: 8px 20px;
@@ -1025,8 +1060,12 @@ td.ant-table-cell .status.c_request {
   display: block !important;
 }
 
-th.ant-table-cell.header_title{
+th.ant-table-cell.header_title {
   padding-left: 82px !important;
+}
+
+th.ant-table-cell.p_header_title {
+  padding-left: 65px !important;
 }
 
 /* =================
@@ -1287,6 +1326,12 @@ button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-sm.ant-b
   border-radius: 4px;
 }
 
+.table_user_img {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+}
+
 /*===============================
 Label Manage
 =============================== */
@@ -1302,44 +1347,76 @@ Label Manage
 /*===============================
 LogIn part
 =============================== */
-
-.logIn_from {
-  width: 420px;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -30%);
+.logIn_page {
+  width: 100%;
+  height: 100vh;
+  background: #1A1820;
+  color: var(--white-color);
 }
 
-.logIn_logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.log_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
+  height: 100%;
 }
 
-.input_form {
+.log_container .lgoIn_img{
+  background: #CDC1FF;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.log_container .logIn_from{
+  max-width: 500px;
+  margin: auto;
+}
+
+.log_container .logIn_from .btn_area{
   display: flex;
   flex-direction: column;
+  width: 100%;
+  /* align-items: end; */
 }
 
-.logIn_logo img {
-  width: 80px;
-}
-
-.logIn_logo h1 {
-  font-size: 36px;
-  font-weight: 700;
-}
-
-.logIn_from .btn {
+.log_container .logIn_from .btn_area a{
+  color: var(--white-color);
+  text-align: end;
   width: 100%;
 }
 
-.logIn_from a {
-  text-decoration: underline !important;
-  color: var(--description-color);
+.log_container .logIn_from .btn_area .forget{
+  color: var(--primary-color);
+}
+
+.log_container .logIn_from .btn_area a button{
+  width: 100% !important;
+  text-align: center;
+}
+.log_container .logIn_from .btn_area a{
+  color: var(--white-color);
+}
+
+.log_container .logIn_from h1{
+  color: var(--white-color);
+  margin-bottom: 42px;
+  font-size: 32px
+}
+
+.log_container .logIn_from input{
+  background: #22202C;
+  height: 50px;
+  color: var(--white-color);
+  border: none;
+}
+
+.copy_R{
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 440px;
 }
 
 /*===============================
@@ -1460,6 +1537,66 @@ Swiper part
   color: var(--white-color);
 }
 
+.popover {
+  padding: 10px;
+  border-radius: 4px;
+  background: #062c4b;
+  border: none;
+}
+
+.popover .icons {
+  color: var(--white-color);
+}
+
+.ant-popover-content {
+  width: 250px;
+}
+
+
+
+/*  */
+
+.yt-ex-bg {
+  padding: 30px;
+  background: var(--white-color);
+  border-radius: 24px;
+}
+
+.masked-number::after {
+  content: attr(data-number);
+  display: inline-block;
+  width: 4em;
+  /* Adjust the width as needed */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.photo_uploader {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #00000013;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.photo_uploader .icons {
+  font-size: 36px;
+}
+
+.photo_uploader .uploaded-image {
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid var(--primary-color);
+}
+
+
+
 /*===============================
 Responcive part
 =============================== */
@@ -1496,6 +1633,23 @@ Responcive part
 
   .announcement {
     margin-top: 30px;
+  }
+
+  .log_container{
+    display: block;
+    padding-top: 80px;
+  }
+
+  .log_container .lgoIn_img{
+    display: none;
+  }
+
+  .log_container .logIn_from{
+    margin: auto;
+  }
+
+  .copy_R{
+    width: 100%;
   }
 }
 
@@ -1552,5 +1706,15 @@ Responcive part
 
   .logIn_from h1 {
     font-size: 30px;
+  }
+
+  .f_performance {
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .f_performance .btn {
+    width: 100%;
   }
 }

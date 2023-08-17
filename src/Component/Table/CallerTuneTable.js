@@ -10,15 +10,15 @@ const columns = [
   {
     title: "Title",
     dataIndex: "title",
-    className: "header_title"
+    className: "header_title",
   },
   {
     title: "Label",
     dataIndex: "label",
   },
   {
-    title: "Upc/Catalogue Number",
-    dataIndex: "ucn",
+    title: "Upc",
+    dataIndex: "upc",
   },
   {
     title: "Stores",
@@ -65,11 +65,7 @@ const data = [
       </div>
     ),
     label: "no info",
-    ucn: (
-      <span>
-        UPC: 10 <br /> CAT#: 10
-      </span>
-    ),
+    upc: <span>UPC: 10 </span>,
     stores: (
       <div className="sim_icons">
         <img src={airtelLogo} alt="" />
@@ -90,11 +86,7 @@ const data = [
       </div>
     ),
     label: "no info",
-    ucn: (
-      <span>
-        UPC: 10 <br /> CAT#: 10
-      </span>
-    ),
+    upc: <span>UPC: 10 </span>,
     stores: (
       <div className="sim_icons">
         <img src={airtelLogo} alt="" />
@@ -115,11 +107,7 @@ const data = [
       </div>
     ),
     label: "no info",
-    ucn: (
-      <span>
-        UPC: 10 <br /> CAT#: 10
-      </span>
-    ),
+    upc: <span>UPC: 10 </span>,
     stores: (
       <div className="sim_icons">
         <img src={airtelLogo} alt="" />
@@ -160,7 +148,6 @@ const CallerTuneTable = () => {
       <Table
         columns={columns}
         dataSource={getFilteredData(data)}
-        bordered
         scroll={{ x: 768 }}
       />
     </>

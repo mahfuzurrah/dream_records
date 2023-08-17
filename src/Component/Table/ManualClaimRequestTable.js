@@ -1,16 +1,32 @@
+import { Table } from "antd";
 import React, { useState } from "react";
 import TableFilter from "../Filter/TableFilter";
 import SearchBar from "../SearchBar/SearchBar";
-import { Table } from "antd";
-import { Link } from "react-router-dom";
+
 const columns = [
   {
     title: "Date",
     dataIndex: "date",
   },
   {
-    title: "Amount",
-    dataIndex: "amount",
+    title: "Channel Link",
+    dataIndex: "channel_link",
+  },
+  {
+    title: "Topic Link",
+    dataIndex: "t_link",
+  },
+  {
+    title: "UPC1",
+    dataIndex: "UPCC1",
+  },
+  {
+    title: "UPC2",
+    dataIndex: "UPCC2",
+  },
+  {
+    title: "UPC3",
+    dataIndex: "UPCC3",
   },
   {
     title: "Status",
@@ -39,34 +55,41 @@ const columns = [
       );
     },
   },
-  {
-    title: "Action",
-    // dataIndex: "AId",
-    render: () => <Link to="">Download</Link>,
-  },
 ];
 const data = [
   {
     key: "1",
     date: "27-10-2001",
-    amount: "₹1235",
+    channel_link: "link",
+    t_link: "link",
+    UPCC1: "upc1 here",
+    UPCC2: "upc2 here",
+    UPCC3: "upc3 here",
     status: "Approved",
   },
   {
     key: "2",
     date: "27-10-2001",
-    amount: "₹1235",
+    channel_link: "link",
+    t_link: "link",
+    UPCC1: "upc1 here",
+    UPCC2: "upc2 here",
+    UPCC3: "upc3 here",
     status: "Pending",
   },
   {
     key: "3",
     date: "27-10-2001",
-    amount: "₹1235",
+    channel_link: "link",
+    t_link: "link",
+    UPCC1: "upc1 here",
+    UPCC2: "upc2 here",
+    UPCC3: "upc3 here",
     status: "Rejected",
   },
 ];
 
-const WithdrawalTransactionTable = () => {
+const ManualClaimRequestTable = () => {
   const [selectedStatus, setSelectedStatus] = useState("all");
 
   const handleFilter = (status) => {
@@ -89,14 +112,18 @@ const WithdrawalTransactionTable = () => {
         handleFilter={handleFilter}
       />
 
-      <div className="table_title mt-5">
+      <div className="table_title mt-3">
         <p>Show 4 entries</p>
         <SearchBar />
       </div>
-
-      <Table columns={columns} dataSource={getFilteredData(data)} scroll={{ x: 991 }} />
+      <Table
+        columns={columns}
+        dataSource={getFilteredData(data)}
+        bordered
+        scroll={{ x: 768 }}
+      />
     </>
-  )
+  );
 };
 
-export default WithdrawalTransactionTable;
+export default ManualClaimRequestTable;

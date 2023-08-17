@@ -243,7 +243,18 @@ li.release-audio {
     align-items: center;
     padding-left: 0 !important;
     border-radius: 16px !important;
+    position: relative !important;
 }
+
+li.release-audio::after{
+    contain: "" !important;
+    position: absolute !important;
+    width: 50px;
+    background: #000;
+    height: 2px;
+    top: 50px;
+}
+
 
 li.dashboard {
     margin-top: 30px !important;

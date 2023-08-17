@@ -1,6 +1,4 @@
 import { Table } from "antd";
-import React, { useState } from "react";
-import TableFilter from "../Filter/TableFilter";
 import SearchBar from "../SearchBar/SearchBar";
 import SupportReplyPopup from "../Modal/SupportReplyPopup";
 
@@ -12,33 +10,6 @@ const columns = [
   {
     title: "Title",
     dataIndex: "title",
-  },
-  {
-    title: "Status",
-    dataIndex: "status",
-    render: (status) => {
-      let color;
-      let className = ""; // Initialize className with an empty string
-
-      if (status === "Pending") {
-        color = "black";
-        className = "pending"; // Set className to "pending" when status is "Pending"
-      } else if (status === "Approved") {
-        color = "black";
-        className = "approved";
-      } else if (status === "Rejected") {
-        color = "black";
-        className = "Rejected";
-      } else {
-        color = "black";
-      }
-
-      return (
-        <span className={`status ${className}`} style={{ color }}>
-          {status}
-        </span>
-      );
-    },
   },
   {
     title: "Last Update",
@@ -76,35 +47,15 @@ const data = [
 ];
 
 const SupportHistoryTable = () => {
-  const [selectedStatus, setSelectedStatus] = useState("all");
-
-  const handleFilter = (status) => {
-    setSelectedStatus(status);
-  };
-
-  const getFilteredData = (data) => {
-    if (selectedStatus === "all") {
-      return data;
-    } else {
-      return data.filter((item) => item.status === selectedStatus);
-    }
-  };
-
   return (
     <>
-      {/* Filter Area */}
-      <TableFilter
-        selectedStatus={selectedStatus}
-        handleFilter={handleFilter}
-      />
-
       <div className="table_title mt-3">
         <p>Show 4 entries</p>
         <SearchBar />
       </div>
       <Table
         columns={columns}
-        dataSource={getFilteredData(data)}
+        dataSource={data}
         bordered
         scroll={{ x: 768 }}
       />

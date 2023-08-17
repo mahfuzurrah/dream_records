@@ -1,4 +1,6 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import InputField from '../Component/InputField/InputField'
 import AddClaimReleaseTable from '../Component/Table/AddClaimReleaseTable';
 
@@ -20,8 +22,12 @@ function AddClaimRelease() {
   const handleLableTChange = (event) => {
     setLableNameT(event.target.value);
   };
+
+  const notify = () => toast("Information Submitted");
+
   return (
-    <div>
+    <>
+      <div className='yt-ex-bg'>
       <div className="section_title">
         <div className="text_area">
           <h2>Add Claim Release</h2>
@@ -34,14 +40,17 @@ function AddClaimRelease() {
         <InputField label="UPC/EAN" star="*" type="text" value={UPCEAN} onChange={handleUPCEANChange} />
         <InputField label="Lable Name (Who send a claim)" star="*" type="text" value={lableName} onChange={handleLableChange} />
         <InputField label="Lable Name (Who received a claim)" star="*" type="text" value={lableNameT} onChange={handleLableTChange} />
-        <button className='btn mt-4'>Submit</button>
+        <button className="btn mt-4" onClick={notify}>
+            Submit <ToastContainer position="top-center" />
+          </button>
         </div>
       </div>
-      <div className="table_content">
+    </div>
+    <div className="table_content">
         <h2 className='mb-5'>All History</h2>
         <AddClaimReleaseTable />
       </div>
-    </div>
+    </>
   )
 }
 

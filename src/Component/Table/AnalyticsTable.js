@@ -115,7 +115,6 @@ const AnalyticsTable = () => {
       <Table
         columns={columns}
         dataSource={getFilteredData(data)}
-        bordered
         scroll={{ x: 768 }}
         onChange={onChange}
       />
