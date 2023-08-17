@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import InputField from "../Component/InputField/InputField";
 import PhotoUploader from "../Component/ImageUpload/PhotoUploader";
+import InputField from "../Component/InputField/InputField";
 
 function Profile() {
   const [fname, setFName] = useState("");
@@ -43,12 +43,12 @@ function Profile() {
   };
   const handlePAddress = (event) => {
     setPAddress(event.target.value);
-    };
-    
+  };
+
   const handlePCode = (event) => {
     setPCode(event.target.value);
   };
-    
+
   const handleEmail = (event) => {
     setEmail(event.target.value);
   };
@@ -119,7 +119,6 @@ function Profile() {
         <div className="col-lg-6">
           <InputField
             label="City"
-            star="*"
             value={city}
             onChange={handleCity}
             type="text"
@@ -128,7 +127,6 @@ function Profile() {
           />
           <InputField
             label="State"
-            star="*"
             value={currentState}
             onChange={handleCurrentState}
             type="text"
@@ -137,7 +135,6 @@ function Profile() {
           />
           <InputField
             label="Postal Address"
-            star="*"
             value={pAddress}
             onChange={handlePAddress}
             type="text"
@@ -146,7 +143,6 @@ function Profile() {
           />
           <InputField
             label="Postal Code"
-            star="*"
             value={pcode}
             onChange={handlePCode}
             type="text"
@@ -158,7 +154,6 @@ function Profile() {
           <h2>My Email Address</h2>
           <InputField
             label="Primary E-mail"
-            star="*"
             value={email}
             onChange={handleEmail}
             type="text"

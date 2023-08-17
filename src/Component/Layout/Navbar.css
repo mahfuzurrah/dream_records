@@ -273,6 +273,10 @@ button.ant-btn.css-w8mnev.ant-btn-text.ant-btn-icon-only {
     display: none;
 }
 
+/* .ant-table-cell a{
+    font-size: 20px;
+} */
+
 @media screen and (max-width: 991px) {
     .body_content {
         margin-left: 0 !important;

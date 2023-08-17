@@ -52,16 +52,21 @@ function ManualClaimRequest() {
               onChange={handleChannelLinkChange}
             />
             <InputField
+              label="ISRC"
+              value={channelLink}
+              onChange={handleChannelLinkChange}
+            />
+            <InputField
               label="Date"
               value={timing}
               onChange={handleTimingChange}
             />
             <div className="mt-3">
-              <label htmlFor="" className="mb-2">Is YTAF activated (Yes/No)</label>
+              <label htmlFor="" className="mb-2">Content Id Activated</label>
               <Selector
                 options={labelOptions}
                 onChange={handleChangeL}
-                placeholder="All Labels"
+                placeholder="Please Select"
                 value={selectedOptionL}
               />
             </div>

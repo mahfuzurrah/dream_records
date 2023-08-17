@@ -120,22 +120,22 @@ const MainLayout = () => {
                 {
                   key: "add_claim_release", // Unique key
                   // icon: <FaPlusSquare />,
-                  label: "Add Claim Release",
+                  label: "Claim Release",
                 },
                 {
                   key: "content_id_request", // Unique key
                   // icon: <FaOrcid />,
-                  label: "Content Id Request",
+                  label: "Content ID",
                 },
                 {
                   key: "artist_channel_request", // Unique key
                   // icon: <BsMusicNote />,
-                  label: "Artist Channel Request",
+                  label: "Artist Channel",
                 },
                 {
                   key: "manual_laim_request", // Unique key
                   // icon: <BsMusicNote />,
-                  label: "Manual Claim Request",
+                  label: "Manual Claim",
                 },
               ],
             },

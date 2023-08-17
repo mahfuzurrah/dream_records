@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import TableFilter from "../Filter/TableFilter";
 import SearchBar from "../SearchBar/SearchBar";
 import { Link } from "react-router-dom";
+import { BiDownload } from "react-icons/bi";
 
 const columns = [
   {
@@ -12,10 +13,6 @@ const columns = [
   {
     title: "Months",
     dataIndex: "month",
-  },
-  {
-    title: "Date",
-    dataIndex: "date",
   },
   {
     title: "Label",
@@ -51,7 +48,7 @@ const columns = [
   {
     title: "Action",
     // dataIndex: "AId",
-    render: () => <Link to="">Download</Link>,
+    render: () => <Link to=""><BiDownload/></Link>,
   },
 ];
 const data = [
@@ -61,7 +58,6 @@ const data = [
     month: "January",
     status: "Approved",
     label: "label",
-    date: "27"
   },
   {
     key: "2",
@@ -69,7 +65,6 @@ const data = [
     month: "February",
     status: "Pending",
     label: "label",
-    date: "27"
   },
   {
     key: "3",
@@ -77,7 +72,6 @@ const data = [
     month: "March",
     status: "Rejected",
     label: "label",
-    date: "27"
   },
 ];
 const onChange = (pagination, filters, sorter, extra) => {

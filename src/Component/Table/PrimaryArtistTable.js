@@ -7,51 +7,27 @@ const columns = [
   {
     title: "ID",
     dataIndex: "id",
-    sorter: {
-      compare: (a, b) => a.SId - b.SId,
-      multiple: 2,
-    },
   },
   {
     title: "Name",
     dataIndex: "name",
-    sorter: {
-      compare: (a, b) => a.name - b.name,
-      multiple: 3,
-    },
     className: "p_header_title",
   },
   {
     title: "Spotify ID",
     dataIndex: "SId",
-    sorter: {
-      compare: (a, b) => a.SId - b.SId,
-      multiple: 2,
-    },
   },
   {
     title: "Apple ID",
     dataIndex: "AId",
-    sorter: {
-      compare: (a, b) => a.AId - b.AId,
-      multiple: 1,
-    },
   },
   {
     title: "Facebook URL",
     dataIndex: "FId",
-    sorter: {
-      compare: (a, b) => a.AId - b.AId,
-      multiple: 1,
-    },
   },
   {
     title: "Instagram ID",
     dataIndex: "IId",
-    sorter: {
-      compare: (a, b) => a.AId - b.AId,
-      multiple: 1,
-    },
   },
   {
     title: "YouTube Channel URL",
