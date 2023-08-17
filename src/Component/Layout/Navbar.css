@@ -41,6 +41,10 @@ header {
     color: var(--description-color);
 }
 
+.ant-menu-sub{
+    margin-left: 40px !important;
+}
+
 ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.css-dev-only-do-not-override-w8mnev {
     border: none;
     margin-top: 30px;

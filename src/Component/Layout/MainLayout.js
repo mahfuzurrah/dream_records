@@ -2,19 +2,10 @@ import { Button, Layout, Menu } from "antd";
 import React, { useState } from "react";
 import { BiMenu, BiX } from "react-icons/bi";
 import { BsBank2} from "react-icons/bs";
-// import { BsBank2, BsMusicNote } from "react-icons/bs";
 import { Outlet, useNavigate } from "react-router-dom";
 import "../Layout/Navbar.css";
 
 import {
-  FaCheckCircle,
-  // FaClipboardList,
-  // FaClock,
-  // FaFirstdraft,
-  // FaHeadset,
-  // FaHome,
-  // FaOrcid,
-  FaPhoneVolume,
   FaPlus,
   FaPlusSquare,
 } from "react-icons/fa";
@@ -44,8 +35,6 @@ const MainLayout = () => {
       <Sider
         className={`fixed-sider ${collapsed ? "sider-collapsed" : ""}`}
         trigger={null}
-        // collapsible
-        // collapsed={collapsed}
         width={250}
       >
         <Menu
@@ -59,105 +48,89 @@ const MainLayout = () => {
           }}
           items={[
             {
-              key: "release-audio", // Unique key
+              key: "release-audio", 
               label: "Release Audio",
               icon: <FaPlus />,
               className: "release-audio",
             },
             {
-              key: "dashboard", // Unique key
+              key: "dashboard",
               icon: <img src={Dashboard} alt="" />,
               label: "Dashboard",
               className: "dashboard",
             },
             {
-              key: "catalog", // Unique key
+              key: "catalog",
               icon: <img src={Cataog} alt="" />,
               label: "Catalog",
               children: [
                 {
-                  key: "release-catalogs", // Unique key
-                  icon: <FaCheckCircle />,
+                  key: "release-catalogs",
                   label: "Release Catalogs",
                 },
-                // {
-                //   key: "draft", // Unique key
-                //   icon: <FaFirstdraft />,
-                //   label: "Draft",
-                // },
-                // {
-                //   key: "pending", // Unique key
-                //   icon: <FaClock />,
-                //   label: "Pending",
-                // },
                 {
-                  key: "caller_tune", // Unique key
-                  icon: <FaPhoneVolume />,
+                  key: "caller_tune",
                   label: "Caller Tune",
                 },
               ],
             },
             {
-              key: "analytics", // Unique key
+              key: "analytics",
               icon: <img src={Analytics} alt="" />,
               label: "Analytics",
             },
             {
-              key: "primary_artist_manage", // Unique key
+              key: "primary_artist_manage",
               icon: <img src={P_A_M} alt="" />,
               label: "Primary Artist Manage",
             },
             {
-              key: "label_manage", // Unique key
+              key: "label_manage",
               icon: <img src={Label} alt="" />,
               label: "Label Manage",
             },
             {
-              key: "youtube-request", // Unique key
+              key: "youtube-request",
               icon: <img src={Y_T} alt="" />,
               label: "YouTube Request",
               children: [
                 {
-                  key: "add_claim_release", // Unique key
-                  // icon: <FaPlusSquare />,
+                  key: "add_claim_release",
                   label: "Claim Release",
                 },
                 {
-                  key: "content_id_request", // Unique key
-                  // icon: <FaOrcid />,
+                  key: "content_id_request",
                   label: "Content ID",
                 },
                 {
-                  key: "artist_channel_request", // Unique key
-                  // icon: <BsMusicNote />,
+                  key: "artist_channel_request", 
                   label: "Artist Channel",
                 },
                 {
-                  key: "manual_laim_request", // Unique key
-                  // icon: <BsMusicNote />,
+                  key: "manual_laim_request", 
                   label: "Manual Claim",
                 },
               ],
             },
             {
-              key: "earning", // Unique key
+              key: "earning",
               icon: <img src={Earning} alt="" />,
               label: "Earning",
               children: [
                 {
-                  key: "overview", // Unique key
+                  key: "overview",
                   icon: <FaPlusSquare />,
                   label: "Overview",
                 },
                 {
-                  key: "withdraw", // Unique key
+                  key: "withdraw",
                   icon: <BsBank2 />,
                   label: "Withdraw",
                 },
               ],
             },
             {
-              key: "support_center", // Unique key
+              key: "support_center",
               icon: <img src={Support_Center} alt="" />,
               label: "Support Center",
             },

@@ -17,17 +17,17 @@ const columns = [
     dataIndex: "status",
     render: (status) => {
       let color;
-      let className = ""; // Initialize className with an empty string
+      let className = "";
 
       if (status === "Pending") {
         color = "black";
-        className = "pending"; // Set className to "pending" when status is "Pending"
+        className = "pending";
       } else if (status === "Approved") {
         color = "black";
         className = "approved";
-      } else if (status === "Rejected") {
+      } else if (status === "Failed") {
         color = "black";
-        className = "Rejected";
+        className = "filter_failed";
       } else {
         color = "black";
       }
@@ -60,7 +60,7 @@ const data = [
     date: "27-10-2001",
     url: "url.com",
     UPC_EAN: "upc/ean",
-    status: "Rejected",
+    status: "Failed",
   },
 ];
 

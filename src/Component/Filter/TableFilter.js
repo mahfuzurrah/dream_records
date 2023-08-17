@@ -29,13 +29,19 @@ const TableFilter = ({ selectedStatus, handleFilter }) => {
       </button>
       <button
         onClick={() => handleFilter("Rejected")}
-        className={selectedStatus === "Rejected" ? "active" : ""}
+        className={selectedStatus === "Rejected" ? "active" : "rej"}
       >
         Rejected
       </button>
       <button
+        onClick={() => handleFilter("Unfinished")}
+        className={selectedStatus === "Unfinished" ? "active" : "draft"}
+      >
+        Unfinished
+      </button>
+      <button
         onClick={() => handleFilter("Correction Request")}
-        className={selectedStatus === "Correction Request" ? "active" : ""}
+        className={selectedStatus === "Correction Request" ? "c_req" : ""}
         id="hide_c_request"
       >
         Correction Request

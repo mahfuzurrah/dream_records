@@ -52,6 +52,9 @@ const columns = [
       } else if (status === "Correction Request") {
         color = "black";
         className = "c_request";
+      } else if (status === "Unfinished") {
+        color = "black";
+        className = "unfinished";
       } else {
         color = "black";
       }
@@ -122,6 +125,17 @@ const columns = [
               <BiTrashAlt className="icons" />
             </Link>
             <AntPopover/>
+          </div>
+        );
+      }  else if (status === "Unfinished") {
+        iconElement = (
+          <div className="r_edit_delete">
+            <Link to="/release-audio" className="pen">
+              <BiPencil className="icons" />
+            </Link>
+            <Link className="delete">
+              <BiTrashAlt className="icons" />
+            </Link>
           </div>
         );
       }
@@ -201,6 +215,20 @@ const data = [
     releaseDate: "22-6-2023",
     upc: <span>123456</span>,
     status: "Correction Request",
+  },
+  {
+    key: "Unfinished",
+    title: (
+      <div className="c_tune_table_title">
+        <img src={coverImg} alt="" className="table_img" />
+        <span>Title Here</span>
+      </div>
+    ),
+    label: "no info",
+    artist: "name here",
+    releaseDate: "22-6-2023",
+    upc: <span>123456</span>,
+    status: "Unfinished",
   },
 ];
 

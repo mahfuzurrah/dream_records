@@ -48,16 +48,19 @@ function ManualClaimRequest() {
           <div className="col-lg-6 col-md-12">
             <InputField
               label="Channel Link"
+              star="*" 
               value={channelLink}
               onChange={handleChannelLinkChange}
             />
             <InputField
               label="ISRC"
+              star="*" 
               value={channelLink}
               onChange={handleChannelLinkChange}
             />
             <InputField
               label="Date"
+              star="*" 
               value={timing}
               onChange={handleTimingChange}
             />
@@ -70,7 +73,7 @@ function ManualClaimRequest() {
                 value={selectedOptionL}
               />
             </div>
-            <InputField label="UPC" value={upc} onChange={handleUpcChange} />
+            <InputField label="UPC" value={upc} star="*"  onChange={handleUpcChange} />
             <button className="btn mt-4" onClick={notify}>
               Submit <ToastContainer position="top-center" />
             </button>

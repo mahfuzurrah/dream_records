@@ -978,11 +978,23 @@ Catalog Page
 }
 
 .Failed {
-  display: none !important;
+  display: block;
 }
 
-.relese_audio_filter_btn_add .Failed {
-  display: block !important;
+.unfinished{
+  background: #d6a198d2;
+}
+
+.c_req,
+.rej,
+.draft{
+display: none;
+}
+
+.relese_audio_filter_btn_add .c_req,
+.relese_audio_filter_btn_add .rej,
+.relese_audio_filter_btn_add .draft{
+display: block;
 }
 
 

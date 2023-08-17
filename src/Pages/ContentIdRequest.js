@@ -23,7 +23,7 @@ function ContentIdRequest() {
       </div>
       <div className='row'>
         <div className="col-lg-6 col-md-12">
-        <InputField label="UPC/EAN" value={name} onChange={handleNameChange} />
+        <InputField label="UPC/EAN" value={name} star="*" onChange={handleNameChange} />
         <button className="btn mt-4" onClick={notify}>
             Submit <ToastContainer position="top-center" />
           </button>

@@ -24,11 +24,11 @@ function ArtistchannelRequest() {
       </div>
       <div className='row'>
         <div className="col-lg-6 col-md-12">
-        <InputField label="Channel Link" value={name} onChange={handleNameChange} />
-        <InputField label="Topic Link" value={name} onChange={handleNameChange} />
-        <InputField label="UPC1" value={name} onChange={handleNameChange} />
-        <InputField label="UPC2" value={name} onChange={handleNameChange} />
-        <InputField label="UPC3" value={name} onChange={handleNameChange} />
+        <InputField label="Channel Link" value={name} star="*" onChange={handleNameChange} />
+        <InputField label="Topic Link" value={name} star="*" onChange={handleNameChange} />
+        <InputField label="UPC1" value={name} star="*" onChange={handleNameChange} />
+        <InputField label="UPC2" value={name} star="*" onChange={handleNameChange} />
+        <InputField label="UPC3" value={name} star="*" onChange={handleNameChange} />
         <button className="btn mt-4" onClick={notify}>
             Submit <ToastContainer position="top-center" />
           </button>

@@ -30,9 +30,9 @@ const columns = [
       } else if (status === "Approved") {
         color = "black";
         className = "approved";
-      } else if (status === "Rejected") {
+      } else if (status === "Failed") {
         color = "black";
-        className = "Rejected";
+        className = "filter_failed";
       } else {
         color = "black";
       }
@@ -62,7 +62,7 @@ const data = [
     key: "3",
     id: "03",
     name: "Title Here",
-    status: "Rejected",
+    status: "Failed",
   }
 ];
 

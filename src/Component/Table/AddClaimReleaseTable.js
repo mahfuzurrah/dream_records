@@ -37,9 +37,9 @@ const columns = [
       } else if (status === "Approved") {
         color = "black";
         className = "approved";
-      } else if (status === "Rejected") {
+      } else if (status === "Failed") {
         color = "black";
-        className = "Rejected";
+        className = "filter_failed";
       } else {
         color = "black";
       }
@@ -78,7 +78,7 @@ const data = [
     UPC_EAN: "upc/ean",
     LNS: "name",
     LNR: "name",
-    status: "Rejected",
+    status: "Failed",
   },
 ];
 

@@ -31,9 +31,9 @@ const columns = [
       } else if (status === "Approved") {
         color = "black";
         className = "approved";
-      } else if (status === "Rejected") {
+      } else if (status === "Failed") {
         color = "black";
-        className = "Rejected";
+        className = "filter_failed";
       } else {
         color = "black";
       }
@@ -72,7 +72,7 @@ const data = [
     date: "27-10-2001",
     amount: "₹1235",
     bank: "Bank Name",
-    status: "Rejected",
+    status: "Failed",
   },
 ];
 
