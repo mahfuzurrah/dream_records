@@ -281,7 +281,7 @@ button.ant-btn.css-w8mnev.ant-btn-text.ant-btn-icon-only {
 
     button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-icon-only {
         display: block;
-        background: var(--primary-color);
+        color: var(--title-color) !important;
     }
 
     aside.ant-layout-sider.ant-layout-sider-dark.fixed-sider {
@@ -303,7 +303,7 @@ button.ant-btn.css-w8mnev.ant-btn-text.ant-btn-icon-only {
     }
 
     button.ant-btn.css-dev-only-do-not-override-w8mnev.ant-btn-text.ant-btn-icon-only {
-        margin-left: 25px;
+        margin-left: 15px;
         display: flex;
         align-items: center;
         justify-content: center;

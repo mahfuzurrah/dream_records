@@ -1412,6 +1412,12 @@ LogIn part
   border: none;
 }
 
+.aaab{
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+
 .copy_R{
   position: absolute;
   bottom: 20px;
@@ -1633,6 +1639,7 @@ Responcive part
 
   .announcement {
     margin-top: 30px;
+    height: 100%;
   }
 
   .log_container{

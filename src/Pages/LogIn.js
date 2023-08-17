@@ -22,10 +22,10 @@ function LogIn() {
           <img src={LogIn_img} alt="" />
         </div>
         <div className="logIn_from">
-          <h1>Welcome To Dream Records</h1>
+          <h1><span className="aaab">Welcome to</span> <br /> Dream Records!</h1>
           <form action="" className="input_form">
             <InputField
-              label="User Name"
+              label="User Name or Email"
               value={name}
               star="*"
               onChange={handleNameChange}
@@ -45,7 +45,7 @@ function LogIn() {
             </Link>
             </div>
           </form>
-          <p className="copy_R">@ 2022 ALL RLGHTS RESERVED</p>
+          <p className="copy_R">© 2023 ALL RLGHTS RESERVED</p>
         </div>
       </div>
     </div>
