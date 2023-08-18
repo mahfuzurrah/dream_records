@@ -48,7 +48,7 @@ const columns = [
   {
     title: "Action",
     // dataIndex: "AId",
-    render: () => <Link to=""><BiDownload/></Link>,
+    render: () => <Link to="" className="t_down"><BiDownload className="table_icons"/></Link>,
   },
 ];
 const data = [

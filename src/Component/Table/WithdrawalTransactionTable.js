@@ -3,7 +3,7 @@ import TableFilter from "../Filter/TableFilter";
 import SearchBar from "../SearchBar/SearchBar";
 import { Table } from "antd";
 import { Link } from "react-router-dom";
-import { FaDownload } from "react-icons/fa";
+import { BiDownload } from "react-icons/bi";
 
 const columns = [
   {
@@ -47,8 +47,7 @@ const columns = [
   },
   {
     title: "Action",
-    // dataIndex: "AId",
-    render: () => <Link to=""><FaDownload className="icons"/></Link>,
+    render: () => <Link to="" className="t_down"><BiDownload className="table_icons"/></Link>,
   },
 ];
 

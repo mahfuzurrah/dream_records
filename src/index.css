@@ -950,7 +950,7 @@ Catalog Page
   display: flex;
   align-items: center;
   padding: 10px;
-  background: var(--primary-color);
+  background: #2d5ad6;
   border-radius: 4px;
 }
 
@@ -981,20 +981,20 @@ Catalog Page
   display: block;
 }
 
-.unfinished{
+.unfinished {
   background: #d6a198d2;
 }
 
 .c_req,
 .rej,
-.draft{
-display: none;
+.draft {
+  display: none;
 }
 
 .relese_audio_filter_btn_add .c_req,
 .relese_audio_filter_btn_add .rej,
-.relese_audio_filter_btn_add .draft{
-display: block;
+.relese_audio_filter_btn_add .draft {
+  display: block;
 }
 
 
@@ -1288,6 +1288,14 @@ Support Page
   align-items: center;
 }
 
+td.ant-table-cell.ant-table-cell-row-hover .reply_btn {
+  color: var(--white-color)
+}
+
+td.ant-table-cell.ant-table-cell-row-hover .reply_btn .icons{
+  color: var(--white-color)
+}
+
 .support_page :where(.css-dev-only-do-not-override-w8mnev).ant-upload-wrapper .ant-upload-select {
   width: 100%;
 }
@@ -1374,63 +1382,64 @@ LogIn part
   height: 100%;
 }
 
-.log_container .lgoIn_img{
+.log_container .lgoIn_img {
   background: #CDC1FF;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.log_container .logIn_from{
+.log_container .logIn_from {
   max-width: 500px;
   margin: auto;
 }
 
-.log_container .logIn_from .btn_area{
+.log_container .logIn_from .btn_area {
   display: flex;
   flex-direction: column;
   width: 100%;
   /* align-items: end; */
 }
 
-.log_container .logIn_from .btn_area a{
+.log_container .logIn_from .btn_area a {
   color: var(--white-color);
   text-align: end;
   width: 100%;
 }
 
-.log_container .logIn_from .btn_area .forget{
+.log_container .logIn_from .btn_area .forget {
   color: var(--primary-color);
 }
 
-.log_container .logIn_from .btn_area a button{
+.log_container .logIn_from .btn_area a button {
   width: 100% !important;
   text-align: center;
 }
-.log_container .logIn_from .btn_area a{
+
+.log_container .logIn_from .btn_area a {
   color: var(--white-color);
 }
 
-.log_container .logIn_from h1{
+.log_container .logIn_from h1 {
   color: var(--white-color);
   margin-bottom: 42px;
   font-size: 32px
 }
 
-.log_container .logIn_from input{
+.log_container .logIn_from input {
   background: #22202C;
   height: 50px;
   color: var(--white-color);
   border: none;
 }
 
-.aaab{
+.aaab {
   font-size: 26px;
   margin-bottom: 10px;
 }
 
 
-.copy_R{
+.copy_R {
   position: absolute;
   bottom: 20px;
   text-align: center;
@@ -1573,6 +1582,18 @@ Swiper part
   width: 250px;
 }
 
+.ant-table-cell a.t_down {
+  padding: 8px;
+  background: #2d5ad6;
+  border-radius: 4px;
+}
+
+.table_icons {
+  font-size: 20px;
+  color: var(--white-color);
+}
+
+
 
 
 /*  */
@@ -1657,20 +1678,20 @@ Responcive part
     height: 100%;
   }
 
-  .log_container{
+  .log_container {
     display: block;
     padding-top: 80px;
   }
 
-  .log_container .lgoIn_img{
+  .log_container .lgoIn_img {
     display: none;
   }
 
-  .log_container .logIn_from{
+  .log_container .logIn_from {
     margin: auto;
   }
 
-  .copy_R{
+  .copy_R {
     width: 100%;
   }
 }
