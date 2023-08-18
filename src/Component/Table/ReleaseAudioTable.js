@@ -140,7 +140,7 @@ const columns = [
         );
       }
 
-      return iconElement; // Return the JSX element
+      return iconElement;
     },
   },
 ];

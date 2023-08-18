@@ -1556,14 +1556,13 @@ Swiper part
 }
 
 .popover {
-  padding: 10px;
-  border-radius: 4px;
+  padding: 8px;
   background: #062c4b;
-  border: none;
 }
 
 .popover .icons {
   color: var(--white-color);
+  font-size: 20px;
 }
 
 .ant-popover-content {
