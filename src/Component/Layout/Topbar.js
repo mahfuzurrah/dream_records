@@ -13,20 +13,6 @@ function Topbar() {
     setIsOpen(!isOpen);
   };
 
-  // const handleOutsideClick = (e) => {
-  //   if (menuRef.current && !menuRef.current.contains(e.target)) {
-  //     setIsOpen(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   document.addEventListener("mousedown", handleOutsideClick);
-
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleOutsideClick);
-  //   };
-  // }, []);
-
   const handleSignOut = () => {
     setIsOpen(false);
   };
@@ -42,14 +28,17 @@ function Topbar() {
         </div>
       <div className="nav_right">
       <Notification />
-      <Link to="/profile" className="account_info">
-        <p className="name">Mahfuzur Rahman</p>
+      <div className="account_info">
+        <p className="name">username</p>
         <img src={userImg} alt="" />
-      </Link>
+      </div>
       <div className="toggle_account_info">
         <AiFillSetting className="icons" onClick={toggleMenu} />
         {isOpen && (
           <div className="menu_item">
+            <Link to="/profile" onClick={handleSignOut}>
+              <p>Profile</p>
+              </Link>
             <ChangePasswordPopup />
             <Link to="/" onClick={handleSignOut}>
               <p>Sign Out</p>
