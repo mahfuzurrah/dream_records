@@ -1,8 +1,8 @@
 import { Button, Layout, Menu } from "antd";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BiMenu, BiX } from "react-icons/bi";
 import { BsBank2} from "react-icons/bs";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import "../Layout/Navbar.css";
 
 import {
@@ -24,11 +24,17 @@ const { Header, Sider, Content } = Layout;
 const MainLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const [activeItem, setActiveItem] = useState("dashboard");
+
+  useEffect(() => {
+    const currentPath = location.pathname.split("/")[1];
+    setActiveItem(currentPath || "dashboard");
+  }, [location.pathname]);
 
   const handleToggle = () => {
     setCollapsed((prevCollapsed) => !prevCollapsed);
   };
-
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
@@ -39,7 +45,7 @@ const MainLayout = () => {
       >
         <Menu
           mode="inline"
-          defaultSelectedKeys={["/"]}
+          selectedKeys={[activeItem]}
           onClick={({ key }) => {
             if (key === "signout") {
             } else {
