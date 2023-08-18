@@ -1558,6 +1558,10 @@ Swiper part
 .popover {
   padding: 8px;
   background: #062c4b;
+  width: 39px;
+  height: 39px;
+  border: none;
+  border-radius: 4px;
 }
 
 .popover .icons {
