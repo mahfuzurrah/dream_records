@@ -178,11 +178,30 @@ svg.ant-menu-item-icon {
     position: absolute;
     right: 0;
     margin-top: 10px;
-    padding: 20px 30px;
+    padding: 10px 16px;
     width: 250px;
     background: var(--white-color);
     box-shadow: 12px 12px 36px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
+}
+
+.toggle_account_info .menu_item a{
+    display: flex;
+    align-items: center;
+    color: var(--description-color);
+    line-height: 120%;
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+}
+
+.toggle_account_info .menu_item a:hover{
+    background: #00000021;
+    color: var(--title-color);
+    transition: all 0.5s ease-in-out;
 }
 
 .news {
@@ -199,11 +218,6 @@ svg.ant-menu-item-icon {
 .news .icons,
 .news p {
     color: var(--white-color);
-}
-
-.toggle_account_info .menu_item p {
-    margin: 10px 0;
-    cursor: pointer;
 }
 
 .ant-row.ant-form-item-row.css-dev-only-do-not-override-w8mnev {

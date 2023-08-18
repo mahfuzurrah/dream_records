@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import PasswordInput from "../InputField/PasswordInput";
+import { Link } from "react-router-dom";
 
 function Example() {
   const [show, setShow] = useState(false);
@@ -16,7 +17,7 @@ function Example() {
 
   return (
     <>
-      <p onClick={handleShow}>Change Your Password</p>
+      <Link onClick={handleShow}>Change Your Password</Link>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Set Password</Modal.Title>
