@@ -232,6 +232,10 @@ label {
   padding-bottom: 20px;
 }
 
+button.ant-btn.css-w8mnev.ant-btn-text.ant-btn-icon-only {
+  margin-top: -17px;
+}
+
 .section_title p {
   margin-top: 5px;
 }
