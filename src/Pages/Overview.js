@@ -18,29 +18,6 @@ function Earning() {
   };
   return (
     <div>
-      {/* <div className="section_title">
-        <div className="text_area">
-          <h2>Earning Overview</h2>
-          <p>A deep dive into your financial situation</p>
-        </div>
-      </div> */}
-      {/* <div className="chart_area">
-        <div className="chart_top_content">
-          <h3>
-            Total Earning:<span className="ms-3">₹</span>
-            <span>1,20,000.00</span>
-          </h3>
-          <div>
-            <Selector
-              options={options}
-              onChange={handleChange}
-              placeholder="This Year"
-              value={selectedOption}
-            />
-          </div>
-        </div>
-        <EarningOverviewChart className="chart" />
-      </div> */}
       <div className="table_content">
         <h2>All Time Earning Transactions</h2>
       <div className="table_title">

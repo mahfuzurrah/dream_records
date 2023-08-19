@@ -226,6 +226,7 @@ label {
   gap: 20px;
 }
 
+.pam_section_title,
 .table_filter_btn {
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 20px;

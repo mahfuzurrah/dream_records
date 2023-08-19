@@ -17,7 +17,7 @@ const columns = [
     dataIndex: "channel_link",
   },
   {
-    title: "Content Id Activated",
+    title: "Content ID Activated",
     dataIndex: "CIA",
   },
   {

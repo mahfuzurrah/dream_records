@@ -7,13 +7,13 @@ function PrimaryArtistManage() {
 
   return (
     <div>
-      <div className="section_title">
+      <div className="section_title pam_section_title">
         <div className="text_area">
           <h1>Primary Artist</h1>
         </div>
         <PrimaryArtistAddPopup/>
       </div>
-      <div className="table_content">
+      <div className="table_content mt-4">
         <div className="table_title">
           <p>Show 4 entries</p>
           <SearchBar/>
