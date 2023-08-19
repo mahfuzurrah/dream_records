@@ -78,79 +78,94 @@ function Profile() {
         </div>
       </div>
       <div className="row">
-        <div className="col-lg-6">
-          <InputField
-            label="First Name"
-            star="*"
-            value={fname}
-            onChange={handleChange}
-            type="text"
-            error={null}
-            disabled={!isEditable}
-          />
-          <InputField
-            label="Last Name"
-            star="*"
-            value={lname}
-            onChange={handleLName}
-            type="text"
-            error={null}
-            disabled={!isEditable}
-          />
-          <InputField
-            label="Phone Number"
-            star="*"
-            value={pNumber}
-            onChange={handlepNumber}
-            type="text"
-            error={null}
-            // disabled={!isEditable}
-          />
-          <InputField
-            label="Country / Region"
-            star="*"
-            value={cname}
-            onChange={handleCName}
-            type="text"
-            error={null}
-            disabled={!isEditable}
-          />
+        <div className="col-lg-6 ">
+          <div className="profile_input_area">
+            <InputField
+              label="First Name"
+              value={fname}
+              onChange={handleChange}
+              type="text"
+              error={null}
+              disabled={!isEditable}
+            />
+            <InputField
+              label="Last Name"
+              value={lname}
+              onChange={handleLName}
+              type="text"
+              error={null}
+              disabled={!isEditable}
+            />
+            <InputField
+              label="Country / Region"
+              value={cname}
+              onChange={handleCName}
+              type="text"
+              error={null}
+              disabled={!isEditable}
+            />
+          </div>
         </div>
         <div className="col-lg-6">
-          <InputField
-            label="City"
-            value={city}
-            onChange={handleCity}
-            type="text"
-            error={null}
-            disabled={!isEditable}
-          />
-          <InputField
-            label="State"
-            value={currentState}
-            onChange={handleCurrentState}
-            type="text"
-            error={null}
-            disabled={!isEditable}
-          />
-          <InputField
-            label="Postal Address"
-            value={pAddress}
-            onChange={handlePAddress}
-            type="text"
-            error={null}
-            disabled={!isEditable}
-          />
-          <InputField
-            label="Postal Code"
-            value={pcode}
-            onChange={handlePCode}
-            type="text"
-            error={null}
-            disabled={!isEditable}
-          />
+          <div className="profile_input_area">
+            <InputField
+              label="City"
+              value={city}
+              onChange={handleCity}
+              type="text"
+              error={null}
+              disabled={!isEditable}
+            />
+            <InputField
+              label="State"
+              value={currentState}
+              onChange={handleCurrentState}
+              type="text"
+              error={null}
+              disabled={!isEditable}
+            />
+            <InputField
+              label="Postal Code"
+              value={pcode}
+              onChange={handlePCode}
+              type="text"
+              error={null}
+              disabled={!isEditable}
+            />
+          </div>
         </div>
-        <div className="col-lg-6 mt-5">
+        <div className="col-lg-12">
+          <div className="profile_input_area mt-4">
+            <InputField
+              label="Email Address"
+              value={fname}
+              onChange={handleChange}
+              type="text"
+              error={null}
+              disabled={!isEditable}
+            />
+            <InputField
+              label="Phone Number"
+              value={pNumber}
+              onChange={handlepNumber}
+              type="text"
+              error={null}
+              disabled={!isEditable}
+            />
+            <div>
+              <InputField
+                label="Whatsapp Number"
+                value={pNumber}
+                onChange={handlepNumber}
+                type="text"
+                error={null}
+                disabled={!isEditable}
+              />
+              <span className="enable_wp"><input type="checkbox" />Add Whatsapp Notification</span>
+            </div>
+          </div>
+        </div>
+        {/* <div className="col-lg-6 mt-5">
           <h2>My Email Address</h2>
           <InputField
             label="Primary E-mail"
@@ -158,10 +173,9 @@ function Profile() {
             onChange={handleEmail}
             type="text"
             error={null}
-            // disabled={!isEditable}
+            disabled={!isEditable}
           />
-          <button className="btn_s mt-4">Add Email Address</button>
-        </div>
+        </div> */}
       </div>
     </>
   );

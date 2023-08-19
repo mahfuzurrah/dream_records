@@ -1642,6 +1642,21 @@ Swiper part
   border: 2px solid var(--primary-color);
 }
 
+.profile_input_area{
+  padding: 30px;
+  background: var(--white-color);
+  box-shadow: 5px 5px 35px #00000009;
+  border-radius: 16px;
+}
+
+span.enable_wp{
+  position: relative;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 
 
 /*===============================
@@ -1699,6 +1714,10 @@ Responcive part
   .copy_R {
     width: 100%;
   }
+.profile_input_area{
+  margin-top: 20px;
+}
+
 }
 
 @media screen and (max-width: 768px) {
