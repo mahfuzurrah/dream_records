@@ -65,7 +65,7 @@ function ManualClaimRequest() {
               onChange={handleTimingChange}
             />
             <div className="mt-3">
-              <label htmlFor="" className="mb-2">Content Id Activated <span style={{ color: "red" }}>*</span></label>
+              <label htmlFor="" className="mb-2">Content ID Activated <span style={{ color: "red" }}>*</span></label>
               <Selector
                 options={labelOptions}
                 onChange={handleChangeL}
