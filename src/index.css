@@ -226,11 +226,11 @@ label {
   gap: 20px;
 }
 
-.pam_section_title,
+/* .pam_section_title,
 .table_filter_btn {
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 20px;
-}
+} */
 
 button.ant-btn.css-w8mnev.ant-btn-text.ant-btn-icon-only {
   margin-top: -17px;
