@@ -105,7 +105,7 @@ img {
 }
 
 hr {
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color) !important;
 }
 
 .icons {
@@ -1620,8 +1620,8 @@ Swiper part
 }
 
 .photo_uploader {
-  width: 100px;
-  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1630,14 +1630,18 @@ Swiper part
   cursor: pointer;
 }
 
+:where(.css-dev-only-do-not-override-w8mnev).ant-divider-horizontal{
+  display: none;
+}
+
 .photo_uploader .icons {
   font-size: 36px;
 }
 
 .photo_uploader .uploaded-image {
   border-radius: 100px;
-  width: 100px;
-  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
   object-fit: cover;
   border: 2px solid var(--primary-color);
 }

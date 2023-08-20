@@ -19,7 +19,7 @@ function WithdrawA() {
 
   return (
     <div className="withdraw_content">
-      <div className="section_title">
+      <div className="section_title pam_section_title">
         <div className="text_area">
           <h1>Withdraw Your Amount</h1>
           <p>Cashing out your balance</p>

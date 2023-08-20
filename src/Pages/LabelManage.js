@@ -12,7 +12,6 @@ function LabelManage() {
         </div>
         <LabelManagePopup/>
       </div>
-      <hr className="mt-4" />
       <div className="table_content mt-4">
         <LabelManageTable />
       </div>

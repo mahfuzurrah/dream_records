@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import EarningOverviewChart from "../Component/Chart/EarningOverviewChart";
 import Selector from "../Component/Selector/Selector";
 import EarningHistoryTable from "../Component/Table/EarningHistoryTable";
 
@@ -18,6 +17,12 @@ function Earning() {
   };
   return (
     <div>
+      <div className="section_title pam_section_title">
+        <div className="text_area">
+          <h1>Earning Overview</h1>
+          <p>A deep dive into your financial situation</p>
+        </div>
+      </div>
       <div className="table_content">
         <h2>All Time Earning Transactions</h2>
       <div className="table_title">

@@ -1,11 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import artist_img from "../Component/assets/img/artist.png";
-
-import { FaBullhorn, FaCheckCircle, FaPlus, FaUserPlus } from "react-icons/fa";
+import { FaBullhorn, FaCheckCircle, FaPlus} from "react-icons/fa";
 import DashboardCardList from "../Component/DashboardCard/DashboardCardList";
-
 import LatestReleaseCard from "../Component/CatalogsCard/LatestReleaseCard";
 import DashboardSlider from "../Component/Slider/DashboardSlider";
 
@@ -38,10 +35,10 @@ const Dashboard = () => {
 
         <div className="artist_row mt-5">
           <div className="section_title d_title" style={{ border: "none" }}>
-            <h3 className="mb-4">
+            {/* <h3 className="mb-4">
               <FaUserPlus className="icons" />
               Primary Artist
-            </h3>
+            </h3> */}
           </div>
           <div className="artist_item">
             <ul className="mt-2">

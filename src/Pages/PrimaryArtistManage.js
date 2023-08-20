@@ -11,6 +11,7 @@ function PrimaryArtistManage() {
         <div className="text_area">
           <h1>Primary Artist</h1>
         </div>
+        <hr className="mt-4" />
         <PrimaryArtistAddPopup/>
       </div>
       <div className="table_content mt-4">

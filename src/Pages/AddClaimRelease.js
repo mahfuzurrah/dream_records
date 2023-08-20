@@ -31,7 +31,6 @@ function AddClaimRelease() {
       <div className="section_title">
         <div className="text_area">
           <h2>Add Claim Release</h2>
-          <p>The benefits of an add claim release</p>
         </div>
       </div>
       <div className='row'>

@@ -18,7 +18,6 @@ function ContentIdRequest() {
       <div className="section_title">
         <div className="text_area">
           <h2>Content Id Request</h2>
-          <p>Requesting identification of content</p>
         </div>
       </div>
       <div className='row'>

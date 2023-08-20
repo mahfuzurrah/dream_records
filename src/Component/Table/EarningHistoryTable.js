@@ -42,7 +42,7 @@ const data = [
 ];
 
 const EarningHistoryTable = () => (
-  <Table columns={columns} dataSource={data} bordered scroll={{ x: 768 }} />
+  <Table columns={columns} dataSource={data} scroll={{ x: 768 }} />
 );
 
 export default EarningHistoryTable;

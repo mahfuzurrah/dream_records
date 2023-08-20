@@ -19,7 +19,6 @@ function ArtistchannelRequest() {
       <div className="section_title">
         <div className="text_area">
           <h2>Artist Channel Request</h2>
-          <p>Promote and share your artistry</p>
         </div>
       </div>
       <div className='row'>

@@ -119,7 +119,6 @@ const ManualClaimRequestTable = () => {
       <Table
         columns={columns}
         dataSource={getFilteredData(data)}
-        bordered
         scroll={{ x: 768 }}
       />
     </>

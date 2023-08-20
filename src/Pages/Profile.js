@@ -4,54 +4,64 @@ import InputField from "../Component/InputField/InputField";
 
 function Profile() {
   const [fname, setFName] = useState("");
-  const [lname, setLName] = useState("");
-  const [pNumber, setpNumber] = useState("");
-  const [cname, setCName] = useState("");
-  const [city, setCity] = useState("");
-  const [currentState, setCurrentState] = useState("");
-  const [pAddress, setPAddress] = useState("");
-  const [pcode, setPCode] = useState("");
-  const [email, setEmail] = useState("yourmail@gmail.com");
-  const [isEditable, setIsEditable] = useState(false);
+const [lname, setLName] = useState("");
+const [line, setLine] = useState("");
+const [line2, setLine2] = useState("");
+const [pNumber, setpNumber] = useState("");
+const [cname, setCName] = useState("");
+const [city, setCity] = useState("");
+const [currentState, setCurrentState] = useState("");
+const [pAddress, setPAddress] = useState("");
+const [pcode, setPCode] = useState("");
+const [email, setEmail] = useState("yourmail@gmail.com");
+const [isEditable, setIsEditable] = useState(false);
 
-  const handleEdit = () => {
-    setIsEditable(true);
-  };
+const handleEdit = () => {
+  setIsEditable(true);
+};
 
-  const handleSave = () => {
-    setIsEditable(false);
-    window.alert("All information saved");
-  };
+const handleSave = () => {
+  setIsEditable(false);
+  window.alert("All information saved");
+};
 
-  const handleChange = (event) => {
-    setFName(event.target.value);
+const handleChange = (event) => {
+  setFName(event.target.value);
+};
+const handleLName = (event) => {
+  setLName(event.target.value);
   };
-  const handleLName = (event) => {
-    setLName(event.target.value);
+  
+const handleLine = (event) => {
+  setLine(event.target.value);
   };
-  const handlepNumber = (event) => {
-    setpNumber(event.target.value);
-  };
-  const handleCName = (event) => {
-    setCName(event.target.value);
-  };
-  const handleCity = (event) => {
-    setCity(event.target.value);
-  };
-  const handleCurrentState = (event) => {
-    setCurrentState(event.target.value);
-  };
-  const handlePAddress = (event) => {
-    setPAddress(event.target.value);
-  };
+  
+const handleLine2 = (event) => {
+  setLine2(event.target.value);
+};
+const handlepNumber = (event) => {
+  setpNumber(event.target.value);
+};
+const handleCName = (event) => {
+  setCName(event.target.value);
+};
+const handleCity = (event) => {
+  setCity(event.target.value);
+};
+const handleCurrentState = (event) => {
+  setCurrentState(event.target.value);
+};
+const handlePAddress = (event) => {
+  setPAddress(event.target.value);
+};
 
-  const handlePCode = (event) => {
-    setPCode(event.target.value);
-  };
+const handlePCode = (event) => {
+  setPCode(event.target.value);
+};
 
-  const handleEmail = (event) => {
-    setEmail(event.target.value);
-  };
+const handleEmail = (event) => {
+  setEmail(event.target.value);
+};
 
   return (
     <>
@@ -96,19 +106,7 @@ function Profile() {
               error={null}
               disabled={!isEditable}
             />
-            <InputField
-              label="Country / Region"
-              value={cname}
-              onChange={handleCName}
-              type="text"
-              error={null}
-              disabled={!isEditable}
-            />
-          </div>
-        </div>
-        <div className="col-lg-6">
-          <div className="profile_input_area">
-            <InputField
+           <InputField
               label="City"
               value={city}
               onChange={handleCity}
@@ -124,10 +122,38 @@ function Profile() {
               error={null}
               disabled={!isEditable}
             />
+          </div>
+        </div>
+        <div className="col-lg-6">
+          <div className="profile_input_area">
+             <InputField
+              label="Address Line 1"
+              value={line}
+              onChange={handleLine}
+              type="text"
+              error={null}
+              disabled={!isEditable}
+            />
+            <InputField
+              label="Address Line 2"
+              value={line2}
+              onChange={handleLine2}
+              type="text"
+              error={null}
+              disabled={!isEditable}
+            />
             <InputField
               label="Postal Code"
               value={pcode}
               onChange={handlePCode}
+              type="text"
+              error={null}
+              disabled={!isEditable}
+            />
+             <InputField
+              label="Country / Region"
+              value={cname}
+              onChange={handleCName}
               type="text"
               error={null}
               disabled={!isEditable}
@@ -138,8 +164,8 @@ function Profile() {
           <div className="profile_input_area mt-4">
             <InputField
               label="Email Address"
-              value={fname}
-              onChange={handleChange}
+              value={email}
+              onChange={handleEmail}
               type="text"
               error={null}
               disabled={!isEditable}
@@ -155,8 +181,8 @@ function Profile() {
             <div>
               <InputField
                 label="Whatsapp Number"
-                value={pNumber}
-                onChange={handlepNumber}
+                value={pAddress}
+                onChange={handlePAddress}
                 type="text"
                 error={null}
                 disabled={!isEditable}

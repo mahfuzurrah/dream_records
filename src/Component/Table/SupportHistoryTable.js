@@ -56,7 +56,6 @@ const SupportHistoryTable = () => {
       <Table
         columns={columns}
         dataSource={data}
-        bordered
         scroll={{ x: 768 }}
       />
     </>
