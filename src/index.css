@@ -224,13 +224,13 @@ label {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 20px;
-}
-
-/* .pam_section_title,
-.table_filter_btn {
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 20px;
-} */
+}
+
+:where(.css-w8mnev).ant-divider-horizontal{
+  display: none;
+}
 
 button.ant-btn.css-w8mnev.ant-btn-text.ant-btn-icon-only {
   margin-top: -17px;
