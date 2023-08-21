@@ -1,14 +1,11 @@
 import { Button, Layout, Menu } from "antd";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BiMenu, BiX } from "react-icons/bi";
-import { BsBank2} from "react-icons/bs";
+import { BsBank2 } from "react-icons/bs";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import "../Layout/Navbar.css";
 
-import {
-  FaPlus,
-  FaPlusSquare,
-} from "react-icons/fa";
+import { FaPlus, FaPlusSquare } from "react-icons/fa";
 import Analytics from "../assets/icons/Analytics.svg";
 import Cataog from "../assets/icons/Cataog.svg";
 import Dashboard from "../assets/icons/Dashboard.svg";
@@ -54,7 +51,7 @@ const MainLayout = () => {
           }}
           items={[
             {
-              key: "release-audio", 
+              key: "release-audio",
               label: "Release Audio",
               icon: <FaPlus />,
               className: "release-audio",
@@ -71,8 +68,8 @@ const MainLayout = () => {
               label: "Catalog",
               children: [
                 {
-                  key: "release-catalogs",
-                  label: "Release Catalogs",
+                  key: "all-release",
+                  label: "All Release",
                 },
                 {
                   key: "caller_tune",
@@ -109,11 +106,11 @@ const MainLayout = () => {
                   label: "Content ID",
                 },
                 {
-                  key: "artist_channel_request", 
+                  key: "artist_channel_request",
                   label: "Artist Channel",
                 },
                 {
-                  key: "manual_laim_request", 
+                  key: "manual_laim_request",
                   label: "Manual Claim",
                 },
               ],

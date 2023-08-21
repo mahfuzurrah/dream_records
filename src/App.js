@@ -1,27 +1,27 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import MainLayout from "./Component/Layout/MainLayout";
-import Dashboard from "./Pages/Dashboard";
-import ReleaseAudio from "./Pages/ReleaseAudio";
-import ArtistChannelRequest from "./Pages/ArtistChannelRequest";
-import Overview from "./Pages/Overview";
 import Analytics from "./Pages/Analytics";
+import ArtistChannelRequest from "./Pages/ArtistChannelRequest";
+import Dashboard from "./Pages/Dashboard";
+import Overview from "./Pages/Overview";
+import ReleaseAudio from "./Pages/ReleaseAudio";
 import ReleaseCatalogs from "./Pages/ReleaseCatalogs";
 // import DraftCatalog from "./Pages/DraftCatalog";
 // import PendingCatalog from "./Pages/PendingCatalog";
-import ContentIdRequest from "./Pages/ContentIdRequest";
-import PrimaryArtistManage from "./Pages/PrimaryArtistManage";
 import AddClaimRelease from "./Pages/AddClaimRelease";
 import AudioSubmission from "./Pages/AudioSubmission";
-import EditPrimaryArtist from "./Pages/EditPrimaryArtist";
-import WithdrawA from "./Pages/WithdrawA";
-import CatalogDetails from "./Pages/CatalogDetails";
-import SupportCenter from "./Pages/SupportCenter";
-import LabelManage from "./Pages/LabelManage";
-import Profile from "./Pages/Profile";
 import CallerTune from "./Pages/CallerTune";
+import CatalogDetails from "./Pages/CatalogDetails";
+import ContentIdRequest from "./Pages/ContentIdRequest";
+import EditPrimaryArtist from "./Pages/EditPrimaryArtist";
+import LabelManage from "./Pages/LabelManage";
 import LogIn from "./Pages/LogIn";
 import ManualClaimRequest from "./Pages/ManualClaimRequest";
+import PrimaryArtistManage from "./Pages/PrimaryArtistManage";
+import Profile from "./Pages/Profile";
+import SupportCenter from "./Pages/SupportCenter";
+import WithdrawA from "./Pages/WithdrawA";
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
           <Route path="/" element={<MainLayout />}>
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="release-audio" element={<ReleaseAudio />} />
-            <Route path="release-catalogs" element={<ReleaseCatalogs />} />
+            <Route path="all-release" element={<ReleaseCatalogs />} />
             {/* <Route path="draft" element={<DraftCatalog />} />
             <Route path="pending" element={<PendingCatalog />} /> */}
             <Route path="analytics" element={<Analytics />} />
