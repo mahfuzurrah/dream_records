@@ -88,18 +88,6 @@ const columns = [
             </Link>
           </div>
         );
-      } else if (status === "Failed") {
-        iconElement = (
-          <div className="r_edit_delete">
-            <Link to="/catalog_details" className="edit">
-              <FaRegEye className="icons" />
-            </Link>
-            <Link className="delete">
-              <BiTrashAlt className="icons" />
-            </Link>
-            <AntPopover/>
-          </div>
-        );
       } else if (status === "Rejected") {
         iconElement = (
           <div className="r_edit_delete">
@@ -130,6 +118,9 @@ const columns = [
       }  else if (status === "Unfinished") {
         iconElement = (
           <div className="r_edit_delete">
+            <Link to="/catalog_details" className="edit">
+              <FaRegEye className="icons" />
+            </Link>
             <Link to="/release-audio" className="pen">
               <BiPencil className="icons" />
             </Link>
@@ -173,20 +164,6 @@ const data = [
     releaseDate: "22-6-2023",
     upc: <span>123456</span>,
     status: "Pending",
-  },
-  {
-    key: "Failed",
-    title: (
-      <div className="c_tune_table_title">
-        <img src={coverImg} alt="" className="table_img" />
-        <span>Title Here</span>
-      </div>
-    ),
-    label: "no info",
-    artist: "name here",
-    releaseDate: "22-6-2023",
-    upc: <span>123456</span>,
-    status: "Failed",
   },
   {
     key: "Rejected",

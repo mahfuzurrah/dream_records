@@ -224,12 +224,19 @@ label {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+.border_bottom {
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 20px;
 }
 
+.relese_audio_filter_btn_add .all_r_d_none{
+  display: none !important;
+}
+
 :where(.css-w8mnev).ant-divider-horizontal{
-  display: none;
+  display: none !important;
 }
 
 button.ant-btn.css-w8mnev.ant-btn-text.ant-btn-icon-only {
@@ -448,7 +455,7 @@ Analytics Page
  ===================== */
 
 .table_content {
-  margin-top: 50px;
+  margin-top: 42px;
 }
 
 .ant-table-wrapper {

@@ -13,7 +13,7 @@ function ReleaseCatalogs() {
           <Link to="/release-audio"><button className="btn">Create Release</button></Link>
         </div>
       </div>
-      <div className="relese_audio_filter_btn_add mt-4">
+      <div className="relese_audio_filter_btn_add  mt-4">
         <ReleseAudioTable/>
       </div>
     </>

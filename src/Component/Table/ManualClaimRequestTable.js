@@ -5,28 +5,24 @@ import SearchBar from "../SearchBar/SearchBar";
 
 const columns = [
   {
-    title: "Date",
+    title: "Timing",
     dataIndex: "date",
   },
   {
-    title: "Channel Link",
+    title: "ISRC",
+    dataIndex: "ISRC",
+  },
+  {
+    title: "Video Link",
     dataIndex: "channel_link",
   },
   {
-    title: "Topic Link",
-    dataIndex: "t_link",
+    title: "Content ID Activated",
+    dataIndex: "CIA",
   },
   {
-    title: "UPC1",
-    dataIndex: "UPCC1",
-  },
-  {
-    title: "UPC2",
-    dataIndex: "UPCC2",
-  },
-  {
-    title: "UPC3",
-    dataIndex: "UPCC3",
+    title: "UPC",
+    dataIndex: "UPC",
   },
   {
     title: "Status",
@@ -41,9 +37,9 @@ const columns = [
       } else if (status === "Approved") {
         color = "black";
         className = "approved";
-      } else if (status === "Rejected") {
+      } else if (status === "Failed") {
         color = "black";
-        className = "Rejected";
+        className = "filter_failed";
       } else {
         color = "black";
       }
@@ -59,33 +55,30 @@ const columns = [
 const data = [
   {
     key: "1",
-    date: "27-10-2001",
+    date: "27-2001",
+    ISRC: "ISRC",
     channel_link: "link",
-    t_link: "link",
-    UPCC1: "upc1 here",
-    UPCC2: "upc2 here",
-    UPCC3: "upc3 here",
+    CIA: "No",
+    UPC: "upc",
     status: "Approved",
   },
   {
     key: "2",
-    date: "27-10-2001",
+    date: "27-2001",
+    ISRC: "ISRC",
     channel_link: "link",
-    t_link: "link",
-    UPCC1: "upc1 here",
-    UPCC2: "upc2 here",
-    UPCC3: "upc3 here",
+    CIA: "Yes",
+    UPC: "upc",
     status: "Pending",
   },
   {
     key: "3",
-    date: "27-10-2001",
+    date: "27-2001",
+    ISRC: "ISRC",
     channel_link: "link",
-    t_link: "link",
-    UPCC1: "upc1 here",
-    UPCC2: "upc2 here",
-    UPCC3: "upc3 here",
-    status: "Rejected",
+    CIA: "No",
+    UPC: "upc",
+    status: "Failed",
   },
 ];
 

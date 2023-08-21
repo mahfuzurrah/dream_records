@@ -2,7 +2,7 @@ import React from "react";
 
 const TableFilter = ({ selectedStatus, handleFilter }) => {
   return (
-    <div className="table_filter_btn">
+    <div className="table_filter_btn border_bottom">
       <button
         onClick={() => handleFilter("all")}
         className={selectedStatus === "all" ? "active" : ""}
@@ -23,7 +23,7 @@ const TableFilter = ({ selectedStatus, handleFilter }) => {
       </button>
       <button
         onClick={() => handleFilter("Failed")}
-        className={selectedStatus === "Failed" ? "active" : "Failed"}
+        className={selectedStatus === "Failed" ? "active" : "Failed all_r_d_none"}
       >
         Failed
       </button>

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import InputField from "../Component/InputField/InputField";
-import Selector from "../Component/Selector/Selector"; // Assuming you have the Selector component
-import ArtistChannelRequestTable from "../Component/Table/ArtistChannelRequestTable";
+import Selector from "../Component/Selector/Selector";
+import ManualClaimRequestTable from "../Component/Table/ManualClaimRequestTable";
 
 function ManualClaimRequest() {
   const [channelLink, setChannelLink] = useState("");
@@ -82,7 +82,7 @@ function ManualClaimRequest() {
       </div>
       <div className="table_content">
         <h2 className="mb-5">All History</h2>
-        <ArtistChannelRequestTable />
+        <ManualClaimRequestTable/>
       </div>
     </div>
   );

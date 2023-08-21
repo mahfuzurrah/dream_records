@@ -17,7 +17,7 @@ function Earning() {
   };
   return (
     <div>
-      <div className="section_title pam_section_title">
+      <div className="section_title border_bottom">
         <div className="text_area">
           <h1>Earning Overview</h1>
           <p>A deep dive into your financial situation</p>
