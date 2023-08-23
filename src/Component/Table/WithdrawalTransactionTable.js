@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import TableFilter from "../Filter/TableFilter";
-import SearchBar from "../SearchBar/SearchBar";
 import { Table } from "antd";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import { BiDownload } from "react-icons/bi";
+import { Link } from "react-router-dom";
+import TableFilter from "../Filter/TableFilter";
 import AntPopover from "../Popover/AntPopover";
+import SearchBar from "../SearchBar/SearchBar";
 
 const WithdrawalTransactionTable = () => {
   const [selectedStatus, setSelectedStatus] = useState("all");
@@ -55,9 +55,12 @@ const WithdrawalTransactionTable = () => {
         }
 
         return (
-          <span className={`status ${className}`} style={{ color }}>
-            {status}
-          </span>
+          <div className="status_area">
+            <span className={`status ${className}`} style={{ color }}>
+              {status}
+            </span>
+            {status === 'Failed' && <AntPopover/>}
+          </div>
         );
       },
     },
@@ -65,7 +68,7 @@ const WithdrawalTransactionTable = () => {
       title: "Action",
       render: (text, record) => {
         const { status } = record;
-    
+
         if (status === "Approved") {
           return (
             <div className="r_edit_delete">
@@ -73,10 +76,6 @@ const WithdrawalTransactionTable = () => {
                 <BiDownload className="icons" />
               </Link>
             </div>
-          );
-        } else if (status === "Failed") {
-          return (
-            <AntPopover />
           );
         } else {
           return null;

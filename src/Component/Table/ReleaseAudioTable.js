@@ -43,9 +43,6 @@ const columns = [
       } else if (status === "Approved") {
         color = "black";
         className = "approved";
-      }else if (status === "Failed") {
-        color = "black";
-        className = "filter_failed";
       } else if (status === "Rejected") {
         color = "black";
         className = "Rejected";

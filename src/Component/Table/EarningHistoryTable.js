@@ -8,10 +8,10 @@ const columns = [
     title: "Month",
     dataIndex: "month",
   },
-  {
-    title: "Date",
-    dataIndex: "date",
-  },
+  // {
+  //   title: "Date",
+  //   dataIndex: "date",
+  // },
   {
     title: "Status",
     dataIndex: "amount",
@@ -22,7 +22,7 @@ const data = [
     key: "1",
     years: "2024",
     month: "January",
-    date: "27",
+    // date: "27",
     amount: "₹ 2500",
   },
   {

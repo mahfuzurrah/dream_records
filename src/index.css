@@ -962,10 +962,15 @@ Catalog Page
   display: flex;
   align-items: center;
   padding: 10px;
-  background: #2d5ad6;
+  background: #ff8800;
   border-radius: 4px;
 }
 
+.status_area{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
 .r_edit_delete svg.icons {
   color: var(--white-color);
@@ -982,7 +987,7 @@ Catalog Page
 }
 
 .r_edit_delete a.delete {
-  background: #ff8800;
+  background: #ff0000;
 }
 
 .filter_failed {
@@ -1647,7 +1652,7 @@ Swiper part
 
 .popover_btn {
   padding: 8px;
-  background: #ff0000;
+  background: #1a1a1c;
   width: 39px;
   height: 39px;
   border: none;
