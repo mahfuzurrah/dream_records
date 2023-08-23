@@ -254,7 +254,6 @@ li.ant-menu-item:hover {
 
 li.release-audio {
     background: linear-gradient(140deg, #3497FC 0%, rgba(57, 63, 140, 0.17) 100%), linear-gradient(140deg, #65E3DF 0%, #8266F6 100%), #4575FC !important;
-    color: var(--white-color) !important;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -262,17 +261,13 @@ li.release-audio {
     padding-left: 0 !important;
     border-radius: 16px !important;
     position: relative !important;
+    color: #ffffff !important
 }
 
-li.release-audio::after{
-    contain: "" !important;
-    position: absolute !important;
-    width: 50px;
-    background: #000;
-    height: 2px;
-    top: 50px;
+li.release-audio svg.ant-menu-item-icon,
+li.release-audio span.ant-menu-title-content{
+    color: var(--white-color) !important;
 }
-
 
 li.dashboard {
     margin-top: 30px !important;
@@ -280,7 +275,7 @@ li.dashboard {
 
 li.release-audio:hover {
     background: linear-gradient(140deg, #3497FC 0%, rgba(57, 63, 140, 0.17) 100%), linear-gradient(140deg, #65E3DF 0%, #8266F6 100%), #4575FC !important;
-    color: var(--white-color) !important;
+    /* color: var(--white-color) !important; */
 }
 
 li.release-audio .ant-menu-title-content {
@@ -291,9 +286,6 @@ button.ant-btn.css-w8mnev.ant-btn-text.ant-btn-icon-only {
     display: none;
 }
 
-/* .ant-table-cell a{
-    font-size: 20px;
-} */
 
 @media screen and (max-width: 991px) {
     .body_content {

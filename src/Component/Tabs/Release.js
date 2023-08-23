@@ -44,7 +44,7 @@ const Release = () => {
               star="*"
             />
             <IconInputField
-              labels={["Featuring", "Secondary Artist"]}
+              labels={["Featuring", "Secondary Featuringt"]}
               ids={["input1", "input2"]}
               placeholders={[null, null]}
             />
@@ -101,7 +101,7 @@ const Release = () => {
         </div>
         <div className="col-xl-3 col-lg-6 mt-4">
           <form className="r_input_group">
-          <InputField
+            <InputField
               label="Original Release Date"
               value={name}
               onChange={handleNameChange}
@@ -136,7 +136,7 @@ const Release = () => {
         </div>
         <div className="col-xl-3 col-lg-6 mt-4">
           <form className="r_input_group">
-          <div className="mt-3">
+            <div className="mt-3">
               <label htmlFor="" className="mb-2">
                 Format <span className="input_star">*</span>
               </label>
@@ -159,13 +159,6 @@ const Release = () => {
               value={name}
               onChange={handleNameChange}
             />
-            <InputField label="ISRC" value={name} onChange={handleNameChange} />
-            <div className="mt-3">
-              <label htmlFor="" className="mb-2">
-                Parental Advisory
-              </label>
-              <Selector />
-            </div>
             <InputField
               label="Producer Catalogue Number"
               value={name}
