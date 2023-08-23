@@ -59,7 +59,7 @@ function ManualClaimRequest() {
               onChange={handleChannelLinkChange}
             />
             <InputField
-              label="Date"
+              label="Timing"
               star="*" 
               value={timing}
               onChange={handleTimingChange}

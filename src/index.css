@@ -105,7 +105,7 @@ img {
 }
 
 hr {
-  border: 1px solid var(--border-color) !important;
+  border: 1px solid var(--border-color);
 }
 
 .icons {
@@ -231,11 +231,11 @@ label {
   padding-bottom: 20px;
 }
 
-.relese_audio_filter_btn_add .all_r_d_none{
+.relese_audio_filter_btn_add .all_r_d_none {
   display: none !important;
 }
 
-:where(.css-w8mnev).ant-divider-horizontal{
+:where(.css-w8mnev).ant-divider-horizontal {
   display: none !important;
 }
 
@@ -982,7 +982,7 @@ Catalog Page
 }
 
 .r_edit_delete a.delete {
-  background: #ff2600;
+  background: #ff8800;
 }
 
 .filter_failed {
@@ -1026,6 +1026,7 @@ td.ant-table-cell.ant-table-cell-row-hover .c_tune_table_title span {
 td.ant-table-cell .status {
   padding: 8px 20px;
   border-radius: 100px;
+  display: inline-block;
 }
 
 td.ant-table-cell .status.approved {
@@ -1135,6 +1136,74 @@ Release Information Page
 .input-row label {
   margin-bottom: 8px;
 }
+
+
+.releaseaudio_page hr{
+  border: 1px solid #00000073 !important
+}
+
+.releaseaudio_page .tab-navigation {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  border-radius: 12px;
+  background: var(--white-color);
+  box-shadow: 12px 12px 35px #0000000a;
+  margin-bottom: 10px;
+}
+
+.releaseaudio_page .tab-navigation .tab {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  padding-right: 30px;
+  width: 100%;
+}
+
+.releaseaudio_page .btn_area{
+  padding: 30px;
+  border-radius: 12px;
+  background: var(--white-color);
+  box-shadow: 12px 12px 35px #0000000a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.releaseaudio_page .tab-navigation .tab::after{
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  height: 2px;
+  background: var(--border-color);
+}
+
+.releaseaudio_page .tab-navigation .tab .icons{
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  border: 2px solid var(--border-color);
+  background: var(--white-color);
+  z-index: 1;
+}
+
+.releaseaudio_page .tab-navigation .tab.active .icons{
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+.releaseaudio_page .steps{
+  padding: 30px;
+  border-radius: 12px;
+  background: var(--white-color);
+  box-shadow: 12px 12px 35px #0000000a;
+}
+
 
 /* =================
 Submission Page
@@ -1304,7 +1373,7 @@ td.ant-table-cell.ant-table-cell-row-hover .reply_btn {
   color: var(--white-color)
 }
 
-td.ant-table-cell.ant-table-cell-row-hover .reply_btn .icons{
+td.ant-table-cell.ant-table-cell-row-hover .reply_btn .icons {
   color: var(--white-color)
 }
 
@@ -1576,16 +1645,16 @@ Swiper part
   color: var(--white-color);
 }
 
-.popover {
+.popover_btn {
   padding: 8px;
-  background: #062c4b;
+  background: #ff0000;
   width: 39px;
   height: 39px;
   border: none;
   border-radius: 4px;
 }
 
-.popover .icons {
+.popover_btn .icons {
   color: var(--white-color);
   font-size: 20px;
 }
@@ -1637,7 +1706,7 @@ Swiper part
   cursor: pointer;
 }
 
-:where(.css-dev-only-do-not-override-w8mnev).ant-divider-horizontal{
+:where(.css-dev-only-do-not-override-w8mnev).ant-divider-horizontal {
   display: none;
 }
 
@@ -1653,14 +1722,14 @@ Swiper part
   border: 2px solid var(--primary-color);
 }
 
-.profile_input_area{
+.profile_input_area {
   padding: 30px;
   background: var(--white-color);
   box-shadow: 5px 5px 35px #00000009;
   border-radius: 16px;
 }
 
-span.enable_wp{
+span.enable_wp {
   position: relative;
   top: 10px;
   display: flex;
@@ -1668,6 +1737,8 @@ span.enable_wp{
   gap: 10px;
 }
 
+
+/*  */
 
 
 /*===============================
@@ -1725,9 +1796,10 @@ Responcive part
   .copy_R {
     width: 100%;
   }
-.profile_input_area{
-  margin-top: 20px;
-}
+
+  .profile_input_area {
+    margin-top: 20px;
+  }
 
 }
 

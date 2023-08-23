@@ -3,7 +3,7 @@ import CardList from "../Component/BankCard/CardList";
 import AddBankPopup from "../Component/Modal/AddBankPopup";
 import WithdrawalTransactionTable from "../Component/Table/WithdrawalTransactionTable";
 
-function WithdrawA() {
+function Withdraw() {
   const [balance, setBalance] = useState(0);
   const isButtonActive = balance >= 100;
 
@@ -58,4 +58,4 @@ function WithdrawA() {
   );
 }
 
-export default WithdrawA;
+export default Withdraw;

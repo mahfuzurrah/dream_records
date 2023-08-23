@@ -10,8 +10,8 @@ const content = (
 
 const AntPopover = () => (
   <Space wrap>
-    <Popover content={content} title="Title" trigger="click">
-      <Button className='popover'><BsInfoLg className='icons'/></Button>
+    <Popover content={content} title="Title" trigger="click" >
+      <Button className='popover_btn'><BsInfoLg className='icons'/></Button>
     </Popover>
   </Space>
 );
