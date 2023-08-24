@@ -1,10 +1,10 @@
 import { Table } from "antd";
 import React, { useState } from "react";
-import TableFilter from "../Filter/TableFilter";
-import SearchBar from "../SearchBar/SearchBar";
-import { Link } from "react-router-dom";
 import { BiDownload } from "react-icons/bi";
-import AntPopover from "../Popover/AntPopover";
+import { Link } from "react-router-dom";
+import TableFilter from "../Filter/TableFilter";
+import FailedPopover from "../Popover/FailedPopover";
+import SearchBar from "../SearchBar/SearchBar";
 
 const columns = [
   {
@@ -41,18 +41,31 @@ const columns = [
 
       return (
         <div className="status_area">
-            <span className={`status ${className}`} style={{ color }}>
-              {status}
-            </span>
-            {status === 'Failed' && <AntPopover/>}
-          </div>
+          <span className={`status ${className}`} style={{ color }}>
+            {status}
+          </span>
+          {status === "Failed" && <FailedPopover />}
+        </div>
       );
     },
   },
   {
     title: "Action",
-    // dataIndex: "AId",
-    render: () => <Link to="" className="t_down"><BiDownload className="table_icons"/></Link>,
+    render: (text, record) => {
+      const { status } = record;
+
+      if (status === "Approved") {
+        return (
+          <div className="r_edit_delete">
+            <Link to="#" className="edit">
+              <BiDownload className="icons" />
+            </Link>
+          </div>
+        );
+      } else {
+        return null;
+      }
+    },
   },
 ];
 const data = [
@@ -109,7 +122,7 @@ const AnalyticsTable = () => {
         <p>Show 4 entries</p>
         <SearchBar />
       </div>
-      
+
       <Table
         columns={columns}
         dataSource={getFilteredData(data)}
@@ -119,6 +132,5 @@ const AnalyticsTable = () => {
     </>
   );
 };
-
 
 export default AnalyticsTable;

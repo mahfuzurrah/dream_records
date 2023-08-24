@@ -5,6 +5,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import airtelLogo from "../assets/img/Airtel.png";
 import coverImg from "../assets/img/cover.jpg";
 import vodafoneLogo from "../assets/img/vodafone.png";
+import FailedPopover from "../Popover/FailedPopover";
 
 const columns = [
   {
@@ -49,9 +50,12 @@ const columns = [
       }
 
       return (
-        <span className={`status ${className}`} style={{ color }}>
-          {status}
-        </span>
+        <div className="status_area">
+          <span className={`status ${className}`} style={{ color }}>
+            {status}
+          </span>
+          {status === "Failed" && <FailedPopover />}
+        </div>
       );
     },
   },

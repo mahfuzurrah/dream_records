@@ -1,9 +1,12 @@
 import React from 'react'
+import EditAssetsTable from '../Table/EditAssetsTable'
+import EditAssetsPopup from '../Modal/EditAssetsPopup'
 
 function EditAssets() {
   return (
-    <div>
-      <h1>EditAssetsStep</h1>
+    <div className='edit_assets'>
+      <EditAssetsPopup/>
+      <EditAssetsTable/>
     </div>
   )
 }

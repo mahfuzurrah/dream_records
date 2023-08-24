@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { BiDownload } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import TableFilter from "../Filter/TableFilter";
-import AntPopover from "../Popover/AntPopover";
+import FailedPopover from "../Popover/FailedPopover";
 import SearchBar from "../SearchBar/SearchBar";
 
 const WithdrawalTransactionTable = () => {
@@ -59,7 +59,7 @@ const WithdrawalTransactionTable = () => {
             <span className={`status ${className}`} style={{ color }}>
               {status}
             </span>
-            {status === 'Failed' && <AntPopover/>}
+            {status === 'Failed' && <FailedPopover/>}
           </div>
         );
       },

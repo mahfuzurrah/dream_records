@@ -1,9 +1,9 @@
 import { Divider, Radio, Table } from "antd";
-import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import TableFilter from "../Filter/TableFilter";
+import FailedPopover from "../Popover/FailedPopover";
 import SearchBar from "../SearchBar/SearchBar";
-import AntPopover from "../Popover/AntPopover";
 
 const columns = [
   {
@@ -40,14 +40,14 @@ const columns = [
 
       return (
         <div className="status_area">
-            <span className={`status ${className}`} style={{ color }}>
-              {status}
-            </span>
-            {status === 'Failed' && <AntPopover/>}
-          </div>
+          <span className={`status ${className}`} style={{ color }}>
+            {status}
+          </span>
+          {status === "Failed" && <FailedPopover />}
+        </div>
       );
     },
-  }
+  },
 ];
 const data = [
   {
@@ -67,7 +67,7 @@ const data = [
     id: "03",
     name: "Title Here",
     status: "Failed",
-  }
+  },
 ];
 
 const onChange = (pagination, filters, sorter, extra) => {

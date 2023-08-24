@@ -1,8 +1,8 @@
 import { Table } from "antd";
 import React, { useState } from "react";
 import TableFilter from "../Filter/TableFilter";
+import FailedPopover from "../Popover/FailedPopover";
 import SearchBar from "../SearchBar/SearchBar";
-import AntPopover from "../Popover/AntPopover";
 
 const columns = [
   {
@@ -51,11 +51,11 @@ const columns = [
 
       return (
         <div className="status_area">
-            <span className={`status ${className}`} style={{ color }}>
-              {status}
-            </span>
-            {status === 'Failed' && <AntPopover/>}
-          </div>
+          <span className={`status ${className}`} style={{ color }}>
+            {status}
+          </span>
+          {status === "Failed" && <FailedPopover />}
+        </div>
       );
     },
   },

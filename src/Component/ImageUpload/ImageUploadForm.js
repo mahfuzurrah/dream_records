@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import shortid from "shortid";
-import UploadIcon from "../assets/icons/Upload.svg";
+// import UploadIcon from "../assets/icons/Upload.svg";
 
 const ImageUploadForm = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -76,7 +76,7 @@ const ImageUploadForm = () => {
                           onChange={handleFileUpload}
                         />
                         <div className="img_Up_info">
-                          <img src={UploadIcon} alt="" className="mb-2" />
+                          {/* <img src={UploadIcon} alt="" className="mb-2" /> */}
                           <span>
                             Drag and drop or
                             <span className="file-link">Choose your file</span>
@@ -115,7 +115,7 @@ const ImageUploadForm = () => {
                     )}
                     <div className="kb-buttons-box">
                       <button type="submit" className="btn">
-                        Upload
+                        Upload Cover
                       </button>
                     </div>
                   </form>

@@ -1,6 +1,10 @@
 import { Table } from "antd";
 const columns = [
   {
+    title: "Issue Date",
+    dataIndex: "date",
+  },
+  {
     title: "Years",
     dataIndex: "years",
   },
@@ -8,10 +12,6 @@ const columns = [
     title: "Month",
     dataIndex: "month",
   },
-  // {
-  //   title: "Date",
-  //   dataIndex: "date",
-  // },
   {
     title: "Status",
     dataIndex: "amount",
@@ -22,21 +22,21 @@ const data = [
     key: "1",
     years: "2024",
     month: "January",
-    // date: "27",
+    date: "27-10-2023",
     amount: "₹ 2500",
   },
   {
     key: "2",
     years: "2024",
     month: "February",
-    date: "27",
+    date: "27-10-2023",
     amount: "₹ 2500",
   },
   {
     key: "3",
     years: "2024",
     month: "March",
-    date: "27",
+    date: "27-10-2023",
     amount: "₹ 2500",
   },
 ];

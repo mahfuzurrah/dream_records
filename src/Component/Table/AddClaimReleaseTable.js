@@ -2,7 +2,7 @@ import { Table } from "antd";
 import React, { useState } from "react";
 import TableFilter from "../Filter/TableFilter";
 import SearchBar from "../SearchBar/SearchBar";
-import AntPopover from "../Popover/AntPopover";
+import FailedPopover from "../Popover/FailedPopover";
 
 const columns = [
   {
@@ -50,7 +50,7 @@ const columns = [
             <span className={`status ${className}`} style={{ color }}>
               {status}
             </span>
-            {status === 'Failed' && <AntPopover/>}
+            {status === 'Failed' && <FailedPopover/>}
           </div>
       );
     },

@@ -4,9 +4,9 @@ import { BiPencil, BiTrashAlt } from "react-icons/bi";
 import { FaRegEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import TableFilter from "../Filter/TableFilter";
+import AntPopover from "../Popover/AntPopover";
 import SearchBar from "../SearchBar/SearchBar";
 import coverImg from "../assets/img/cover.jpg";
-import AntPopover from "../Popover/AntPopover";
 
 const columns = [
   {
@@ -94,7 +94,7 @@ const columns = [
             <Link className="delete">
               <BiTrashAlt className="icons" />
             </Link>
-            <AntPopover/>
+            <AntPopover />
           </div>
         );
       } else if (status === "Correction Request") {
@@ -109,10 +109,10 @@ const columns = [
             <Link className="delete">
               <BiTrashAlt className="icons" />
             </Link>
-            <AntPopover/>
+            <AntPopover />
           </div>
         );
-      }  else if (status === "Unfinished") {
+      } else if (status === "Unfinished") {
         iconElement = (
           <div className="r_edit_delete">
             <Link to="/catalog_details" className="edit">

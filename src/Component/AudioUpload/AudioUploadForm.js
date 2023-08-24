@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import shortid from "shortid";
-import UploadIcon from "../assets/icons/Upload.svg";
+// import UploadIcon from "../assets/icons/Upload.svg";
 
 const AudioUploadForm = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -30,7 +30,7 @@ const AudioUploadForm = () => {
     // Reset form on submit
     e.target.reset();
 
-    if (selectedFile) {
+    if (selectedFile && selectedFile.name.match(/.(mp3|wav)$/i)) {
       const reader = new FileReader();
 
       reader.onloadend = () => {
@@ -47,11 +47,11 @@ const AudioUploadForm = () => {
 
       setSelectedFile(null);
     } else {
-      alert("Please select a file");
+      alert("Please select an audio file (mp3 or wav format).");
     }
   };
 
-  const deleteFile = async () => {
+  const deleteFile = () => {
     setFile(null);
   };
 
@@ -65,14 +65,15 @@ const AudioUploadForm = () => {
                 <form onSubmit={uploadFile}>
                   <div className="kb-file-upload">
                     <div className="file-upload-box">
-                      <input
+                    <input
                         type="file"
+                        accept=".mp3,.wav"
                         id="fileupload"
                         className="file-upload-input"
                         onChange={handleInputChange}
                       />
-                      <div className="img_Up_info">
-                        <img src={UploadIcon} alt="" className="mb-2" />
+                       <div className="img_Up_info">
+                        {/* <img src={UploadIcon} alt="" className="mb-2" /> */}
                         <span>
                           Drag and drop or
                           <span className="file-link">Choose your audio file</span>
@@ -113,7 +114,7 @@ const AudioUploadForm = () => {
                   </div>
                   <div className="kb-buttons-box">
                     <button type="submit" className="btn">
-                      Upload
+                      Upload Audio
                     </button>
                   </div>
                 </form>
