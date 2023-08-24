@@ -1170,12 +1170,13 @@ Release Information Page
 
 .releaseaudio_page .btn_area{
   padding: 30px;
-  border-radius: 12px;
   background: var(--white-color);
   box-shadow: 12px 12px 35px #0000000a;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-top: 1px solid var(--border-color);
+  border-radius: 0 0 12px 12px;
 }
 
 .releaseaudio_page .tab-navigation .tab::after{
@@ -1204,7 +1205,7 @@ Release Information Page
 
 .releaseaudio_page .steps{
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 12px 12px 0 0;
   background: var(--white-color);
   box-shadow: 12px 12px 35px #0000000a;
 }
