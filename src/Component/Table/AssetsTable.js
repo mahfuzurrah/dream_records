@@ -1,7 +1,7 @@
 import { Table } from "antd";
 import React, { useRef, useState } from "react";
+import { BiPencil, BiTrashAlt } from "react-icons/bi";
 import { FaPause, FaPlay } from "react-icons/fa";
-import { BiTrashAlt, BiPencil } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import t_audio from "../assets/audio/Lukrembo.mp3";
 
@@ -12,7 +12,7 @@ const columns = [
     render: (audio) => <CustomAudioPlayer audio={audio} />,
   },
   {
-    title: "Track",
+    title: "Track Title",
     dataIndex: "track",
   },
   {
@@ -28,7 +28,7 @@ const columns = [
     render: (text, record) => (
       <div className="r_edit_delete">
         <Link to="#" className="edit">
-        <BiPencil className="icons" />
+          <BiPencil className="icons" />
         </Link>
         <Link to="#" className="delete">
           <BiTrashAlt className="icons" />
@@ -42,16 +42,9 @@ const data = [
   {
     key: "1",
     audio: t_audio,
-    track: "Track Here",
-    artist: "Artist name",
-    ISRC: "XX-0X0-00-00000",
-  },
-  {
-    key: "2",
-    audio: t_audio,
-    track: "Track Here",
-    artist: "Artist name",
-    ISRC: "XX-0X0-00-00000",
+    track: "Track Title",
+    artist: "Type Here",
+    ISRC: "Not Found",
   },
 ];
 
@@ -80,7 +73,7 @@ const CustomAudioPlayer = ({ audio }) => {
   );
 };
 
-const EditAssetsTable = () => {
+const AssetsTable = () => {
   return (
     <div>
       <Table
@@ -93,4 +86,4 @@ const EditAssetsTable = () => {
   );
 };
 
-export default EditAssetsTable;
+export default AssetsTable;

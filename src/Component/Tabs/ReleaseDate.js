@@ -1,11 +1,21 @@
-import React from 'react'
+import { DatePicker, Space } from "antd";
+import React from "react";
+const onChange = (date, dateString) => {
+  console.log(date, dateString);
+};
+const EditAssets = () => (
+    <form className="r_input_group">
+      <div className="mt-3">
+        <label htmlFor="" className="mb-2">
+        Choose a main release date <span className="input_star">*</span>
+        </label>
+        <div className="checkbox_item">
+          <Space direction="vertical">
+            <DatePicker onChange={onChange} />
+          </Space>
+        </div>
+      </div>
+    </form>
+);
 
-function EditAssets() {
-  return (
-    <div>
-      <h1>Date</h1>
-    </div>
-  )
-}
-
-export default EditAssets
+export default EditAssets;

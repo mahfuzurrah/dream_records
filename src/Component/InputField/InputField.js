@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InputField = ({ label, star, value, onChange, type, error, disabled }) => {
+const InputField = ({ label, star, value, onChange, type, error, disabled, placeholder }) => {
   const inputId = label.replace(/\s+/g, '-').toLowerCase();
 
   return (
@@ -13,8 +13,9 @@ const InputField = ({ label, star, value, onChange, type, error, disabled }) => 
         type={type}
         value={value}
         onChange={onChange}
+        placeholder={placeholder}
         required
-        disabled={disabled} // Set the disabled attribute based on the prop
+        disabled={disabled}
       />
       {error && <p className="input_error">{error}</p>}
     </div>

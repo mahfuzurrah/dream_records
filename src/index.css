@@ -105,7 +105,7 @@ img {
 }
 
 hr {
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color) !important;
 }
 
 .icons {
@@ -207,6 +207,10 @@ label {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+.modal-content{
+  padding: 20px 20px;
 }
 
 .modal-footer .btn_area {
@@ -505,149 +509,31 @@ Edit Primary Artist
   color: #fff;
 }
 
-.kb-data-box {
-  width: 100%;
-  flex: 1;
+.image-upload-container {
+  text-align: center;
 }
 
-.kb-data-title h6 {
-  margin-bottom: 0;
-  font-size: 15px;
-  font-weight: 600;
+.file-input {
+  display: none;
 }
 
-.kb-file-upload {
-  margin-bottom: 20px;
-}
-
-.file-upload-box {
-  border: 1px dashed #b6bed1;
-  background-color: #f0f2f7;
-  border-radius: 4px;
-  min-height: 150px;
-  position: relative;
-  overflow: hidden;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #8194aa;
-  font-weight: 400;
-  font-size: 15px;
-}
-
-.file-upload-box .file-upload-input {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.file-link {
-  color: #475f7b;
-  text-decoration: underline;
-  margin-left: 3px;
-}
-
-.file-upload-box .file-link:hover {
-  text-decoration: none;
-}
-
-.file-atc-box {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.file-image {
-  width: 130px;
-  height: 85px;
-  background-size: cover;
-  border-radius: 5px;
-  margin-right: 15px;
-  background-color: #eaecf1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  color: #475f7b;
-  padding: 3px;
-}
-
-.file-image img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 4px;
-}
-
-.file-detail {
-  flex: 1;
-  width: 100%;
-}
-
-audio {
-  width: 100%;
-}
-
-.file-detail h6 {
-  word-break: break-all;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 20px;
-  margin-bottom: 8px;
-}
-
-.file-detail p {
-  font-size: 12px;
-  color: #8194aa;
-  line-height: initial;
-  font-weight: 400;
-  margin-bottom: 8px;
-}
-
-.file-actions {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.file-action-btn {
-  font-size: 12px;
-  color: #8194aa;
-  line-height: 20px;
-  font-weight: 400;
-  margin-bottom: 0;
-  padding: 0;
-  background-color: transparent;
+.upload-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
   border: none;
-  text-decoration: underline;
-  margin-right: 15px;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
-.file-action-btn:hover {
-  color: #3d546f;
-  text-decoration: underline;
+.upload-button:hover {
+  background-color: #0056b3;
 }
 
-.file-atc-box:last-child {
-  margin-bottom: 0;
-}
-
-.img_Up_info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.kb-buttons-box .btn {
-  width: 100%;
+.image-preview img {
+  max-width: 100%;
+  height: auto;
 }
 
 /*  */
@@ -966,7 +852,7 @@ Catalog Page
   border-radius: 4px;
 }
 
-.status_area{
+.status_area {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -1143,8 +1029,8 @@ Release Information Page
 }
 
 
-.releaseaudio_page hr{
-  border: 1px solid #00000073 !important
+.releaseaudio_page hr {
+  border: 1px solid var(--border-color);
 }
 
 .releaseaudio_page .tab-navigation {
@@ -1168,7 +1054,7 @@ Release Information Page
   width: 100%;
 }
 
-.releaseaudio_page .btn_area{
+.releaseaudio_page .btn_area {
   padding: 30px;
   background: var(--white-color);
   box-shadow: 12px 12px 35px #0000000a;
@@ -1179,7 +1065,7 @@ Release Information Page
   border-radius: 0 0 12px 12px;
 }
 
-.releaseaudio_page .tab-navigation .tab::after{
+.releaseaudio_page .tab-navigation .tab::after {
   content: "";
   position: absolute;
   top: 20px;
@@ -1188,7 +1074,7 @@ Release Information Page
   background: var(--border-color);
 }
 
-.releaseaudio_page .tab-navigation .tab .icons{
+.releaseaudio_page .tab-navigation .tab .icons {
   font-size: 24px;
   width: 40px;
   height: 40px;
@@ -1198,12 +1084,12 @@ Release Information Page
   z-index: 1;
 }
 
-.releaseaudio_page .tab-navigation .tab.active .icons{
+.releaseaudio_page .tab-navigation .tab.active .icons {
   background: var(--primary-color);
   color: var(--white-color);
 }
 
-.releaseaudio_page .steps{
+.releaseaudio_page .steps {
   padding: 30px;
   border-radius: 12px 12px 0 0;
   background: var(--white-color);
@@ -1221,19 +1107,20 @@ Submission Page
   width: 100%;
 }
 
-.s_info .items .item .input_value {
+.s_info .input_value {
   display: flex;
+  gap: 20px;
   margin-top: 8px;
 }
 
-.s_info .items .item p.input_name {
-  width: 150px !important;
+.s_info p.input_name {
+  width: 200px !important;
 }
 
-.s_info .items .item span {
+.s_info span {
   display: flex;
   flex-direction: row;
-  width: 150px !important;
+  width: 200px !important;
 }
 
 .upload_info .card {
@@ -1246,6 +1133,13 @@ Submission Page
 
 .upload_info .card.audio {
   height: 300px;
+}
+
+.submission_img {
+  border-radius: 16px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .upload_info .card img {
@@ -1693,7 +1587,7 @@ Swiper part
   color: var(--white-color);
 }
 
-.play_btn{
+.play_btn {
   width: 35px;
   height: 35px;
   border: none;
@@ -1762,26 +1656,75 @@ span.enable_wp {
   gap: 10px;
 }
 
-.modal_upload_area{
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
+.modal_upload_area {
+  margin-bottom: 30px;
 }
 
-.checkbox_item{
+.checkbox_item {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
 }
 
-.checkbox_item .item{
+.checkbox_item .item {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+.ant-space.css-dev-only-do-not-override-w8mnev.ant-space-vertical,
+.ant-picker.css-dev-only-do-not-override-w8mnev,
+:where(.css-dev-only-do-not-override-w8mnev).ant-picker-focused {
+  width: 450px;
+}
+
+.cover_upload .dropzone {
+  width: 250px;
+  height: 250px;
+  background: #0000001c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.audio_upload_form .dropzone {
+  width: 100%;
+  background: #0000001c;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.audio_upload_form .dropzone {
+  width: 100%;
+  height: 200px;
+  background: #0000001c;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.audio_upload_form .dropzone .icons,
+.cover_upload .dropzone .icons {
+  font-size: 50px;
+  color: var(--title-color);
+}
+
+.cover_upload .upload-button-container {
+  margin-top: 30px;
+}
+
+.cover_upload .upload-button-container {
+  margin-top: 30px;
+}
 
 /*  */
 

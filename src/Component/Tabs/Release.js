@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import IconInputField from "../InputField/IconInputField";
 import InputField from "../InputField/InputField";
 import Selector from "../Selector/Selector";
+import ImageUploadForm from "../ImageUpload/ImageUploadForm";
 
 const Release = () => {
   const [name, setName] = useState("");
@@ -22,6 +23,9 @@ const Release = () => {
   return (
     <>
       <div className="row release-row">
+        <div className="col-xl-3 col-lg-6 mt-4">
+          <ImageUploadForm/>
+        </div>
         <div className="col-xl-3 col-lg-6 mt-4">
           <form className="r_input_group">
             <InputField
@@ -48,72 +52,20 @@ const Release = () => {
               ids={["input1", "input2"]}
               placeholders={[null, null]}
             />
-            <IconInputField
-              labels={["Remixer", "Secondary Remixer"]}
-              ids={["input1", "input2"]}
-              placeholders={[null, null]}
-            />
-            <div className="add_input mt-3">
-              <InputField
-                label="Song Writer"
-                value={version_S}
-                onChange={handleversion_SChange}
-                star="*"
-              />
-              <p className="input_desc">
-                Digital Audio Stores required Full First & Last Name
-              </p>
-            </div>
-          </form>
-        </div>
-        <div className="col-xl-3 col-lg-6 mt-4">
-          <form className="r_input_group">
-            <div className="add_input mt-3">
-              <IconInputField
-                labels={["Composer", "Secondary Composer"]}
-                ids={["input1", "input2"]}
-                placeholders={[null, null]}
-                onChange={handlePrimaryArtistChange}
-                value={primaryArtist}
-                star="*"
-              />
-              <p className="input_desc">
-                Digital Audio Stores required Full First & Last Name
-              </p>
-            </div>
-            <InputField
-              label="Main Release Date"
-              value={name}
-              onChange={handleNameChange}
-              star="*"
-            />
-            <IconInputField
-              labels={["Arranger", "Secondary Arranger"]}
-              ids={["input1", "input2"]}
-              placeholders={[null, null]}
-            />
-            <IconInputField
-              labels={["Producer", "Secondary Producer"]}
-              ids={["input1", "input2"]}
-              placeholders={[null, null]}
-            />
-          </form>
-        </div>
-        <div className="col-xl-3 col-lg-6 mt-4">
-          <form className="r_input_group">
-            <InputField
-              label="Original Release Date"
-              value={name}
-              onChange={handleNameChange}
-              star="*"
-            />
             <div className="mt-3">
               <label htmlFor="" className="mb-2">
-                Lyrics Language <span className="input_star">*</span>
+              Various Artists / Compilation <span className="input_star">*</span>
               </label>
-              <Selector />
+              <div className="checkbox_item">
+                <div className="item">
+                  <input type="checkbox" />
+                </div>
+              </div>
             </div>
-
+          </form>
+        </div>
+        <div className="col-xl-3 col-lg-6 mt-4">
+          <form className="r_input_group">
             <div className="mt-3">
               <label htmlFor="" className="mb-2">
                 Genre <span className="input_star">*</span>
@@ -126,22 +78,30 @@ const Release = () => {
               </label>
               <Selector />
             </div>
+
             <div className="mt-3">
               <label htmlFor="" className="mb-2">
                 Label Name <span className="input_star">*</span>
               </label>
               <Selector />
             </div>
-          </form>
-        </div>
-        <div className="col-xl-3 col-lg-6 mt-4">
-          <form className="r_input_group">
+
             <div className="mt-3">
               <label htmlFor="" className="mb-2">
                 Format <span className="input_star">*</span>
               </label>
               <Selector />
             </div>
+            <InputField
+              label="Original Release Date"
+              value={name}
+              onChange={handleNameChange}
+              star="*"
+            />
+          </form>
+        </div>
+        <div className="col-xl-3 col-lg-6 mt-4">
+          <form className="r_input_group">
             <InputField
               label="℗ line"
               value={name}
@@ -154,6 +114,14 @@ const Release = () => {
               onChange={handleNameChange}
               star="*"
             />
+
+            <div className="mt-3">
+              <label htmlFor="" className="mb-2">
+                Production Year <span className="input_star">*</span>
+              </label>
+              <Selector />
+            </div>
+
             <InputField
               label="UPC/EAN"
               value={name}
@@ -166,10 +134,6 @@ const Release = () => {
             />
           </form>
         </div>
-        {/* <div className="col-xl-3 col-lg-6 mt-5">
-          <div><ImageUploadForm/></div>
-          <div className="mt-4"><AudioUploadForm/></div>
-        </div> */}
       </div>
     </>
   );

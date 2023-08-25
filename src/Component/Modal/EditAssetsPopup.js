@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import AudioUploadForm from "../AudioUpload/AudioUploadForm";
-import ImageUploadForm from "../ImageUpload/ImageUploadForm";
 import IconInputField from "../InputField/IconInputField";
 import InputField from "../InputField/InputField";
 import Selector from "../Selector/Selector";
+import TextField from "../TextBox/TextField";
 
 function EditAssetsPopup() {
   const [show, setShow] = useState(false);
@@ -27,6 +27,12 @@ function EditAssetsPopup() {
     setPrimaryArtist(event.target.value);
   };
 
+  const [comment, setComment] = useState("");
+
+  const handleCommentChange = (event) => {
+    setComment(event.target.value);
+  };
+
   return (
     <>
       <button className="btn add_label_btn" onClick={handleShow}>
@@ -34,11 +40,10 @@ function EditAssetsPopup() {
       </button>
       <Modal show={show} onHide={handleClose} size="lg">
         <Modal.Header closeButton>
-          <Modal.Title>Add Primary Artist Details</Modal.Title>
+          <Modal.Title>Add Track</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="modal_upload_area">
-            <ImageUploadForm />
             <AudioUploadForm />
           </div>
           <form className="r_input_group">
@@ -106,11 +111,6 @@ function EditAssetsPopup() {
               value={version_S}
               onChange={handleversion_SChange}
             />
-            <InputField
-              label="Remixer"
-              value={version_S}
-              onChange={handleversion_SChange}
-            />
             <IconInputField
               labels={["Primary Artist", "Secondary Artist"]}
               ids={["input1", "input2"]}
@@ -124,6 +124,33 @@ function EditAssetsPopup() {
               ids={["input1", "input2"]}
               placeholders={[null, null]}
             />
+            <InputField
+              label="Remixer"
+              value={version_S}
+              onChange={handleversion_SChange}
+            />
+            <div className="add_input mt-3">
+              <InputField
+                label="Lyrics Writter"
+                value={version_S}
+                onChange={handleversion_SChange}
+                star="*"
+              />
+              <p className="input_desc">
+              Digital Music Stores require full first and last (family) name
+              </p>
+            </div>
+            <div className="add_input mt-3">
+              <InputField
+                label="Composer"
+                value={version_S}
+                onChange={handleversion_SChange}
+                star="*"
+              />
+              <p className="input_desc">
+              Digital Music Stores require full first and last (family) name
+              </p>
+            </div>
             <IconInputField
               labels={["Arranger", "Secondary Arranger"]}
               ids={["input1", "input2"]}
@@ -145,6 +172,19 @@ function EditAssetsPopup() {
               </label>
               <Selector />
             </div>
+            <InputField
+              label="Publisher"
+              value={name}
+              onChange={handleNameChange}
+              star="*"
+            />
+            <InputField
+              label="ISRC"
+              value={name}
+              onChange={handleNameChange}
+              star="*"
+              placeholder="XX-0X0-00-00000"
+            />
             <div className="mt-3">
               <label htmlFor="" className="mb-2">
                 Gener <span className="input_star">*</span>
@@ -157,18 +197,6 @@ function EditAssetsPopup() {
               </label>
               <Selector />
             </div>
-            <InputField
-              label="Publisher"
-              value={name}
-              onChange={handleNameChange}
-              star="*"
-            />
-            <InputField
-              label="Isrc"
-              value={name}
-              onChange={handleNameChange}
-              star="*"
-            />
             <InputField
               label="Producer Catalogue Number"
               value={name}
@@ -206,12 +234,12 @@ function EditAssetsPopup() {
               onChange={handleNameChange}
               star="*"
             />
-            <InputField
-              label="Lyrics Language"
-              value={name}
-              onChange={handleNameChange}
-              star="*"
-            />
+            <TextField
+                label="Lyrics"
+                type="text"
+                value={comment}
+                onChange={handleCommentChange}
+              />
           </form>
         </Modal.Body>
         <Modal.Footer>
