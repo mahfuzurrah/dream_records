@@ -209,7 +209,7 @@ label {
   gap: 20px;
 }
 
-.modal-content{
+.modal-content {
   padding: 20px 20px;
 }
 
@@ -759,60 +759,74 @@ Catalog Page
   margin-bottom: 10px;
 }
 
-.catalog_details {
-  background-image: linear-gradient(0deg,
-      rgba(9, 9, 9, 0.8),
-      rgba(9, 9, 9, 0.8)),
-    url(./Component/assets/img/cover.jpg);
-  border-radius: 24px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 30px 60px;
-  height: 380px;
-  display: flex;
-  align-items: center;
-  width: 100%;
+/* catalog_details */
+
+.catalog_details .cover_img img {
+  border-radius: 16px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
 }
 
-.catalog_details .card {
-  background: transparent;
-  padding: 0;
+.catalog_details .catalog_release_info,
+.catalog_details .catalog_area {
+  background: var(--white-color);
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.catalog_details .catalog_release_info{
+  margin-top: 30px;
+}
+
+.catalog_details .cover_text_content .cover_header {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
   flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 20px;
 }
 
-.catalog_details .card img {
-  height: 250px;
+.catalog_details .cover_text_content .status p{
+  padding: 4px 16px;
+  border-radius: 100px;
+  background: #5554542d;
+  color: var(--title-color)
 }
 
-.catalog_details .card img {
-  border-radius: 8px;
+.catalog_details .cover_text_content .covr_title{
+  margin-top: 50px;
 }
 
-.c_top_info h2 {
-  color: var(--white-color);
-  width: 100%;
+.catalog_details .cover_text_content .covr_title h1{
+  font-size: 56px;
+  font-weight: var(--font-bold);
+  margin-bottom: 20px;
 }
 
-.draft_page .catalog_card .card img.ringtone,
-.pending_page .catalog_card .card img.ringtone {
-  display: none;
-}
-
-.c_top_info .icon-list {
+.catalog_release_info .song_info,
+.catalog_release_info .song_info .title{
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 30px;
 }
 
-.c_top_info img.ringtone {
-  width: 24px;
-  height: 24px;
+.catalog_release_info .song_info .toggle_icons{
+  padding: 12px 12px;
+  cursor: pointer;
+  background: #00000009;
+  border-radius: 100px;
 }
+
+.catalog_release_info .song_info .icons{
+  font-size: 24px;
+  color: var(--title-color);
+}
+
+
+
+
 
 .cTune .item {
   display: flex;
@@ -1588,14 +1602,11 @@ Swiper part
 }
 
 .play_btn {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border: none;
   border-radius: 100px;
 }
-
-
-
 
 /*  */
 

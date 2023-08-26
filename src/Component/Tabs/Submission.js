@@ -9,7 +9,6 @@ function Submission() {
         <h2 className="mb-4">Release Information</h2>
         <div className="col-xl-4 col-lg-6 col-md-12 mt-3">
           <img src={sub_img} alt="" className="submission_img" />
-          {/* <h2 className="mt-3">Release Album</h2> */}
         </div>
         <div className="col-xl-4 col-lg-6 col-md-12 mt-3">
           <div className="input_value">

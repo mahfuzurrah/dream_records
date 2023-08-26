@@ -114,7 +114,6 @@ const Release = () => {
               onChange={handleNameChange}
               star="*"
             />
-
             <div className="mt-3">
               <label htmlFor="" className="mb-2">
                 Production Year <span className="input_star">*</span>
