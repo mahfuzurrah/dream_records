@@ -60,7 +60,7 @@ function EditAssetsPopup() {
             </div>
             <div className="mt-3">
               <label htmlFor="" className="mb-2">
-              Secondary Track Type <span className="input_star">*</span>
+                Secondary Track Type <span className="input_star">*</span>
               </label>
               <div className="checkbox_item">
                 <div className="item">
@@ -87,7 +87,7 @@ function EditAssetsPopup() {
             </div>
             <div className="mt-3">
               <label htmlFor="" className="mb-2">
-              Instrumental <span className="input_star">*</span>
+                Instrumental <span className="input_star">*</span>
               </label>
               <div className="checkbox_item">
                 <div className="item">
@@ -137,7 +137,7 @@ function EditAssetsPopup() {
                 star="*"
               />
               <p className="input_desc">
-              Digital Music Stores require full first and last (family) name
+                Digital Music Stores require full first and last (family) name
               </p>
             </div>
             <div className="add_input mt-3">
@@ -148,7 +148,7 @@ function EditAssetsPopup() {
                 star="*"
               />
               <p className="input_desc">
-              Digital Music Stores require full first and last (family) name
+                Digital Music Stores require full first and last (family) name
               </p>
             </div>
             <IconInputField
@@ -187,7 +187,7 @@ function EditAssetsPopup() {
             />
             <div className="mt-3">
               <label htmlFor="" className="mb-2">
-                Gener <span className="input_star">*</span>
+                Genre <span className="input_star">*</span>
               </label>
               <Selector />
             </div>
@@ -235,11 +235,11 @@ function EditAssetsPopup() {
               star="*"
             />
             <TextField
-                label="Lyrics"
-                type="text"
-                value={comment}
-                onChange={handleCommentChange}
-              />
+              label="Lyrics"
+              type="text"
+              value={comment}
+              onChange={handleCommentChange}
+            />
           </form>
         </Modal.Body>
         <Modal.Footer>

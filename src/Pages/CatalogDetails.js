@@ -77,65 +77,26 @@ function CatalogDetails() {
             <hr />
             <div className="s_info">
               <div className="row">
-                <h2 className="mb-4">Track Information</h2>
-                <div className="col-xl-4 col-lg-6 col-md-12 mt-3">
-                  <div className="input_value">
-                    <p className="input_name">Primary Track Type</p>{" "}
-                    <span>Not Found</span>
-                  </div>
-                  <div className="input_value">
-                    <p className="input_name">Secondary Track Type</p>{" "}
-                    <span>Not Found</span>
-                  </div>
-                  <div className="input_value">
-                    <p className="input_name">Instrumental</p>{" "}
-                    <span>Not Found</span>
-                  </div>
+                <div className="col-xl-4 col-lg-6 col-md-12 ">
                   <div className="input_value">
                     <p className="input_name">Title</p> <span>Not Found</span>
                   </div>
                   <div className="input_value">
-                    <p className="input_name">Version/Subtitle</p>{" "}
+                    <p className="input_name">Version/Subtitle</p>
                     <span>Not Found</span>
                   </div>
                   <div className="input_value">
-                    <p className="input_name">Primary Artist </p>{" "}
+                    <p className="input_name">Primary Artist </p>
                     <span>Not Found</span>
-                  </div>
-                  <div className="input_value">
-                    <p className="input_name">Featuring</p>{" "}
-                    <span>Not Found</span>
-                  </div>
-                  <div className="input_value">
-                    <p className="input_name">Remixer</p> <span>Not Found</span>
                   </div>
                 </div>
-                <div className="col-xl-4 col-lg-6 col-md-12 mt-3">
+                <div className="col-xl-4 col-lg-6 col-md-12">
                   <div className="input_value">
-                    <p className="input_name">Lyrics Writter</p>{" "}
+                    <p className="input_name">Lyrics Writter</p>
                     <span>Not Found</span>
                   </div>
                   <div className="input_value">
-                    <p className="input_name">Composer</p>{" "}
-                    <span>Not Found</span>
-                  </div>
-                  <div className="input_value">
-                    <p className="input_name">Arranger</p>{" "}
-                    <span>Not Found</span>
-                  </div>
-                  <div className="input_value">
-                    <p className="input_name">Producer</p>{" "}
-                    <span>Not Found</span>
-                  </div>
-                  <div className="input_value">
-                    <p className="input_name">℗ Pline</p> <span>Not Found</span>
-                  </div>
-                  <div className="input_value">
-                    <p className="input_name">Production Year</p>{" "}
-                    <span>Not Found</span>
-                  </div>
-                  <div className="input_value">
-                    <p className="input_name">Publisher</p>{" "}
+                    <p className="input_name">Composer</p>
                     <span>Not Found</span>
                   </div>
                   <div className="input_value">
@@ -143,31 +104,16 @@ function CatalogDetails() {
                     <span>Not Found</span>
                   </div>
                 </div>
-                <div className="col-xl-4 col-lg-6 col-md-12 mt-3">
+                <div className="col-xl-4 col-lg-6 col-md-12">
                   <div className="input_value">
-                    <p className="input_name">Gener</p> <span>Not Found</span>
+                    <p className="input_name">Genre</p> <span>Not Found</span>
                   </div>
                   <div className="input_value">
                     <p className="input_name">Subgenre</p>{" "}
                     <span>Not Found</span>
                   </div>
                   <div className="input_value">
-                    <p className="input_name">Producer Catalogue Number</p>{" "}
-                    <span>Not Found</span>
-                  </div>
-                  <div className="input_value">
-                    <p className="input_name">Parental advisory</p>{" "}
-                    <span>Not Found</span>
-                  </div>
-                  <div className="input_value">
-                    <p className="input_name">Track Title Language</p> <span>Not Found</span>
-                  </div>
-                  <div className="input_value">
                     <p className="input_name">Lyrics Language</p>{" "}
-                    <span>Not Found</span>
-                  </div>
-                  <div className="input_value">
-                    <p className="input_name">Lyrics</p>{" "}
                     <span>Not Found</span>
                   </div>
                 </div>
@@ -178,76 +124,46 @@ function CatalogDetails() {
       </div>
       <div className="catalog_release_info s_info mt-3">
         <div className="row">
-          <div className="col-lg-8 col-md-12">
-            <div className="row">
-              <h2 className="mb-4">Release Information</h2>
-              <div className="col-lg-6 col-md-12 mt-3">
-                <div className="input_value">
-                  <p className="input_name">Release Title</p>{" "}
-                  <span>Not Found</span>
-                </div>
-                <div className="input_value">
-                  <p className="input_name">Version/Subtitle</p>{" "}
-                  <span>Not Found</span>
-                </div>
-                <div className="input_value">
-                  <p className="input_name">Primary Artist</p>{" "}
-                  <span>Not Found</span>
-                </div>
-                <div className="input_value">
-                  <p className="input_name">Featuring</p> <span>Not Found</span>
-                </div>
-                <div className="input_value">
-                  <p className="input_name">Remixer</p> <span>Not Found</span>
-                </div>
-                <div className="input_value">
-                  <p className="input_name">Various Artists / Compilation</p>{" "}
-                  <span>Not Found</span>
-                </div>
-                <div className="input_value">
-                  <p className="input_name">Genre</p> <span>Not Found</span>
-                </div>
-                <div className="input_value">
-                  <p className="input_name">Subgenre</p> <span>Not Found</span>
-                </div>
-              </div>
-              <div className="col-lg-6 col-md-12 mt-3">
-                <div className="input_value">
-                  <p className="input_name">Label Name</p>{" "}
-                  <span>Not Found</span>
-                </div>
-                <div className="input_value">
-                  <p className="input_name">Format</p> <span>Not Found</span>
-                </div>
-                <div className="input_value">
-                  <p className="input_name">Original Release Date</p>{" "}
-                  <span>Not Found</span>
-                </div>
-                <div className="input_value">
-                  <p className="input_name">℗ line</p> <span>Not Found</span>
-                </div>
-                <div className="input_value">
-                  <p className="input_name">℗ line</p> <span>Not Found</span>
-                </div>
-                <div className="input_value">
-                  <p className="input_name">Production Year</p>{" "}
-                  <span>Not Found</span>
-                </div>
-                <div className="input_value">
-                  <p className="input_name">UPC/EAN</p> <span>Not Found</span>
-                </div>
-                <div className="input_value">
-                  <p className="input_name">Producer Catalogue Number</p>
-                  <span>Not Found</span>
-                </div>
-              </div>
+          <div className="col-xl-4 col-lg-6 col-md-12">
+            <div className="input_value">
+              <p className="input_name">Label Name</p>
+              <span>Not Found</span>
+            </div>
+            <div className="input_value">
+              <p className="input_name">UPC/EAN</p>
+              <span>Not Found</span>
+            </div>
+            <div className="input_value">
+              <p className="input_name">℗ line</p>
+              <span>Not Found</span>
             </div>
           </div>
-          <div className="col-lg-4 col-md-12">
-            <h2 className="mb-3">Release Date</h2>
+          <div className="col-xl-4 col-lg-6 col-md-12">
+            <div className="input_value">
+              <p className="input_name">© line</p>
+              <span>Not Found</span>
+            </div>
+            <div className="input_value">
+              <p className="input_name">Production Year</p>
+              <span>Not Found</span>
+            </div>
+            <div className="input_value">
+              <p className="input_name">Genre</p>
+              <span>Not Found</span>
+            </div>
+          </div>
+          <div className="col-xl-4 col-lg-6 col-md-12">
+            <div className="input_value">
+              <p className="input_name">Sub Genre</p>
+              <span>Not Found</span>
+            </div>
+            <div className="input_value">
+              <p className="input_name">Original Release Date</p>
+              <span>Not Found</span>
+            </div>
             <div className="input_value">
               <p className="input_name">Main Release Date</p>
-              <span>12-12-2023</span>
+              <span>Not Found</span>
             </div>
           </div>
         </div>
