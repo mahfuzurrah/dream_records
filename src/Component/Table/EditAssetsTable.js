@@ -1,9 +1,10 @@
 import { Table } from "antd";
 import React, { useRef, useState } from "react";
 import { FaPause, FaPlay } from "react-icons/fa";
-import { BiTrashAlt, BiPencil } from "react-icons/bi";
+import { BiPencil } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import t_audio from "../assets/audio/Lukrembo.mp3";
+import  DeletePopup from "../Modal/DeletePopup"
 
 const columns = [
   {
@@ -30,9 +31,7 @@ const columns = [
         <Link to="#" className="edit">
         <BiPencil className="icons" />
         </Link>
-        <Link to="#" className="delete">
-          <BiTrashAlt className="icons" />
-        </Link>
+        <DeletePopup/>
       </div>
     ),
   },

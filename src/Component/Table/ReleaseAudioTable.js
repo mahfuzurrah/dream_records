@@ -1,13 +1,13 @@
 import { Divider, Radio, Table } from "antd";
 import React, { useState } from "react";
-import { BiPencil, BiTrashAlt } from "react-icons/bi";
+import { BiPencil} from "react-icons/bi";
 import { FaRegEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import TableFilter from "../Filter/TableFilter";
 import AntPopover from "../Popover/AntPopover";
 import SearchBar from "../SearchBar/SearchBar";
 import coverImg from "../assets/img/cover.jpg";
-
+import DeletePopup from "../Modal/DeletePopup"
 const columns = [
   {
     title: "Title",
@@ -91,9 +91,7 @@ const columns = [
             <Link to="/catalog_details" className="edit">
               <FaRegEye className="icons" />
             </Link>
-            <Link className="delete">
-              <BiTrashAlt className="icons" />
-            </Link>
+            <DeletePopup/>
             <AntPopover />
           </div>
         );
@@ -106,9 +104,7 @@ const columns = [
             <Link to="/release-audio" className="pen">
               <BiPencil className="icons" />
             </Link>
-            <Link className="delete">
-              <BiTrashAlt className="icons" />
-            </Link>
+            <DeletePopup/>
             <AntPopover />
           </div>
         );
@@ -121,9 +117,7 @@ const columns = [
             <Link to="/release-audio" className="pen">
               <BiPencil className="icons" />
             </Link>
-            <Link className="delete">
-              <BiTrashAlt className="icons" />
-            </Link>
+            <DeletePopup/>
           </div>
         );
       }

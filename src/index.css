@@ -115,8 +115,24 @@ hr {
 
 .body_content {
   margin-left: 280px !important;
+  padding-bottom: 0 !important;
+}
+.footer{
+  background: var(--white-color);
+  margin-top: 20px;
+  padding-left: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 50px;
+  gap: 30px;
 }
 
+.sponsored_by{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 /*===================== 
 Common CSS
 =====================*/
@@ -1756,6 +1772,10 @@ Responcive part
 
   .profile_input_area {
     margin-top: 20px;
+  }
+
+  .footer{
+    padding-left: 30px;
   }
 
 }

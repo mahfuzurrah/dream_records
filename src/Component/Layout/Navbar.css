@@ -2,12 +2,7 @@
 header {
     padding: 0 !important;
     background: var(--white-color) !important;
-    /* border-bottom: 1px solid var(--border-color); */
 }
-
-/* header.ant-layout-header.fixed-header.css-dev-only-do-not-override-w8mnev{
-    background: var(--white-color) !important;
-} */
 
 .trigger {
     padding: 0 24px;
@@ -253,7 +248,6 @@ li.ant-menu-item:hover {
 }
 
 li.release-audio {
-    background: linear-gradient(140deg, #3497FC 0%, rgba(57, 63, 140, 0.17) 100%), linear-gradient(140deg, #65E3DF 0%, #8266F6 100%), #4575FC !important;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -261,7 +255,8 @@ li.release-audio {
     padding-left: 0 !important;
     border-radius: 16px !important;
     position: relative !important;
-    color: #ffffff !important
+    color: #ffffff !important;
+    background: linear-gradient(140deg, #379AF9, #7168E5) !important;
 }
 
 li.release-audio svg.ant-menu-item-icon,
@@ -274,8 +269,7 @@ li.dashboard {
 }
 
 li.release-audio:hover {
-    background: linear-gradient(140deg, #3497FC 0%, rgba(57, 63, 140, 0.17) 100%), linear-gradient(140deg, #65E3DF 0%, #8266F6 100%), #4575FC !important;
-    /* color: var(--white-color) !important; */
+    background: linear-gradient(140deg, #7168E5, #379AF9) !important;
 }
 
 li.release-audio .ant-menu-title-content {

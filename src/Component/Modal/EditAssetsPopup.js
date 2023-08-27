@@ -87,7 +87,7 @@ function EditAssetsPopup() {
             </div>
             <div className="mt-3">
               <label htmlFor="" className="mb-2">
-                Instrumental <span className="input_star">*</span>
+                Instrumental
               </label>
               <div className="checkbox_item">
                 <div className="item">

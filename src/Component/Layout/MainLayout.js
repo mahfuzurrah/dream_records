@@ -16,7 +16,7 @@ import Support_Center from "../assets/icons/Support Center.svg";
 import Y_T from "../assets/icons/YouTube_Request.svg";
 import Topbar from "./Topbar";
 
-const { Header, Sider, Content } = Layout;
+const { Header, Sider, Content, Footer } = Layout;
 
 const MainLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -170,6 +170,14 @@ const MainLayout = () => {
         >
           <Outlet />
         </Content>
+        <Footer
+          className="footer"
+        >
+          <p>Dream Record ©2023 Created by Subhamay Karjee</p>
+          <div className="sponsored_by">
+          Partnered by
+          </div>
+        </Footer>
       </Layout>
     </Layout>
   );

@@ -4,6 +4,7 @@ import TextField from "../Component/TextBox/TextField";
 import { IoLogoWhatsapp } from "react-icons/io";
 import SupportHistoryTable from "../Component/Table/SupportHistoryTable";
 import UploadButton from "../Component/UploadBtn/UploadButton";
+import PrimaryBtn from "../Component/Button/PrimaryBtn";
 
 function SupportCenter() {
   const [name, setName] = useState("");
@@ -36,7 +37,9 @@ function SupportCenter() {
               <div className="support_file mt-3">
               <UploadButton />
               </div>
-              <button className="btn mt-3">Submit</button>
+              <div className="mt-3">
+              <PrimaryBtn label="Submit" />
+              </div>
             </div>
           </div>
         </div>

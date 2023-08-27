@@ -54,7 +54,7 @@ const Release = () => {
             />
             <div className="mt-3">
               <label htmlFor="" className="mb-2">
-              Various Artists / Compilation <span className="input_star">*</span>
+              Various Artists / Compilation
               </label>
               <div className="checkbox_item">
                 <div className="item">

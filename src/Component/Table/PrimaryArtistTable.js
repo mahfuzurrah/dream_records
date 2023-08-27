@@ -1,7 +1,8 @@
 import { Table } from "antd";
-import { BiPencil, BiTrashAlt } from "react-icons/bi";
+import { BiPencil} from "react-icons/bi";
 import { Link } from "react-router-dom";
 import UserImg from "../assets/img/user.png";
+import DeletePopup from "../Modal/DeletePopup"
 
 const columns = [
   {
@@ -41,9 +42,7 @@ const columns = [
         <Link className="pen">
           <BiPencil className="icons" />
         </Link>
-        <Link className="delete">
-          <BiTrashAlt className="icons" />
-        </Link>
+        <DeletePopup/>
       </div>
     ),
   },

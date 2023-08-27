@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import artist_img from "../Component/assets/img/artist.png";
-import { FaCheckCircle, FaPlus} from "react-icons/fa";
+import { FaPlus} from "react-icons/fa";
 import DashboardCardList from "../Component/DashboardCard/DashboardCardList";
 import LatestReleaseCard from "../Component/CatalogsCard/LatestReleaseCard";
 import DashboardSlider from "../Component/Slider/DashboardSlider";
@@ -15,14 +15,10 @@ const Dashboard = () => {
             <DashboardSlider />
           </div>
         </div>
-
         <div className="mt-4">
           <DashboardCardList />
         </div>
-
         <div className="artist_row mt-5">
-          <div className="section_title d_title" style={{ border: "none" }}>
-          </div>
           <div className="artist_item">
             <ul className="mt-2">
               <li className="add_artist">
@@ -50,12 +46,6 @@ const Dashboard = () => {
         </div>
 
         <div className="row mt-5">
-          <div className="section_title d_title" style={{ border: "none" }}>
-            <h3 className="mb-4">
-              <FaCheckCircle className="icons circle" />
-              Latest Release
-            </h3>
-          </div>
           <div className="relese_card_list mt-2">
             <Link to="/release-audio" className="add_realese">
               <FaPlus className="icons" />
@@ -70,7 +60,7 @@ const Dashboard = () => {
               Performance
             </h3>
             <h1><span>₹</span> 00.00</h1>
-            <button className="btn">Show more</button>
+            <button className="btn">Show More</button>
           </div>
         </div>
       </div>
