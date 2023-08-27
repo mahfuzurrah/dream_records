@@ -8,6 +8,19 @@ import TextField from "../TextBox/TextField";
 
 function EditAssetsPopup() {
   const [show, setShow] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const handlePChange = (selectedOption) => {
+    setSelectedOption(selectedOption);
+    console.log(`Selected: ${selectedOption.label}`);
+  };
+
+  const Pyears = [
+    { value: "2024", label: "2024" },
+    { value: "2023", label: "2023" },
+    { value: "2022", label: "2022" },
+    { value: "2021", label: "2021" },
+  ];
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -165,24 +178,28 @@ function EditAssetsPopup() {
               label="℗ Pline"
               value={version_S}
               onChange={handleversion_SChange}
+              star="*"
             />
             <div className="mt-3">
               <label htmlFor="" className="mb-2">
                 Production Year <span className="input_star">*</span>
               </label>
-              <Selector />
+              <Selector
+                options={Pyears}
+                onChange={handlePChange}
+                placeholder="2023"
+                value={selectedOption}
+              />
             </div>
             <InputField
               label="Publisher"
               value={name}
               onChange={handleNameChange}
-              star="*"
             />
             <InputField
               label="ISRC"
               value={name}
               onChange={handleNameChange}
-              star="*"
               placeholder="XX-0X0-00-00000"
             />
             <div className="mt-3">
@@ -201,7 +218,6 @@ function EditAssetsPopup() {
               label="Producer Catalogue Number"
               value={name}
               onChange={handleNameChange}
-              star="*"
             />
             <div className="mt-3">
               <label htmlFor="" className="mb-2">

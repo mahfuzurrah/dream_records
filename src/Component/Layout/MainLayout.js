@@ -170,12 +170,10 @@ const MainLayout = () => {
         >
           <Outlet />
         </Content>
-        <Footer
-          className="footer"
-        >
-          <p>Dream Record ©2023 Created by Subhamay Karjee</p>
+        <Footer className="footer">
+          <p>Copyright © 2023 Dream Records Pvt. Ltd.</p>
           <div className="sponsored_by">
-          Partnered by
+           <p>Partnered By Believe Music</p>
           </div>
         </Footer>
       </Layout>

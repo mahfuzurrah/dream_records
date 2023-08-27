@@ -43,14 +43,14 @@ const data = [
     audio: t_audio,
     track: "Track Here",
     artist: "Artist name",
-    ISRC: "XX-0X0-00-00000",
+    ISRC: "Not Found",
   },
   {
     key: "2",
     audio: t_audio,
     track: "Track Here",
     artist: "Artist name",
-    ISRC: "XX-0X0-00-00000",
+    ISRC: "Not Found",
   },
 ];
 
